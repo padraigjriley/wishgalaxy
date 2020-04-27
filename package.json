@@ -12,6 +12,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "express": "^4.17.1",
+    "jquery": "^3.5.0",
     "pg": "^8.0.3",
     "psql": "0.0.1",
     "ripples": "0.0.1",
