@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wish Well</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="./aos.css">
+<link rel="icon" href="./coin.png">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js">
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<body>
+	<div class="cursor"></div>
+	<div class="image" id="image"></div>
+	
+	<div id="zero" class="zero"><br><br><br><br><br><br>WELCOME TO<br>THE WISH WELL</div>
+	<div class="vl" id="vl"></div>
+
+	<section id="first_section">
+			<div id="first" class="first" data-aos="fade-up" data-aos-anchor="#hidden1" data-aos-anchor-placement="top-bottom">IN UNCERTAIN TIMES</div>
+			<div id="second" class="second" data-aos="fade-up" data-aos-anchor="#hidden3" data-aos-anchor-placement="top-bottom">THIS IS A SPACE FOR YOU</div>
+			<div id="third" class="third" data-aos="fade-up" data-aos-anchor="#hidden5" data-aos-anchor-placement="top-bottom">TO MAKE A WISH</div>
+			<div id="forth" class="forth" data-aos="fade-up" data-aos-anchor="#hidden7" data-aos-anchor-placement="top-bottom">OR WISH SOMEONE WELL</div>
+			<div id="fifth" class="fifth" data-aos="fade-up" data-aos-anchor="#hidden9" data-aos-anchor-placement="top-bottom">MAYBE YOU DIDN'T GET THE CHANCE</div>
+			<div id="sixth" class="sixth" data-aos="fade-up" data-aos-anchor="#hidden11" data-aos-anchor-placement="top-bottom">TO SAY GOODBYE</div>
+	</section>
+
+	<div class="click_container" onclick="cointoss()" id="click_container">
+		<form class="form" id="form" target="hiddenFrame" netlify>
+			<label name="wish" id="label">I WISH   </label>
+			<textarea name="textarea" class="input" type="text" id="wish" autocomplete="off" maxlength="200" form="form"></textarea> 
+ 			</form>
+		<div id="seventh" class="seventh">CLICK TO TOSS YOUR COIN</div>
+	</div>
+
+
+	<div id="wrapper" class="wrapper">
+			<div id="hidden1" class="hidden"></div>
+			<div id="hidden2" class="hidden"></div>
+			<div id="hidden3" class="hidden"></div>
+			<div id="hidden4" class="hidden"></div>
+			<div id="hidden5" class="hidden"></div>
+			<div id="hidden6" class="hidden"></div>
+			<div id="hidden7" class="hidden"></div>
+			<div id="hidden8" class="hidden"></div>
+			<div id="hidden9" class="hidden"></div>
+			<div id="hidden10" class="hidden"></div>
+			<div id="hidden11" class="hidden"></div>
+			<div id="hidden12" class="hidden"></div>
+	</div>
+
+	<div class="video_container" id="video_container">
+
+		<video muted autoplay loop playsinline webkit-playsinline defaultMuted id ="video_stars">
+				<source src="./video_stars.mp4" type="video/mp4" id="space">
+		</video>
+
+		<video muted autoplay loop playsinline webkit-playsinline defaultMuted id ="video_space2">
+				<source src="./video_space.mp4" type="video/mp4" id="video_space2">
+		</video>
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="ripple_script.js"></script>
+	<script type="text/javascript" src="cursor_script.js"></script>
+</body>
+</html>
