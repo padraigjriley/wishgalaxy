@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+var $ = require('jquery')
 //const { Client } = require('pg')
 
 app.use(express.static('public'))
