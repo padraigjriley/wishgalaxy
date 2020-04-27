@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 var $ = require('jquery')
+var $ = require('jquery.ripples')
 //const { Client } = require('pg')
 
 app.use(express.static('public'))
