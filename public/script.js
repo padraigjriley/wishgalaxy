@@ -20,6 +20,12 @@ function handleWheel(e) {
     document.getElementById("form").style.opacity = ((op_index-1130)/100);     
   }
 
+  if (tossed) {
+    document.getElementById('nineth').style.opacity = ((op_index-300)/100);
+    document.getElementById("video_space2").style.opacity = ((op_index-100)/1000);
+    document.getElementById('eighth').style.opacity = (1-(op_index-100)/100);
+  }
+
   document.getElementById("video_stars").style.opacity = Math.min(((op_index-1130)/800), 0.1);
 }
 
@@ -49,6 +55,12 @@ function cointoss() {
   document.getElementById("video_stars").classList.remove("disolve_quick");
   document.getElementById("video_stars").classList.add("involve");
   document.getElementById('form').submit();
+
+  document.getElementById("zero").classList.add("hideme");
+  document.getElementById("vl").classList.add("hideme");
+  document.getElementById("first_section").classList.add("hideme");
+  window.scrollTo(0,0);
+  document.getElementById('second_section').classList.add('heavens');
 }
 
 document.addEventListener("click",function(e){

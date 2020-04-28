@@ -162,6 +162,24 @@ section {
   cursor: none;
 }
 
+.eighth {
+  margin-left: 10%;
+  bottom: 30%;
+  /*opacity: 0;*/
+  position: fixed;
+  pointer-events: none;
+  cursor: none;
+}
+
+.nineth {
+  margin-left: 10%;
+  bottom: 30%;
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  cursor: none;
+}
+
 .form {
   cursor: none;
   position: fixed;
@@ -249,6 +267,18 @@ textarea {
   overflow: hidden;
 }
 
+.second_section {
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  position: fixed;
+  z-index: 5;
+  animation-delay: 1.5s;
+  overflow: hidden;
+  pointer-events: none;
+  cursor: none;
+}
+
 .hideme {
   opacity: 0;
   display: none;
@@ -325,6 +355,19 @@ textarea {
 
 .deflate {
   animation: cursorAnim2 .5s forwards;
+}
+
+.heavens {
+  animation: heavenAnim 10s forwards;
+}
+
+@keyframes heavenAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes cursorAnim {
