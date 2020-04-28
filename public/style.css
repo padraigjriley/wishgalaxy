@@ -40,7 +40,7 @@ body {
  pointer-events: none;
  content:url('./coin.png');
  cursor: none;
- z-index: 2;
+ z-index: 99;
 }
 
 .zero {
@@ -69,7 +69,7 @@ body {
 }
 
 #wrapper {
-  height: 15000px;
+  height: 13000px;
   position: relative;
   top: 10;
   margin: 0;
@@ -186,6 +186,7 @@ label {
   z-index: 40;
   pointer-events: none;
   cursor: none;
+  opacity: 1;
 }
 
 textarea {
@@ -207,6 +208,7 @@ textarea {
   pointer-events: none;
   cursor: none;
   text-shadow: 1px 1px #3d3b35;
+  opacity: 1;
 }
 
 .video_container {
@@ -245,4 +247,100 @@ textarea {
   right: 0;
   bottom: 0;
   overflow: hidden;
+}
+
+.hideme {
+  opacity: 0;
+  display: none;
+}
+
+.shrink {
+  animation: coinAnim 6s forwards;
+}
+
+.grow {
+  animation: grow 3s forwards;
+}
+
+.involve {
+  animation: spaceAnim 4s forwards;
+}
+
+@keyframes coinAnim {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes spaceAnim {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(.3);
+    opacity: 1;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.disolve {
+  animation: anim 2s forwards;
+}
+
+.expand {
+    animation: cursorAnim .5s forwards;
+}
+
+.deflate {
+  animation: cursorAnim2 .5s forwards;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(3);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(3);
+    }
+    to {
+        transform: scale(1);
+    }
 }

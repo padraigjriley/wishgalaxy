@@ -11,7 +11,7 @@
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <body>
-	<div class="cursor"></div>
+	<div class="cursor" id="cursor"></div>
 	<div class="image" id="image"></div>
 	
 	<div id="zero" class="zero"><br><br><br><br><br><br>WELCOME TO<br>THE WISH WELL</div>
@@ -26,13 +26,12 @@
 			<div id="sixth" class="sixth" data-aos="fade-up" data-aos-anchor="#hidden11" data-aos-anchor-placement="top-bottom">TO SAY GOODBYE</div>
 	</section>
 
-	<div class="click_container" onclick="cointoss()" id="click_container">
-		<form class="form" id="form" target="hiddenFrame" netlify>
-			<label name="wish" id="label">I WISH   </label>
-			<textarea name="textarea" class="input" type="text" id="wish" autocomplete="off" maxlength="200" form="form"></textarea> 
- 			</form>
-		<div id="seventh" class="seventh">CLICK TO TOSS YOUR COIN</div>
-	</div>
+	<form class="form" id="form" target="hiddenFrame" method='post'>
+		<label name="wish" id="label">I WISH   </label>
+		<textarea name="textarea" class="input" type="text" id="wish" autocomplete="off" maxlength="200" form="form"></textarea> 
+ 	</form>
+	
+	<div id="seventh" class="seventh">CLICK TO TOSS YOUR COIN</div>
 
 
 	<div id="wrapper" class="wrapper">
@@ -47,7 +46,6 @@
 			<div id="hidden9" class="hidden"></div>
 			<div id="hidden10" class="hidden"></div>
 			<div id="hidden11" class="hidden"></div>
-			<div id="hidden12" class="hidden"></div>
 	</div>
 
 	<div class="video_container" id="video_container">
@@ -61,6 +59,7 @@
 		</video>
 
 	</div>
+	<iframe name="hiddenFrame" class="hideme"></iframe>
 
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="ripple_script.js"></script>
