@@ -387,3 +387,71 @@ textarea {
         transform: scale(1);
     }
 }
+
+.pointer {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  padding: 20px;
+  margin: 5px;
+  -mox-box-shadow: 0 0 5px white;
+  -webkit-box-shadow: 0 0 5px white;
+  box-shadow: 0 0 5px white;
+  /*transition-duration: 200ms;*/
+  pointer-events: none;
+  z-index: 99;
+  cursor: none;
+  position: fixed;
+}
+
+.button {
+  /*border-width: thin; */
+  cursor: none;
+  outline: none;
+  border-radius: 50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  background-color: transparent;
+  border: solid white 1px;
+  /*border-color: white;*/
+  padding: 20px;
+  width: 20px;
+  margin: 20px;
+  transition: background-size .5s, color .5s;
+  background-size: 0 0;
+  background-position: 50% 50%;
+  background-image: radial-gradient(circle at center , white 50%, transparent 50%);
+  background-repeat: no-repeat;
+}
+
+.button:hover {
+    background-size: 200% 200%;
+    color: white;
+}
+
+.button2 {
+  border-width: thin; 
+  cursor: none;
+  outline: none;
+  border-radius: 50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  background-color: white;
+  border: solid white 1px;
+  padding: 20px;
+  width: 20px;
+  margin: 20px;
+  transition: background-size .5s, background-color .5s;
+  background-size: 200% 200%;
+  background-position: 50% 50%;
+  background-image: radial-gradient(circle at center , white 50%, transparent 50%);
+  background-repeat: no-repeat;
+}
+
+.button2:hover {
+  background-size: 0% 0%;
+  background-color: transparent;
+  color: transparent;
+}

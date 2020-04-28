@@ -1,10 +1,8 @@
 $(function () {
   $("#image").mousemove(function (e) {
-    $(".cursor").show().css({
+    $("#cursor").show().css({
       "left": e.clientX - 60,
       "top": e.clientY - 60 - $('body').scrollTop()
     });
-  }).mouseout(function () {
-    $(".cursor").hide();
   });
 });

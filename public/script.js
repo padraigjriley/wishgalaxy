@@ -1,4 +1,6 @@
 var tossed = false;
+var op_index = 0;
+window.scrollTo(0, 0);
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
@@ -47,11 +49,11 @@ textarea.oninput = function() {
 
 function cointoss() {
   tossed = true;
-
+  document.getElementById("cursor").classList.remove("deflate");
   document.getElementById("wish").classList.add("disolve");
   document.getElementById("label").classList.add("disolve");
   document.getElementById("seventh").classList.add("disolve");
-  // document.getElementById("cursor").classList.add("shrink");
+  document.getElementById("cursor").classList.add("shrink");
   document.getElementById("video_stars").classList.remove("disolve_quick");
   document.getElementById("video_stars").classList.add("involve");
   document.getElementById('form').submit();
@@ -61,6 +63,10 @@ function cointoss() {
   document.getElementById("first_section").classList.add("hideme");
   window.scrollTo(0,0);
   document.getElementById('second_section').classList.add('heavens');
+
+  var x = document.getElementById("cursor");
+  x.addEventListener("webkitAnimationEnd", CursorEndFunction);
+  x.addEventListener("animationend", CursorEndFunction);
 }
 
 document.addEventListener("click",function(e){
@@ -71,14 +77,26 @@ document.addEventListener("click",function(e){
 });
 
 document.addEventListener("mousedown",function(e){
-  document.getElementById("cursor").classList.remove("deflate");
-  document.getElementById("cursor").classList.add("expand");
+   if ((op_index < 1130) && (!tossed)){
+      document.getElementById("cursor").classList.remove("deflate");
+      document.getElementById("cursor").classList.add("expand");
+    }
 });
 
 document.addEventListener("mouseup",function(e){
-  document.getElementById("cursor").classList.remove("expand");
-  document.getElementById("cursor").classList.add("deflate");
+   if ((op_index < 1130) && (!tossed)){
+      document.getElementById("cursor").classList.remove("expand");
+      document.getElementById("cursor").classList.add("deflate");
+    }
 });
+
+function CursorEndFunction() {
+  document.getElementById("cursor").classList.remove("cursor");
+  document.getElementById("cursor").classList.remove("shrink");
+  document.getElementById("cursor").classList.add("pointer");
+  document.getElementById("cursor").classList.add("grow");
+  document.getElementById("image").classList.add('hidme');
+}
 
 AOS.init({
   duration: 1200,
