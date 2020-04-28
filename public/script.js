@@ -1,5 +1,17 @@
 var tossed = false;
 var op_index = 0;
+var bool = true;
+var sub = false;
+
+document.getElementById("email").classList.add("hideme");
+
+document.getElementById("about_page").classList.add("hideme");
+
+document.getElementById("about_text").classList.add("hideme");
+document.getElementById("coin_text").classList.add("hideme");
+
+document.getElementById("middle").classList.add("hideme");
+
 window.scrollTo(0, 0);
 
 window.onbeforeunload = function () {
@@ -16,6 +28,18 @@ function handleWheel(e) {
   document.getElementById("zero").style.opacity = (1 - (op_index)/20);
   
   document.getElementById("vl").style.opacity = (1 - (op_index)/20);
+
+  if (progress < 300) {
+      document.getElementById("button").setAttribute("onclick", "button_clicked()");
+    }
+
+  if ((progress > 300) && (bool) && (!tossed)){
+      document.getElementById("button").removeAttribute("onclick");
+    }
+
+  if (bool) {
+      document.getElementById("button").style.opacity = (1 - (op_index)/20);
+    }
   
   if (!tossed) {    
     document.getElementById("seventh").style.opacity = ((op_index-1130)/100);
@@ -77,14 +101,14 @@ document.addEventListener("click",function(e){
 });
 
 document.addEventListener("mousedown",function(e){
-   if ((op_index < 1130) && (!tossed)){
+   if ((op_index < 1130) && (!tossed) && (bool)){
       document.getElementById("cursor").classList.remove("deflate");
       document.getElementById("cursor").classList.add("expand");
     }
 });
 
 document.addEventListener("mouseup",function(e){
-   if ((op_index < 1130) && (!tossed)){
+   if ((op_index < 1130) && (!tossed) && (bool)){
       document.getElementById("cursor").classList.remove("expand");
       document.getElementById("cursor").classList.add("deflate");
     }
@@ -96,6 +120,161 @@ function CursorEndFunction() {
   document.getElementById("cursor").classList.add("pointer");
   document.getElementById("cursor").classList.add("grow");
   document.getElementById("image").classList.add('hidme');
+}
+
+function button_clicked(){
+  bool = !bool;
+
+  // Entered About Page
+  if (!bool){
+
+    document.getElementById("container").classList.add('hideme');
+    document.getElementById("first_section").classList.add('hideme');
+    document.getElementById("container").classList.add('hideme');
+    document.getElementById("image").classList.add('hideme');
+    
+    
+
+    document.getElementById("button").classList.remove("button");
+    document.getElementById("button").classList.add("button2");
+    
+    // document.getElementById("about_section").classList.remove("hideme");
+    // document.getElementById("about_section").classList.add("involve_quick");
+
+    document.getElementById("about_page").classList.remove("hideme");
+    document.getElementById("about_page").classList.add("involve_quick");
+
+    // var y = document.getElementById("about_page");
+
+    // y.addEventListener("webkitAnimationEnd", myEndFunction2);
+    // y.addEventListener("animationend", myEndFunction2);
+
+    // document.getElementById("about_section").style.backgroundColor = "#1c1c1c";
+    document.getElementById("video_container").style.backgroundColor = "#1c1c1c";
+
+    document.getElementById("middle").classList.remove("hideme");
+
+    if (!tossed) {
+
+      // document.getElementById("video_stars").classList.add("involve_quick");
+
+      document.getElementById("first_section").classList.remove("involve_quick");
+      document.getElementById("first_section").classList.add("disolve_quick");
+
+      document.getElementById("zero").classList.remove("involve_quick");
+      document.getElementById("zero").classList.add("disolve_quick");
+
+      document.getElementById("vl").classList.remove("involve_quick");
+      document.getElementById("vl").classList.add("disolve_quick");
+
+      document.getElementById("wish").classList.remove("involve_quick");
+      document.getElementById("wish").classList.add("disolve_quick");
+
+      document.getElementById("label").classList.remove("involve_quick");
+      document.getElementById("label").classList.add("disolve_quick");
+
+      document.getElementById("seventh").classList.add("involve_quick");
+      document.getElementById("seventh").classList.remove("disolve_quick");
+
+      document.getElementById("cursor").classList.remove("cursor");
+      document.getElementById("cursor").classList.add("circle");
+
+    }
+
+    if (tossed) {
+      // window.scrollTo(0,0);
+      document.getElementById("second_section").classList.remove("involve_quick");
+      document.getElementById("second_section").classList.add("disolve_quick");
+      document.getElementById("another").classList.remove("hideme");
+      document.getElementById("another").classList.add("another");
+      document.getElementById("vl2").classList.remove("hideme");
+      document.getElementById("vl2").classList.add("vl2");
+    }
+  } 
+  
+  //Exit About page
+  if (tossed){
+    document.getElementById("button").classList.remove("button2");
+    document.getElementById("button").classList.add("button");
+
+    document.getElementById("about_page").classList.remove("involve_quick");
+    document.getElementById("about_page").classList.add("hideme");
+
+    document.getElementById("progress").style.backgroundColor = "transparent";
+    document.getElementById("video_container").style.backgroundColor = "transparent";
+
+    document.getElementById("coin_text").classList.add("hideme");
+    document.getElementById("about_text").classList.add("hideme");
+    // document.getElementById("wrapper").style.backgroundColor = "transparent";
+
+    document.getElementById("middle").classList.add("hideme");
+
+    if (!tossed) {
+      // window.scrollTo(0,0);
+
+      // document.getElementById("video_stars").classList.remove("involve_quick");
+      // document.getElementById("video_stars").classList.add("disolve_quick");
+
+      document.getElementById("first_section").classList.add("involve_quick");
+      document.getElementById("first_section").classList.remove("disolve_quick");
+
+      document.getElementById("zero").classList.add("involve_quick");
+      document.getElementById("zero").classList.remove("disolve_quick");
+
+      document.getElementById("vl").classList.add("involve_quick");
+      document.getElementById("vl").classList.remove("disolve_quick");
+
+      document.getElementById("wish").classList.add("involve_quick");
+      document.getElementById("wish").classList.remove("disolve_quick");
+
+      document.getElementById("label").classList.add("involve_quick");
+      document.getElementById("label").classList.remove("disolve_quick");
+
+      document.getElementById("seventh").classList.add("involve_quick");
+      document.getElementById("seventh").classList.add("disolve_quick");
+
+      var f = document.getElementById("zero");
+      f.addEventListener("webkitAnimationEnd", myEndFunction3);
+      f.addEventListener("animationend", myEndFunction3);
+
+      document.getElementById("cursor").classList.remove("circle");
+      document.getElementById("cursor").classList.add("cursor");
+    }
+
+    if (tossed) {
+      // window.scrollTo(0,0);
+
+      document.getElementById("second_section").classList.add("involve_quick");
+      document.getElementById("second_section").classList.remove("disolve_quick");
+      document.getElementById("vl2").classList.add("hideme");
+      document.getElementById("vl2").classList.remove("vl2");
+
+    }
+
+
+  }
+
+  window.scrollTo(0,0);
+}
+
+function toggle_subscribe() {
+  sub = !sub;
+  if (!sub){
+    document.getElementById("email").classList.add("hideme");
+  }
+  if (sub){
+    document.getElementById("email").classList.remove("hideme");
+  }
+}
+
+function reveal_about() {
+    document.getElementById("about_text").classList.remove("hideme");
+    document.getElementById("coin_text").classList.add("hideme");
+}
+
+function reveal_coin() {
+    document.getElementById("about_text").classList.add("hideme");
+    document.getElementById("coin_text").classList.remove("hideme");
 }
 
 AOS.init({
