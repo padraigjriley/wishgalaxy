@@ -15,36 +15,40 @@
 	
 	<div class="container" id="container">
 		<button class="button" onclick="button_clicked()" id="button"></button>
-		<div id="zero" class="zero"><br><br><br><br><br><br>WELCOME TO<br>THE WISH WELL</div>
+		<div id="zero" class="zero">
+			<br><br><br><br><br><br>WELCOME TO<br>THE WISH WELL
+		</div>
 		<div class="vl" id="vl"></div>
 	</div>
 
-	
-
-		
-
-		<div class="about" id="about_page">
-			<button class="button2" onclick="button_clicked()" id="button"></button>
-			<div class="side" id="left_side">01<br><hr><br><a href="https://wartherdixon.com/">WARTHER DIXON<br>ARTIST DUO</a></div>
-			<div class="middle" id="middle">
-				<div class="vl2" id="vl2"></div>
-				<a id ="another" class="hideme" href ="./index.html">MAKE ANOTHER WISH<br><br><br><br></a>
-				<h1 id="about_heading" onclick="reveal_about()">ABOUT</h1>
-				<p class ="about_text" id="about_text">THE WISH WELL IS AN ONGOING INTERACTIVE ARTWORK.<br>THE PROJECT EXPLORES...<br>BY SOUTH AFRICAN ARTIST DUO WARTHER DIXON.<br><br>TO LIVE FOREVER. A CHANCE AT HAPPINESS.<br>TO FIND LOVE. A CHANCE TO TO SAY GOODBYE.<br>WEALTH BEYOND COMPARE. FOR MORE WISHES.<br><br>YOUR WISH IS A GIFT. A WAY TO RE-EXAMINE LIFE AND<br>ITS POSSIBILITIES. THE WISH WELL IS A SPACE FOR THESE<br>POSSIBILITIES TO EXIST.<br>
-				</p>
-				<h1 id="coin_heading" onclick="reveal_coin()">COIN</h1>
-				<p class="coin_text" id="coin_text"><img src="./coin.png"></p>
-				<h1 id="galaxy_heading" onclick="reveal_galaxy()">WISH GALAXY</h1>
-				<footer class="footer">ALL RIGHTS RESERVED &copy CWWD STUDIO 2020</footer>
+	<div class="about" id="about_page">
+		<button class="button2" onclick="button_clicked()" id="button"></button>
+		<div class="side" id="left_side">
+				01<br><hr><br><a href="https://wartherdixon.com/">WARTHER DIXON<br>ARTIST DUO</a>
 		</div>
-		<div class="side" id="right_side">02<br><hr><br><a href ="https://www.instagram.com/wartherdixon/">INSTAGRAM<br></a><a class="sub" onclick="toggle_subscribe()">SUBSCRIBE<br><br></a>
-			<form class="email" id="email" target="hiddenFrame" netlify>
+		<div class="middle" id="middle">
+			<div class="vl2" id="vl2"></div>
+			<a id ="another" class="another" href ="./index.html">
+				MAKE ANOTHER WISH<br><br><br><br>
+			</a>
+			<h1 id="about_heading" onclick="reveal_about()">ABOUT</h1>
+			<p class ="about_text" id="about_text">
+				THE WISH WELL IS AN ONGOING INTERACTIVE ARTWORK.<br>THE PROJECT EXPLORES...<br>BY SOUTH AFRICAN ARTIST DUO WARTHER DIXON.<br><br>TO LIVE FOREVER. A CHANCE AT HAPPINESS.<br>TO FIND LOVE. A CHANCE TO TO SAY GOODBYE.<br>WEALTH BEYOND COMPARE. FOR MORE WISHES.<br><br>YOUR WISH IS A GIFT. A WAY TO RE-EXAMINE LIFE AND<br>ITS POSSIBILITIES. THE WISH WELL IS A SPACE FOR THESE<br>POSSIBILITIES TO EXIST.<br>
+			</p>
+			<h1 id="coin_heading" onclick="reveal_coin()">COIN</h1>
+			<p class="coin_text" id="coin_text"><img src="./coin.png"></p>
+			<h1 id="galaxy_heading" onclick="reveal_galaxy()">WISH GALAXY</h1>
+			<footer class="footer">ALL RIGHTS RESERVED &copy CWWD STUDIO 2020</footer>
+		</div>
+		<div class="side" id="right_side">
+			02<br><hr><br><a href ="https://www.instagram.com/wartherdixon/">INSTAGRAM<br></a><a class="sub" onclick="toggle_subscribe()">SUBSCRIBE<br><br></a>
+			<form class="email" id="email" target="hiddenFrame" method='post' action="/email">
 				<input class ="text" type="text" placeholder="ENTER YOUR EMAIL" name="mail" id="subscribe"><br>
 				<input class="submit" type="submit" value="SUBMIT">
 			</form>
 
 		</div>
-		</div>
+	</div>
 	
 
 	<section id="first_section">
@@ -56,7 +60,7 @@
 			<div id="sixth" class="sixth" data-aos="fade-up" data-aos-anchor="#hidden11" data-aos-anchor-placement="top-bottom">TO SAY GOODBYE</div>
 	</section>
 
-	<form class="form" id="form" target="hiddenFrame" method='post'>
+	<form class="form" id="form" target="hiddenFrame" method='post' action="/wish">
 		<label name="wish" id="label">I WISH   </label>
 		<textarea name="textarea" class="input" type="text" id="wish" autocomplete="off" maxlength="200" form="form"></textarea> 
  	</form>
@@ -64,7 +68,6 @@
 	<div id="seventh" class="seventh">CLICK TO TOSS YOUR COIN</div>
 
 	<section id="second_section" class="second_section">
-		<button class="button" onclick="button_clicked()" id="button"></button>
 		<div id="eighth" class="eighth">THE HEAVENS ARE WATCHING</div>
 		<div id="nineth" class="nineth">WITH LOVE</div>
 	</section>

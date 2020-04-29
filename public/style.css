@@ -441,7 +441,7 @@ textarea {
   position: fixed;
   left: 0;
   cursor: none;
-  pointer-events: auto;
+  pointer-events: all;
   outline: none;
   border-radius: 50%;
   -moz-border-radius:50%;

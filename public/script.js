@@ -12,6 +12,7 @@ document.getElementById("coin_text").classList.add("hideme");
 document.getElementById("vl2").classList.add("hideme");
 
 document.getElementById("middle").classList.add("hideme");
+document.getElementById("another").classList.add("hideme");
 
 window.scrollTo(0, 0);
 
@@ -82,12 +83,10 @@ function cointoss() {
   document.getElementById("video_stars").classList.remove("disolve_quick");
   document.getElementById("video_stars").classList.add("involve");
   document.getElementById('form').submit();
-
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
   document.getElementById("first_section").classList.add("hideme");
   window.scrollTo(0,0);
-  document.getElementById('second_section').classList.add('heavens');
   document.getElementById('button').classList.add('hideme');
 
   var x = document.getElementById("cursor");
@@ -126,11 +125,11 @@ function CursorEndFunction() {
   document.getElementById("image").classList.add('hidme');
   document.getElementById('button').classList.remove('hideme');
   document.getElementById('button').classList.add('heavens');
+  document.getElementById('second_section').classList.add('heavens');
 }
 
 function button_clicked(){
   bool = !bool;
-  console.log("button_clicked");
 
   // Entered About Page
   if (!bool){
@@ -139,31 +138,17 @@ function button_clicked(){
     document.getElementById("first_section").classList.add('hideme');
     document.getElementById("container").classList.add('hideme');
     document.getElementById("image").classList.add('hideme');
-    
-    
 
     document.getElementById("button").classList.remove("button");
     document.getElementById("button").classList.add("button2");
-    
-    // document.getElementById("about_section").classList.remove("hideme");
-    // document.getElementById("about_section").classList.add("involve_quick");
 
     document.getElementById("about_page").classList.remove("hideme");
     document.getElementById("about_page").classList.add("involve_quick");
-
-    // var y = document.getElementById("about_page");
-
-    // y.addEventListener("webkitAnimationEnd", myEndFunction2);
-    // y.addEventListener("animationend", myEndFunction2);
-
-    // document.getElementById("about_section").style.backgroundColor = "#1c1c1c";
+    document.getElementById("about_page").classList.add("about")
 
     document.getElementById("middle").classList.remove("hideme");
 
     if (!tossed) {
-
-      // document.getElementById("video_stars").classList.add("involve_quick");
-
       document.getElementById("first_section").classList.remove("involve_quick");
       document.getElementById("first_section").classList.add("disolve_quick");
 
@@ -179,13 +164,11 @@ function button_clicked(){
     }
 
     if (tossed) {
-      // window.scrollTo(0,0);
+      document.getElementById("second_section").classList.remove("heavens");
       document.getElementById("second_section").classList.remove("involve_quick");
       document.getElementById("second_section").classList.add("disolve_quick");
       document.getElementById("another").classList.remove("hideme");
-      document.getElementById("another").classList.add("another");
       document.getElementById("vl2").classList.remove("hideme");
-      // document.getElementById("vl2").classList.add("vl2");
     }
   } 
   
@@ -196,11 +179,13 @@ function button_clicked(){
 
     document.getElementById("about_page").classList.remove("involve_quick");
     document.getElementById("about_page").classList.add("hideme");
+    document.getElementById("about_page").classList.remove("about")
 
     document.getElementById("coin_text").classList.add("hideme");
     document.getElementById("about_text").classList.add("hideme");
-
     document.getElementById("middle").classList.add("hideme");
+
+    document.getElementById("image").classList.remove('hideme');
 
     if (!tossed) {
 
@@ -218,22 +203,17 @@ function button_clicked(){
       document.getElementById("vl").classList.add("involve_quick");
       document.getElementById("vl").classList.remove("disolve_quick");
 
-
-      // var f = document.getElementById("zero");
-      // f.addEventListener("webkitAnimationEnd", myEndFunction3);
-      // f.addEventListener("animationend", myEndFunction3);
-
       document.getElementById("cursor").classList.remove("circle");
       document.getElementById("cursor").classList.add("cursor");
     }
 
     if (tossed) {
-
-      document.getElementById("second_section").classList.add("involve_quick");
+      document.getElementById("container").classList.remove('hideme');
+      document.getElementById("button").classList.remove('heavens');
       document.getElementById("second_section").classList.remove("disolve_quick");
+      document.getElementById("second_section").classList.add("involve_quick");
       document.getElementById("vl2").classList.add("hideme");
-      // document.getElementById("vl2").classList.remove("vl2");
-
+      document.getElementById("another").classList.add("hideme");
     }
 
 

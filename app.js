@@ -28,8 +28,14 @@ app.use(bodyParser.json());
 //   client.end();
 // });
 
-app.post('/', (req, res) => {
-	console.log('Wish: ' + req.body.textarea)
+app.post('/wish', (req, res) => {
+	var wish = req.body.textarea
+	console.log('Wish: ' + wish)
+})
+
+app.post('/email', (req, res) => {
+	var email = req.body.mail
+	console.log('Email: ' + email)
 })
 
 const port = process.env.PORT || 3000;
