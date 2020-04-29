@@ -28,6 +28,17 @@ body {
     background: none;
 }
 
+a {
+  color: white; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited { text-decoration: none; color:white; }
+
 .container {
   position: relative;
   height: 100vh;
@@ -472,6 +483,9 @@ textarea {
   background-position: 50% 50%;
   background-image: radial-gradient(circle at center , white 50%, transparent 50%);
   background-repeat: no-repeat;
+  opacity: 1;
+  position: fixed;
+  z-index: 98;
 }
 
 .button2:hover {
@@ -528,6 +542,7 @@ textarea {
   border-bottom: solid white 1px;
   font-size: .9em;
   padding: 3px;
+  outline: none;
 }
 
 .sub {
@@ -554,7 +569,7 @@ textarea {
     margin-right: auto;
     flex: 1;
     overflow: hidden;
-    justify-content: center;
+    margin-top: 105px;
 }
 
 .titlething {
@@ -564,19 +579,22 @@ textarea {
 }
 
 .another {
-  top: 0;
+  margin-top: 0;
   font-size: .8em;
-    font-family: Geomanist;
-    color: white;
+  font-family: Geomanist;
+  color: white;
 }
 
 .vl2 {
   top: 0;
+  left: 0;
   border-left: 1px solid white;
-    height: 80px;
-    position: fixed;
-    margin-left: 50%;
-    bottom: 100px;
+  height: 100px;
+  width: 1px;
+  position: absolute;
+  margin-left: 50%;
+  z-index: 99;
+  opacity: 1;
 }
 
 h1 {
