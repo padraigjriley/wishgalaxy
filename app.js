@@ -1,42 +1,64 @@
 const express = require('express')
 const app = express()
-const { Client } = require("pg");
 const bodyParser = require('body-parser')
+const { Pool, Client } = require('pg')
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Parse URL-encoded bodies (as sent by HTML forms)
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true}))
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 app.use(bodyParser.json())
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
+const pool = new Pool({
+	connectionString: process.env.DATABASE_URL,
+ 	ssl: true,
 })
 
-client.connect()
+app.post('/wishss', (req, res) => {
+	var wished = req.body.textarea
+	console.log('Wish: ' + wished)
+	var wish_string = "INSERT INTO wishes(wish)VALUES('"+wished+"')"
 
-client.query('SELECT * FROM emails;', (err, res) => {
-  if (err) throw err
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row))
-  }
-  client.end()
+	pool.connect(err => {
+	if (err) {
+		console.error('connection error', err.stack)
+		} else {
+			console.log('connected to db')
+		}	
+	})
+
+	pool.query(
+	wish_string,
+	(err, res) => {
+		console.log(err, res)
+	}
+	)
 })
 
+app.post('/emailss', (req, res) => {
+	var emailed = req.body.mail
+	console.log('Email: ' + emailed)
+	var email_string = "INSERT INTO emails(email)VALUES('"+emailed+"')"
+	console.log(email_string)
 
-app.post('/wish', (req, res) => {
-	var wish = req.body.textarea
-	console.log('Wish: ' + wish)
-})
+	pool.connect(err => {
+	if (err) {
+		console.error('connection error', err.stack)
+		} else {
+			console.log('connected to db')
+		}	
+	})
 
-app.post('/email', (req, res) => {
-	var email = req.body.mail
-	console.log('Email: ' + email)
+	pool.query(
+	email_string,
+	(err, res) => {
+		console.log(err, res)
+	}
+	)
 })
 
 const port = process.env.PORT || 3000;
