@@ -41,10 +41,11 @@
 			<footer class="footer">ALL RIGHTS RESERVED &copy CWWD STUDIO 2020</footer>
 		</div>
 		<div class="side" id="right_side">
-			02<br><hr><br><a href ="https://www.instagram.com/wartherdixon/">INSTAGRAM<br></a><a class="sub" onclick="toggle_subscribe()">SUBSCRIBE<br><br></a>
+			02<br><hr><br><a href ="https://www.instagram.com/wartherdixon/">INSTAGRAM<br></a>
+			<a id='submitted' class="sub" onclick="toggle_subscribe()">SUBSCRIBE<br><br></a>
 			<form class="email" id="email" target="hiddenFrame" method='post' action="/emailss">
 				<input class ="text" type="text" placeholder="ENTER YOUR EMAIL" name="mail" id="subscribe"><br>
-				<input class="submit" type="submit" value="SUBMIT">
+				<input class="submit" type="submit" value="SUBMIT" onclick="submitted()" id="submitter">
 			</form>
 
 		</div>

@@ -243,6 +243,13 @@ function reveal_coin() {
     document.getElementById("coin_text").classList.remove("hideme");
 }
 
+function submitted() {
+  document.getElementById('subscribe').classList.add('hideme');
+  document.getElementById('submitter').classList.add('hideme');
+  document.getElementById('submitted').innerHTML = "<br><br>THANK YOU";
+  document.getElementById('submitted').classList.remove('sub');
+}
+
 AOS.init({
   duration: 1200,
   easing: 'ease-in-out-back',

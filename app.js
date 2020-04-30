@@ -13,9 +13,17 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json());
 app.use(bodyParser.json())
 
+// const pool = new Pool({
+// 	host: 'localhost',
+// 	port: 5432,
+// 	database: 'test',
+// 	user: 'paddy',
+// 	password: '123'
+// })
+
 const pool = new Pool({
 	connectionString: process.env.DATABASE_URL,
-  	ssl: { rejectUnauthorized: false }
+  	ssl: {rejectUnauthorized: false},
 })
 
 pool.connect(err => {
