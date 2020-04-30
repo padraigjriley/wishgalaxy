@@ -15,12 +15,11 @@ app.use(bodyParser.json())
 
 const pool = new Pool({
 	connectionString: process.env.DATABASE_URL,
- 	ssl: true,
+ 	ssl: { rejectUnauthorized: false }
 })
 
 app.post('/wishss', (req, res) => {
 	var wished = req.body.textarea
-	console.log('Wish: ' + wished)
 	var wish_string = "INSERT INTO wishes(wish)VALUES('"+wished+"')"
 
 	pool.connect(err => {
@@ -41,9 +40,7 @@ app.post('/wishss', (req, res) => {
 
 app.post('/emailss', (req, res) => {
 	var emailed = req.body.mail
-	console.log('Email: ' + emailed)
 	var email_string = "INSERT INTO emails(email)VALUES('"+emailed+"')"
-	console.log(email_string)
 
 	pool.connect(err => {
 	if (err) {
