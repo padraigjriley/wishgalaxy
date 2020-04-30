@@ -166,7 +166,7 @@ function button_clicked(){
     if (tossed) {
       document.getElementById("second_section").classList.remove("heavens");
       document.getElementById("second_section").classList.remove("involve_quick");
-      document.getElementById("second_section").classList.add("disolve_quick");
+      document.getElementById("second_section").classList.add("hideme");
       document.getElementById("another").classList.remove("hideme");
       document.getElementById("vl2").classList.remove("hideme");
     }
@@ -210,7 +210,7 @@ function button_clicked(){
     if (tossed) {
       document.getElementById("container").classList.remove('hideme');
       document.getElementById("button").classList.remove('heavens');
-      document.getElementById("second_section").classList.remove("disolve_quick");
+      document.getElementById("second_section").classList.remove("hideme");
       document.getElementById("second_section").classList.add("involve_quick");
       document.getElementById("vl2").classList.add("hideme");
       document.getElementById("another").classList.add("hideme");
