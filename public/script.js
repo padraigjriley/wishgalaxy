@@ -39,7 +39,7 @@ function handleWheel(e) {
       document.getElementById("button").removeAttribute("onclick");
     }
 
-  if (bool) {
+  if ((bool) && (!tossed)) {
       document.getElementById("button").style.opacity = (1 - (op_index)/20);
     }
   

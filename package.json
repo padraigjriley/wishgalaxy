@@ -11,9 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "datetime": "0.0.3",
     "express": "^4.17.1",
-    "mysql": "^2.18.1",
     "node-datetime": "^2.1.2",
     "pg": "^8.0.3",
     "psql": "0.0.1"
