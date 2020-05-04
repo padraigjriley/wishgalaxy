@@ -39,7 +39,7 @@ app.post('/wishss', (req, res) => {
 	var wished = req.body.textarea
 	console.log('Wish: ' + wished)
 	var now = new Date()
-	var wish_string = "INSERT INTO wishes(wish)VALUES('"+wished+"', '" + now + "')"
+	var wish_string = "INSERT INTO wishes(wish, date)VALUES('"+wished+"', '" + now + "')"
 
 	pool.query(
 		wish_string,
@@ -54,7 +54,7 @@ app.post('/emailss', (req, res) => {
 	var emailed = req.body.mail
 	console.log('Email: ' + emailed)
 	var now = new Date()
-	var email_string = "INSERT INTO emails(email)VALUES('"+emailed+"', '" + now + "')"
+	var email_string = "INSERT INTO emails(email, date)VALUES('"+emailed+"', '" + now + "')"
 	console.log(email_string)
 
 	pool.query(
