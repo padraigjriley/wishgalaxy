@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const { Pool, Client } = require('pg')
-var now = new Date()
+var dateTime = require('node-datetime');
+var dt = dateTime.create();
+var now = dt.format('Y-m-d H:M:S');
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -38,7 +40,8 @@ pool.connect(err => {
 app.post('/wishss', (req, res) => {
 	var wished = req.body.textarea
 	console.log('Wish: ' + wished)
-	var now = new Date()
+	var dt = dateTime.create();
+	var now = dt.format('Y-m-d H:M:S');
 	var wish_string = "INSERT INTO wishes(wish, date)VALUES('"+wished+"', '" + now + "')"
 
 	pool.query(
@@ -53,7 +56,8 @@ app.post('/wishss', (req, res) => {
 app.post('/emailss', (req, res) => {
 	var emailed = req.body.mail
 	console.log('Email: ' + emailed)
-	var now = new Date()
+	var dt = dateTime.create()
+	var now = dt.format('Y-m-d H:M:S')
 	var email_string = "INSERT INTO emails(email, date)VALUES('"+emailed+"', '" + now + "')"
 	console.log(email_string)
 
