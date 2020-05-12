@@ -681,6 +681,11 @@ hr {
   overflow: hidden;
 }
 
+.involve_quicker {
+  animation: involve_quick .5s forwards;
+  overflow: hidden;
+}
+
 .circle {
   height: 15px;
   width: 15px;

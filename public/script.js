@@ -76,6 +76,7 @@ textarea.oninput = function() {
 function cointoss() {
   tossed = true;
   document.getElementById("cursor").classList.remove("deflate");
+  document.getElementById("cursor").classList.remove("involve_quicker");
   document.getElementById("wish").classList.add("disolve");
   document.getElementById("label").classList.add("disolve");
   document.getElementById("seventh").classList.add("disolve");
@@ -160,6 +161,7 @@ function button_clicked(){
 
       document.getElementById("cursor").classList.remove("cursor");
       document.getElementById("cursor").classList.add("circle");
+      document.getElementById("cursor").classList.remove("involve_quicker");
 
     }
 
@@ -205,6 +207,7 @@ function button_clicked(){
 
       document.getElementById("cursor").classList.remove("circle");
       document.getElementById("cursor").classList.add("cursor");
+      document.getElementById("cursor").classList.add("involve_quicker");
     }
 
     if (tossed) {
@@ -267,6 +270,7 @@ function resetTimer() {
   document.getElementById('rem').innerHTML = "";
   timeout = setTimeout(function(){
     if ((bool) && (!tossed) && (progress < 300)){
+      document.getElementById('rem').style.bottom = "150px";
       document.getElementById('rem').innerHTML = "(scroll down)";
     }
     if ((bool) && (!tossed) && (progress > 300) && (op_index < 1130)){
