@@ -214,6 +214,7 @@ function button_clicked(){
       document.getElementById("second_section").classList.add("involve_quick");
       document.getElementById("vl2").classList.add("hideme");
       document.getElementById("another").classList.add("hideme");
+      document.getElementById("button").style.opacity = 1;
     }
 
 
@@ -255,3 +256,16 @@ AOS.init({
   easing: 'ease-in-out-back',
   mirror: true
 });
+
+var timeout;
+
+document.onmousemove = resetTimer;
+window.addEventListener("scroll", resetTimer);
+
+function resetTimer() {
+  clearTimeout(timeout);
+  document.getElementById('rem').innerHTML = "";
+  timeout = setTimeout(function(){
+    document.getElementById('rem').innerHTML = "(scroll down)";
+  }, 2*1000);
+}

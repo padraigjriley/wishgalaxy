@@ -703,3 +703,20 @@ hr {
   margin: 0;
   padding: 0;
 }
+
+.rem {
+  position: fixed;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 1em;
+  font-family: Geomanist;
+  color: white;
+  overflow: hidden;
+  z-index: 97;
+  pointer-events: none;
+  cursor: none;
+  bottom: 150px;
+  width: 100%;
+  justify-content: center;
+}
