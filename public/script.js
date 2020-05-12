@@ -266,6 +266,17 @@ function resetTimer() {
   clearTimeout(timeout);
   document.getElementById('rem').innerHTML = "";
   timeout = setTimeout(function(){
-    document.getElementById('rem').innerHTML = "(scroll down)";
-  }, 2*1000);
+    if ((bool) && (!tossed) && (progress < 300)){
+      document.getElementById('rem').innerHTML = "(scroll down)";
+    }
+    if ((bool) && (!tossed) && (progress > 300) && (op_index < 1130)){
+      document.getElementById('rem').style.bottom = "10px";
+      document.getElementById('rem').innerHTML = "(keep scrolling)";
+    }
+    if ((bool) && (tossed) && (op_index < 100)){
+      document.getElementById('rem').style.bottom = "10px";
+      document.getElementById('rem').innerHTML = "(scroll down)";
+    }
+    
+  }, 15*1000);
 }
