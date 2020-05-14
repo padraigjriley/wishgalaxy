@@ -71,6 +71,7 @@ a:visited { text-decoration: none; color:white; }
  content:url('./images/coin.png');
  cursor: none;
  z-index: 99;
+ opacity: 0;
 }
 
 .zero {
