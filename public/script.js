@@ -10,6 +10,8 @@ var forth = false;
 var fifth = false;
 var sixth = false;
 
+document.getElementById("image").classList.add("image");
+
 document.getElementById("email").classList.add("hideme");
 
 document.getElementById("about_page").classList.add("hideme");
