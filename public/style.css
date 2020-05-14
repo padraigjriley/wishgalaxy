@@ -86,6 +86,7 @@ a:visited { text-decoration: none; color:white; }
   font-size: 3em;
   letter-spacing: 5px;
   text-shadow: 1px 1px #3d3b35;
+  opacity: 0;
 }
 
 .vl {
@@ -97,6 +98,7 @@ a:visited { text-decoration: none; color:white; }
   pointer-events: none;
   cursor: none;
   position: absolute;
+  opacity: 0;
 }
 
 #wrapper {

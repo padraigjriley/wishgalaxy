@@ -402,5 +402,12 @@ function anim_out(cont){
     });
 }
 
-// document.getElementById("image").style.backgroundImage = "url('./images/bg.jpg')";
+function showit(){
+  console.log("hello");
+  document.getElementById("zero").classList.add("involve_quick");
+  document.getElementById("vl").classList.add("involve_quick");
+  document.getElementById("button").classList.add("involve_quick")
+}
+
+document.addEventListener("load", showit);
 
