@@ -407,6 +407,7 @@ function showit() {
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.add("involve_quick");
   document.getElementById("button").classList.add("involve_quick");
+  document.getElementById("cursor").classList.add("involve_quick")
   var y = document.getElementById("button");
   y.addEventListener("webkitAnimationEnd", buttonEndFunction);
   y.addEventListener("animationend", buttonEndFunction);
