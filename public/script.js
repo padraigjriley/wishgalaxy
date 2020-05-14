@@ -10,7 +10,7 @@ var forth = false;
 var fifth = false;
 var sixth = false;
 
-document.getElementById("image").classList.add("image");
+// document.getElementById("image").classList.add("image");
 
 document.getElementById("email").classList.add("hideme");
 
@@ -401,3 +401,6 @@ function anim_out(cont){
       delay: (el, i) => 50 * (i+1)
     });
 }
+
+// document.getElementById("image").style.backgroundImage = "url('./images/bg.jpg')";
+
