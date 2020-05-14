@@ -488,7 +488,6 @@ textarea {
   background-image: radial-gradient(circle at center , white 50%, transparent 50%);
   background-repeat: no-repeat;
   z-index: 98;
-  opacity: 1;
 }
 
 .button:hover {
@@ -755,19 +754,4 @@ hr {
   bottom: 150px;
   width: 100%;
   justify-content: center;
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 1;
-    transform: translate3d(0,0,0);
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0,-200px,0)
-  }
-}
-
-.fade-up {
-  animation: fade-up 1s forwards;
 }

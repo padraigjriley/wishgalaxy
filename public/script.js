@@ -402,12 +402,21 @@ function anim_out(cont){
     });
 }
 
-function showit(){
+function showit() {
   console.log("hello");
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.add("involve_quick");
-  document.getElementById("button").classList.add("involve_quick")
+  document.getElementById("button").classList.add("involve_quick");
+  var y = document.getElementById("button");
+  y.addEventListener("webkitAnimationEnd", buttonEndFunction);
+  y.addEventListener("animationend", buttonEndFunction);
 }
 
-document.addEventListener("load", showit);
+function buttonEndFunction() {
+  document.getElementById("button").classList.remove("involve_quick");
+  document.getElementById("zero").classList.remove("involve_quick");
+  document.getElementById("vl").classList.remove("involve_quick");
+  document.getElementById("zero").style.opacity = "1";
+  document.getElementById("vl").style.opacity = "1";
+}
 
