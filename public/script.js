@@ -3,6 +3,13 @@ var op_index = 0;
 var bool = true;
 var sub = false;
 
+var first = false;
+var second = false;
+var third = false;
+var forth = false;
+var fifth = false;
+var sixth = false;
+
 document.getElementById("email").classList.add("hideme");
 
 document.getElementById("about_page").classList.add("hideme");
@@ -19,6 +26,73 @@ window.scrollTo(0, 0);
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
+
+textwrap('.first');
+textwrap('.second');
+textwrap('.third');
+textwrap('.forth');
+textwrap('.fifth');
+textwrap('.sixth');
+
+document.addEventListener('aos:in:aos_first', ({ detail }) => {
+  first = !first;
+  if (first){
+    anim_in('.first');
+  }
+  if (!first){
+    anim_out('.first');
+  }
+});
+
+document.addEventListener('aos:in:aos_second', ({ detail }) => {
+  second = !second;
+  if (second){
+    anim_in('.second');
+  }
+  if (!second){
+    anim_out('.second');
+  }
+});
+
+document.addEventListener('aos:in:aos_third', ({ detail }) => {
+  third = !third;
+  if (third){
+    anim_in('.third');
+  }
+  if (!third){
+    anim_out('.third');
+  }
+});
+
+document.addEventListener('aos:in:aos_forth', ({ detail }) => {
+  forth = !forth;
+  if (forth){
+    anim_in('.forth');
+  }
+  if (!forth){
+    anim_out('.forth');
+  }
+});
+
+document.addEventListener('aos:in:aos_fifth', ({ detail }) => {
+  fifth = !fifth;
+  if (fifth){
+    anim_in('.fifth');
+  }
+  if (!fifth){
+    anim_out('.fifth');
+  }
+});
+
+document.addEventListener('aos:in:aos_sixth', ({ detail }) => {
+  sixth = !sixth;
+  if (sixth){
+    anim_in('.sixth');
+  }
+  if (!sixth){
+    anim_out('.sixth');
+  }
+});
 
 var progress = 0;
 window.addEventListener("scroll", handleWheel);
@@ -257,7 +331,8 @@ function submitted() {
 AOS.init({
   duration: 1200,
   easing: 'ease-in-out-back',
-  mirror: true
+  mirror: true,
+  anchorPlacement: 'top-bottom',
 });
 
 var timeout;
@@ -283,4 +358,44 @@ function resetTimer() {
     }
     
   }, 15*1000);
+}
+
+function textwrap(cont){
+  var textWrapper = document.querySelector(cont);
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+}
+
+function anim_in(cont){
+  anime.timeline({loop: false})
+      .add({
+        targets: cont + ' .letter',
+        translateY: [100,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 300 + 30 * i,
+        opacity: [0,1,0,1],
+        easing: "easeInOutQuad",
+        duration: 1400,
+        delay: (el, i) => 50 * (i+1)
+      });    
+}
+
+function anim_out(cont){
+  anime.timeline({loop: false})
+    .add({
+      targets: cont + ' .letter',
+      translateY: [0,-100],
+      translateZ: 0,
+      opacity: [1,0],
+      easing: "easeInExpo",
+      duration: 1200,
+      delay: (el, i) => 300 + 30 * i,
+      opacity: [1,0,1,0],
+      easing: "easeInOutQuad",
+      duration: 1400,
+      delay: (el, i) => 50 * (i+1)
+    });
 }

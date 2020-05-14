@@ -142,43 +142,73 @@ section {
 .first {
   margin-left: 10%;
   bottom: 30%;
-  opacity: 0;
   position: fixed;
+}
+
+.first .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
 }
 
 .second {
   margin-left: 10%;
   bottom: 30%;
-  opacity: 0;
   position: fixed;
+}
+
+.second .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
 }
 
 .third {
   margin-left: 10%;
   bottom: 30%;
-  opacity: 0;
   position: fixed;
+}
+
+.third .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
 }
 
 .forth {
   margin-left: 10%;
   bottom: 30%;
-  opacity: 0;
   position: fixed;
+}
+
+.forth .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
 }
 
 .fifth {
   margin-left: 10%;
   bottom: 30%;
-  opacity: 0;
   position: fixed;
+}
+
+.fifth .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
 }
 
 .sixth {
   margin-left: 10%;
   bottom: 30%;
-  opacity: 0;
   position: fixed;
+}
+
+.sixth .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
 }
 
 .seventh {
@@ -724,4 +754,19 @@ hr {
   bottom: 150px;
   width: 100%;
   justify-content: center;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0,-200px,0)
+  }
+}
+
+.fade-up {
+  animation: fade-up 1s forwards;
 }

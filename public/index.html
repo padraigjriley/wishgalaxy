@@ -4,11 +4,11 @@
 	<title>Wish Well</title>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="./plugins/aos.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 <link rel="icon" href="./images/coin.png">
 <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 <script src="./plugins/jquery.ripples.js"></script>
-<script src="./plugins/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <body>
 	<div class="rem" id="rem"></div>
 	<div class="cursor" id="cursor"></div>
@@ -54,12 +54,12 @@
 	
 
 	<section id="first_section">
-			<div id="first" class="first" data-aos="fade-up" data-aos-anchor="#hidden1" data-aos-anchor-placement="top-bottom">IN UNCERTAIN TIMES</div>
-			<div id="second" class="second" data-aos="fade-up" data-aos-anchor="#hidden3" data-aos-anchor-placement="top-bottom">THIS IS A SPACE FOR YOU</div>
-			<div id="third" class="third" data-aos="fade-up" data-aos-anchor="#hidden5" data-aos-anchor-placement="top-bottom">TO MAKE A WISH</div>
-			<div id="forth" class="forth" data-aos="fade-up" data-aos-anchor="#hidden7" data-aos-anchor-placement="top-bottom">OR WISH SOMEONE WELL</div>
-			<div id="fifth" class="fifth" data-aos="fade-up" data-aos-anchor="#hidden9" data-aos-anchor-placement="top-bottom">MAYBE YOU DIDN'T GET THE CHANCE</div>
-			<div id="sixth" class="sixth" data-aos="fade-up" data-aos-anchor="#hidden11" data-aos-anchor-placement="top-bottom">TO SAY GOODBYE</div>
+			<div id="first" class="first" data-aos="custom1" data-aos-id="aos_first" data-aos-anchor="#hidden1">IN UNCERTAIN TIMES</div>
+			<div id="second" class="second" data-aos="custom2" data-aos-id="aos_second" data-aos-anchor="#hidden3">THIS IS A SPACE FOR YOU</div>
+			<div id="third" class="third" data-aos="custom3" data-aos-id="aos_third" data-aos-anchor="#hidden5">TO MAKE A WISH</div>
+			<div id="forth" class="forth" data-aos="custom4" data-aos-id="aos_forth" data-aos-anchor="#hidden7">OR WISH SOMEONE WELL</div>
+			<div id="fifth" class="fifth" data-aos="custom5" data-aos-id="aos_fifth" data-aos-anchor="#hidden9">MAYBE YOU DIDN'T GET THE CHANCE</div>
+			<div id="sixth" class="sixth" data-aos="custom6" data-aos-id="aos_sixth" data-aos-anchor="#hidden11">TO SAY GOODBYE</div>
 	</section>
 
 	<form class="form" id="form" target="hiddenFrame" method='post' action="/wishss">
@@ -101,6 +101,7 @@
 	</div>
 	<iframe name="hiddenFrame" class="hideme"></iframe>
 
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="ripple_script.js"></script>
 	<script type="text/javascript" src="cursor_script.js"></script>
