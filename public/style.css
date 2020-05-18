@@ -650,16 +650,10 @@ h1:hover{
 p {
     display: flex;
     text-align: center;
-    font-size: 5em;
     font-family: Geomanist;
+    font-size: .8em;
     color: white;
-    width: 100%;
     overflow: hidden;
-}
-
-.about_text {
-  font-size: 1em;
-  overflow: hidden;
 }
 
 footer {
@@ -735,10 +729,21 @@ hr {
 }
 
 .coin_text {
+  width: 100%;
   text-align: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  text-align: center;
+  font-family: Geomanist;
+  font-size: .8em;
+  color: white;
+  overflow: hidden;
+}
+
+.coin_text img {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
 }
 
 .rem {

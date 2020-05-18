@@ -446,7 +446,7 @@ function reveal_galaxy(){
   document.getElementById("button").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.add("involve_quick");
-  document.getElementById("about_page").classList.add("hideme");
+  document.getElementById("about_page").classList.add("disolve");
   document.getElementById("about_page").classList.remove("about")
   document.getElementById("about_page").classList.remove("involve_quick");
   document.getElementById("eighth").classList.add("hideme");
