@@ -776,18 +776,20 @@ hr {
   width: 15%;
   justify-content: center;
   text-align: center;
-  opacity: .45;
+  opacity: .35;
   font-size: 1.2em;
   font-family: Geomanist;
   color: white;
   text-shadow: 1px 1px #3d3b35;
   pointer-events: all;
   cursor: none;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
 }
 
 .wish:hover {
   opacity: 1;
-  font-size: 1.3em;
+  transform: scale(1.2,1.2);
 }
 
 .wish1 {
