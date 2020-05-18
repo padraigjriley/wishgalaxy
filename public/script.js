@@ -417,6 +417,8 @@ function buttonEndFunction() {
   document.getElementById("button").classList.remove("involve_quick");
   document.getElementById("zero").classList.remove("involve_quick");
   document.getElementById("vl").classList.remove("involve_quick");
+  document.getElementById("cursor").classList.remove("involve_quick");
+  document.getElementById("cursor").style.opacity = "1";
   document.getElementById("zero").style.opacity = "1";
   document.getElementById("vl").style.opacity = "1";
   document.getElementById("button").style.opacity = "1";
