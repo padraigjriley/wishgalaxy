@@ -757,3 +757,83 @@ hr {
   width: 100%;
   justify-content: center;
 }
+
+.wish_galaxy {
+  top: 0;
+  right: 0;
+  color: white;
+  z-index: 59;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  cursor: none;
+  pointer-events: all;
+}
+
+.wish {
+  z-index: 59;
+  width: 15%;
+  justify-content: center;
+  text-align: center;
+  opacity: .45;
+  font-size: 1.2em;
+  font-family: Geomanist;
+  color: white;
+  text-shadow: 1px 1px #3d3b35;
+  pointer-events: all;
+  cursor: none;
+}
+
+.wish:hover {
+  opacity: 1;
+  font-size: 1.3em;
+}
+
+.wish1 {
+  position: fixed;
+  margin-left: 10%;
+  margin-top: 17%;
+}
+
+.wish2 {
+  position: fixed;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.wish3 {
+  position: fixed;
+  margin-left: 78%;
+  margin-top: 20%;
+}
+
+.wish4 {
+  position: fixed;
+  margin-left: 37%;
+  margin-top: 25%;
+}
+
+.wish5 {
+  position: fixed;
+  margin-left: 60%;
+  margin-top: 10%;
+}
+
+.wish6 {
+  position: fixed;
+  margin-left: 15%;
+  margin-top: 35%;
+}
+
+.wish7 {
+  position: fixed;
+  margin-left: 40%;
+  margin-top: 10%;
+}
+
+.wish8 {
+  position: fixed;
+  margin-left: 70%;
+  margin-top: 40%;
+}

@@ -10,6 +10,8 @@ var forth = false;
 var fifth = false;
 var sixth = false;
 
+var galaxy = false;
+
 // document.getElementById("image").classList.add("image");
 
 document.getElementById("email").classList.add("hideme");
@@ -124,10 +126,16 @@ function handleWheel(e) {
     document.getElementById("form").style.opacity = ((op_index-1130)/100);     
   }
 
-  if (tossed) {
+  if ((tossed) && (op_index<400) && !galaxy) {
     document.getElementById('nineth').style.opacity = ((op_index-300)/100);
     document.getElementById("video_space2").style.opacity = ((op_index-100)/1000);
     document.getElementById('eighth').style.opacity = (1-(op_index-100)/100);
+  }
+
+  if ((tossed) && (op_index > 500) && !galaxy){
+    document.getElementById('wish_galaxy').style.opacity = ((op_index-600)/100);
+    document.getElementById("video_space2").style.opacity = ((op_index-100)/1000);
+    document.getElementById('nineth').style.opacity = (1-(op_index-500)/100);
   }
 
   document.getElementById("video_stars").style.opacity = Math.min(((op_index-1130)/800), 0.1);
@@ -165,6 +173,7 @@ function cointoss() {
   document.getElementById("first_section").classList.add("hideme");
   window.scrollTo(0,0);
   document.getElementById('button').classList.add('hideme');
+  document.getElementById('wish_galaxy').classList.remove('hideme');
 
   var x = document.getElementById("cursor");
   x.addEventListener("webkitAnimationEnd", CursorEndFunction);
@@ -172,7 +181,7 @@ function cointoss() {
 }
 
 document.addEventListener("click",function(e){
-    if (op_index > 1130){
+    if ((op_index > 1130) && (!galaxy)){
       cointoss();
     }
     if (bool){
@@ -225,6 +234,8 @@ function button_clicked(){
     document.getElementById("about_page").classList.add("about")
 
     document.getElementById("middle").classList.remove("hideme");
+
+    document.getElementById("wish_galaxy").classList.add("hideme");
 
     if (!tossed) {
       document.getElementById("first_section").classList.remove("involve_quick");
@@ -285,6 +296,8 @@ function button_clicked(){
       document.getElementById("cursor").classList.remove("circle");
       document.getElementById("cursor").classList.add("cursor");
       document.getElementById("cursor").classList.add("involve_quicker");
+
+      window.scrollTo(0,0);
     }
 
     if (tossed) {
@@ -295,12 +308,12 @@ function button_clicked(){
       document.getElementById("vl2").classList.add("hideme");
       document.getElementById("another").classList.add("hideme");
       document.getElementById("button").style.opacity = 1;
+      document.getElementById("wish_galaxy").classList.remove("hideme");
+      document.getElementById("wish_galaxy").style.opacity = 0;
     }
 
 
   }
-
-  window.scrollTo(0,0);
 }
 
 function toggle_subscribe() {
@@ -404,7 +417,6 @@ function anim_out(cont){
 }
 
 function showit() {
-  console.log("hello");
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.add("involve_quick");
   document.getElementById("button").classList.add("involve_quick");
@@ -423,5 +435,26 @@ function buttonEndFunction() {
   document.getElementById("zero").style.opacity = "1";
   document.getElementById("vl").style.opacity = "1";
   document.getElementById("button").style.opacity = "1";
+}
+
+function reveal_galaxy(){
+  galaxy = true;
+  document.getElementById("button").setAttribute("onclick", "button_clicked()");
+  document.getElementById("button").classList.remove("button2");
+  document.getElementById("button").classList.add("button");
+  document.getElementById("container").classList.remove("hideme");
+  document.getElementById("button").classList.remove("hideme");
+  document.getElementById("wish_galaxy").classList.remove("hideme");
+  document.getElementById("wish_galaxy").classList.add("involve_quick");
+  document.getElementById("about_page").classList.add("hideme");
+  document.getElementById("about_page").classList.remove("about")
+  document.getElementById("about_page").classList.remove("involve_quick");
+  document.getElementById("eighth").classList.add("hideme");
+  document.getElementById("nineth").classList.add("hideme");
+  document.getElementById("image").classList.add("hideme");
+  document.getElementById("video_space2").style.opacity = 1;
+  tossed = true;
+  bool = true;
+  window.scrollTo(0,document.body.scrollHeight);
 }
 
