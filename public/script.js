@@ -182,6 +182,7 @@ document.addEventListener("click",function(e){
 
 document.addEventListener("mousedown",function(e){
    if ((op_index < 1130) && (!tossed) && (bool)){
+      document.getElementById("cursor").classList.remove("involve_quicker")
       document.getElementById("cursor").classList.remove("deflate");
       document.getElementById("cursor").classList.add("expand");
     }
