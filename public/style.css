@@ -425,12 +425,12 @@ textarea {
 
 .heavens {
   animation: heavenAnim 4s forwards;
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
 
 .heavens2 {
   animation: heavenAnim 4s forwards;
-  animation-delay: 3s;
+  animation-delay: 5s;
 }
 
 @keyframes heavenAnim {
@@ -466,8 +466,8 @@ textarea {
   border-radius: 50%;
   background-color: white;
   border: none;
-  padding: 20px;
-  margin: 5px;
+  /*padding: 20px;
+  margin: 5px;*/
   -mox-box-shadow: 0 0 5px white;
   -webkit-box-shadow: 0 0 5px white;
   box-shadow: 0 0 5px white;

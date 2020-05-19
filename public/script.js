@@ -146,6 +146,7 @@ function handleWheel(e) {
     scroll = !scroll;
     document.getElementById('seventh').classList.add('involve');
     document.getElementById('form').classList.add('involve');
+    wisher = true;
     seventh = true;
   }
 
@@ -165,13 +166,6 @@ function handleWheel(e) {
 
   if (op_index > 1500){
     window.scrollTo(0,0);
-  }
-
-  if (op_index > 1700){
-    wisher = true;
-  }
-  else {
-    wisher = false;
   }
 
   // document.getElementById("video_stars").style.opacity = Math.min(((op_index-1600)/800), 0.1);
