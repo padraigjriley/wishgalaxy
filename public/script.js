@@ -9,6 +9,7 @@ var third = false;
 var forth = false;
 var fifth = false;
 var sixth = false;
+var seventh = false;
 
 var galaxy = false;
 var about = false;
@@ -17,6 +18,11 @@ var coin = false;
 var opac = false;
 
 var wisher = false;
+
+var scroll = false;
+
+var animated_in = false;
+var animated_out = false;
 
 document.getElementById("email").classList.add("hideme");
 document.getElementById("second_section").classList.add("hideme");
@@ -42,138 +48,6 @@ textwrap('.forth');
 textwrap('.fifth');
 textwrap('.sixth');
 
-document.addEventListener('aos:in:aos_first', ({ detail }) => {
-  first = !first;
-  if (first){
-    anim_in('.first');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.remove('hideme');
-  }
-  if (!first){
-    anim_out('.first');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.remove('hideme');
-  }
-});
-
-document.addEventListener('aos:in:aos_second', ({ detail }) => {
-  second = !second;
-  if (second){
-    anim_in('.second');
-    document.getElementById('second').classList.remove('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-  if (!second){
-    anim_out('.second');
-    document.getElementById('second').classList.remove('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-});
-
-document.addEventListener('aos:in:aos_third', ({ detail }) => {
-  third = !third;
-  if (third){
-    anim_in('.third');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('third').classList.remove('hideme');
-  }
-  if (!third){
-    anim_out('.third');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.remove('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-});
-
-document.addEventListener('aos:in:aos_forth', ({ detail }) => {
-  forth = !forth;
-  if (forth){
-    anim_in('.forth');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.remove('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-  if (!forth){
-    anim_out('.forth');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.remove('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-});
-
-document.addEventListener('aos:in:aos_fifth', ({ detail }) => {
-  fifth = !fifth;
-  if (fifth){
-    anim_in('.fifth');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.remove('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-  if (!fifth){
-    anim_out('.fifth');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.remove('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-});
-
-document.addEventListener('aos:in:aos_sixth', ({ detail }) => {
-  sixth = !sixth;
-  if (sixth){
-    anim_in('.sixth');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.remove('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-  if (!sixth){
-    anim_out('.sixth');
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.remove('hideme');
-    document.getElementById('first').classList.add('hideme');
-  }
-});
-
 var progress = 0;
 window.addEventListener("scroll", handleWheel);
 function handleWheel(e) {
@@ -181,54 +55,113 @@ function handleWheel(e) {
 
   op_index = Math.round((progress/1000)*100);
 
-  document.getElementById("zero").style.opacity = (1 - (op_index)/20);
-  
-  document.getElementById("vl").style.opacity = (1 - (op_index)/20);
-
-  if (progress < 300) {
-      document.getElementById('second').classList.add('hideme');
-      document.getElementById('third').classList.add('hideme');
-      document.getElementById('forth').classList.add('hideme');
-      document.getElementById('fifth').classList.add('hideme');
-      document.getElementById('sixth').classList.add('hideme');
-      document.getElementById('first').classList.add('hideme');
-      document.getElementById("button").setAttribute("onclick", "button_clicked()");
-    }
-
-  if ((progress > 300) && (bool) && (!tossed)){
-      document.getElementById("button").removeAttribute("onclick");
-    }
-
-  if ((bool) && (!tossed)) {
-      document.getElementById("button").style.opacity = (1 - (op_index)/20);
-    }
-  
-  if (!tossed) {    
-    document.getElementById("seventh").style.opacity = ((op_index-1800)/100);
-    document.getElementById("form").style.opacity = ((op_index-1800)/100);     
+  if ((!scroll) && (!animated_in) && (!animated_out) && (!first)){
+    scroll = !scroll;
+    anim_in('.first');
+    document.getElementById("zero").classList.add('disolve_quick');
+    document.getElementById("vl").classList.add('disolve_quick');
+    document.getElementById("button").classList.add('disolve_quick');
+    document.getElementById("button").removeAttribute("onclick");
   }
 
-  if (op_index > 1800){
-    document.getElementById('second').classList.add('hideme');
-    document.getElementById('third').classList.add('hideme');
-    document.getElementById('forth').classList.add('hideme');
-    document.getElementById('fifth').classList.add('hideme');
-    document.getElementById('sixth').classList.add('hideme');
-    document.getElementById('first').classList.add('hideme');
+  if ((scroll) && (animated_in) && (!animated_out) && (!first)){
+    scroll = !scroll;
+    anim_out('.first');
+    first = true;
   }
 
-  // if ((tossed) && (op_index<400) && !galaxy) {
-  //   document.getElementById('nineth').style.opacity = ((op_index-300)/100);
-  //   document.getElementById("video_space2").style.opacity = ((op_index-100)/1000);
-  //   document.getElementById('eighth').style.opacity = (1-(op_index-100)/100);
+  //////////////////////////////
+
+  if ((!scroll) && (animated_in) && (animated_out) && first && !second){
+    scroll = !scroll;
+    anim_in('.second');
+  }
+
+  if ((scroll) && (!animated_in) && (animated_out) && first && !second){
+    scroll = !scroll;
+    anim_out('.second');
+    second = true;
+  }
+
+  /////////////////////////////////////
+
+   if ((!scroll) && (!animated_in) && (!animated_out) && (!third) && second){
+    scroll = !scroll;
+    anim_in('.third');
+  }
+
+  if ((scroll) && (animated_in) && (!animated_out) && (!third) && second){
+    scroll = !scroll;
+    anim_out('.third');
+    third = true;
+  }
+
+  ////////////////////////////////////
+
+  if ((!scroll) && (animated_in) && (animated_out) && (!forth) && third){
+    scroll = !scroll;
+    anim_in('.forth');
+  }
+
+  if ((scroll) && (!animated_in) && (animated_out) && (!forth) && third){
+    scroll = !scroll;
+    anim_out('.forth');
+    forth = true;
+  }
+
+  /////////////////////////////////
+
+  if ((!scroll) && (!animated_in) && (!animated_out) && (!fifth) && forth){
+    scroll = !scroll;
+    anim_in('.fifth');
+  }
+
+  if ((scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
+    scroll = !scroll;
+    anim_out('.fifth');
+    fifth = true;
+  }
+
+  /////////////////////////////////
+
+  if ((!scroll) && (animated_in) && (animated_out) && (!sixth) && fifth){
+    scroll = !scroll;
+    anim_in('.sixth');
+  }
+
+  if ((scroll) && (!animated_in) && (animated_out) && (!sixth) && fifth){
+    scroll = !scroll;
+    anim_out('.sixth');
+    document.getElementById("video_stars").classList.add("cheekyfade");
+    sixth = true;
+  }
+
+  ////////////////////////////////
+
+  if ((!scroll) && (!animated_in) && (!animated_out) && (sixth)){
+    scroll = !scroll;
+    document.getElementById('seventh').classList.add('involve');
+    document.getElementById('form').classList.add('involve');
+    seventh = true;
+  }
+
+
+  // if ((progress > 300) && (bool) && (!tossed)){
+  //     document.getElementById("button").removeAttribute("onclick");
+  //   }
+
+  // if ((bool) && (!tossed)) {
+  //     document.getElementById("button").style.opacity = (1 - (op_index)/20);
+  //   }
+  
+  // if (!tossed) {    
+  //   document.getElementById("seventh").style.opacity = ((op_index-1800)/100);
+  //   document.getElementById("form").style.opacity = ((op_index-1800)/100);     
   // }
 
-  // if ((tossed) && !galaxy && opac){
-  //   document.getElementById('wish_galaxy').style.opacity = ((op_index-100)/100);
-  //   document.getElementById("video_space2").style.opacity = ((op_index)/1000);
-  //   document.getElementById('eighth').style.opacity = (1-(op_index)/100);
-  //   document.getElementById('nineth').style.opacity = (1-(op_index)/100);
-  // }
+  if (op_index > 1500){
+    window.scrollTo(0,0);
+  }
 
   if (op_index > 1700){
     wisher = true;
@@ -237,8 +170,9 @@ function handleWheel(e) {
     wisher = false;
   }
 
-  document.getElementById("video_stars").style.opacity = Math.min(((op_index-1600)/800), 0.1);
+  // document.getElementById("video_stars").style.opacity = Math.min(((op_index-1600)/800), 0.1);
 }
+
 
 var cursorFocus = function(elm) {
   var x = window.scrollX, y = window.scrollY;
@@ -266,13 +200,16 @@ function cointoss() {
   document.getElementById("seventh").classList.add("disolve");
   document.getElementById("cursor").classList.add("shrink");
   document.getElementById("video_stars").classList.remove("disolve_quick");
+  document.getElementById("video_stars").classList.remove("cheekyfade");
   document.getElementById("video_stars").classList.add("involve");
   document.getElementById('form').submit();
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
   document.getElementById("first_section").classList.add("hideme");
   window.scrollTo(0,0);
-  document.getElementById('button').classList.add('hideme');
+  document.getElementById("button").setAttribute("onclick", "button_clicked()");
+  document.getElementById('button').classList.remove('disolve_quick');
+  document.getElementById("button").style.opacity = 0;
   document.getElementById('wish_galaxy').classList.remove('hideme');
   document.getElementById('second_section').classList.remove('hideme');
 
@@ -292,7 +229,7 @@ function cointoss() {
 }
 
 document.addEventListener("click",function(e){
-    if ((op_index > 1130) && (!galaxy)){
+    if ((seventh) && (!galaxy)){
       cointoss();
     }
     if (bool){
@@ -301,7 +238,7 @@ document.addEventListener("click",function(e){
 });
 
 document.addEventListener("mousedown",function(e){
-   if ((op_index < 1130) && (!tossed) && (bool)){
+   if ((!tossed) && (bool) && (!galaxy)){
       document.getElementById("cursor").classList.remove("involve_quicker")
       document.getElementById("cursor").classList.remove("deflate");
       document.getElementById("cursor").classList.add("expand");
@@ -309,7 +246,7 @@ document.addEventListener("mousedown",function(e){
 });
 
 document.addEventListener("mouseup",function(e){
-   if ((op_index < 1130) && (!tossed) && (bool)){
+   if ((!galaxy) && (!tossed) && (bool)){
       document.getElementById("cursor").classList.remove("expand");
       document.getElementById("cursor").classList.add("deflate");
     }
@@ -324,6 +261,7 @@ function CursorEndFunction() {
 }
 
 function HeavensEndFunction() {
+  document.getElementById("image").classList.add("hideme");
   document.getElementById("eighth").classList.remove("heavens");
   document.getElementById("nineth").classList.remove("heavens2");
   document.getElementById("eighth").classList.add("disolve");
@@ -350,18 +288,23 @@ function button_clicked(){
     document.getElementById("container").classList.add('hideme');
     document.getElementById("first_section").classList.add('hideme');
     document.getElementById("container").classList.add('hideme');
-    document.getElementById("image").classList.add('hideme');
+    // document.getElementById("image").classList.add('hideme');
 
     document.getElementById("button").classList.remove("button");
     document.getElementById("button").classList.add("button2");
 
     document.getElementById("about_page").classList.remove("hideme");
     document.getElementById("about_page").classList.add("involve_quick");
-    document.getElementById("about_page").classList.add("about")
+    document.getElementById("about_page").classList.add("about");
+
+    about = true;
+    coin = true;
+    reveal_about();
+    reveal_coin();
 
     document.getElementById("middle").classList.remove("hideme");
 
-    document.getElementById("wish_galaxy").classList.add("hideme");
+    document.getElementById("wish_galaxy").classList.add("disolve_quick");
 
     if (!tossed) {
       document.getElementById("first_section").classList.remove("involve_quick");
@@ -400,8 +343,8 @@ function button_clicked(){
     document.getElementById("button").classList.add("button");
 
     document.getElementById("about_page").classList.remove("involve_quick");
-    document.getElementById("about_page").classList.add("hideme");
-    document.getElementById("about_page").classList.remove("about")
+    // document.getElementById("about_page").classList.add("hideme");
+    // document.getElementById("about_page").classList.remove("about")
 
     document.getElementById("coin_text").classList.add("hideme");
     document.getElementById("about_text").classList.add("hideme");
@@ -439,6 +382,12 @@ function button_clicked(){
       document.getElementById("another").classList.add("hideme");
       document.getElementById("button").style.opacity = 1;
       document.getElementById("wish_galaxy").classList.remove("hideme");
+    }
+
+    if (galaxy) {
+      document.getElementById("about_page").classList.add("disolve_quick");
+      document.getElementById("wish_galaxy").classList.add("involve_quick");
+      document.getElementById("video_space2").classList.add("involve_quick");
     }
 
 
@@ -536,7 +485,10 @@ function anim_in(cont){
         opacity: [0,1,0,1],
         easing: "easeInOutQuad",
         duration: 1400,
-        delay: (el, i) => 50 * (i+1)
+        delay: (el, i) => 50 * (i+1),
+        complete: function() {
+          animated_in = !animated_in;
+        }
       });    
 }
 
@@ -549,7 +501,10 @@ function anim_out(cont){
       opacity: [1,0],
       easing: "easeInExpo",
       duration: 750,
-      delay: (el, i) => 300 + 30 * i
+      delay: (el, i) => 300 + 30 * i,
+      complete: function() {
+          animated_out = !animated_out;
+        }
     });
 }
 
@@ -583,15 +538,18 @@ function reveal_galaxy(){
   document.getElementById("container").classList.remove("hideme");
   document.getElementById("button").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.remove("hideme");
-  document.getElementById("wish_galaxy").classList.add("involve_quick");
-  document.getElementById("about_page").classList.add("disolve");
-  document.getElementById("about_page").classList.remove("about")
+  document.getElementById("wish_galaxy").classList.remove("disolve_quick");
+  document.getElementById("wish_galaxy").classList.add("involve");
+  // document.getElementById("about_page").classList.add("disolve");
+  // document.getElementById("about_page").classList.remove("about");
   document.getElementById("about_page").classList.remove("involve_quick");
   document.getElementById("eighth").classList.add("hideme");
   document.getElementById("nineth").classList.add("hideme");
   document.getElementById("image").classList.add("hideme");
-  document.getElementById("video_space2").style.opacity = 1;
-  document.getElementById("about_page").classList.add("hideme");
+  document.getElementById("video_space2").classList.add("involve_quick");
+  // document.getElementById("about_page").classList.add("hideme");
+  document.getElementById("zero").classList.add("hideme");
+  document.getElementById("vl").classList.add("hideme");
   tossed = true;
   bool = true;
   window.scrollTo(0,document.body.scrollHeight);

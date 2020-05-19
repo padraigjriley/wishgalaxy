@@ -30,6 +30,11 @@ body {
     background: none;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 a {
   color: white; /* Inherit text color of parent element. */
   text-decoration: none; /* Remove underline. */
@@ -625,6 +630,7 @@ textarea {
   font-family: Geomanist;
   color: white;
   position: absolute;
+  letter-spacing: 2px;
 }
 
 .vl2 {
@@ -800,19 +806,19 @@ hr {
 
 .wish:hover {
   opacity: 1;
-  transform: scale(1.2,1.2);
+  /*transform: scale(1.2,1.2);*/
 }
 
 .wish_outer {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .wish_mid {
-  font-size: .9em;
+  font-size: .8em;
 }
 
 .wish_inner {
-  font-size: .7em;
+  font-size: .6em;
 }
 
 .wish1 {
@@ -920,4 +926,18 @@ hr {
   position: fixed;
   margin-left: 5%;
   margin-top: 40%;
+}
+
+
+.cheekyfade {
+  animation: cheekyfade 2s forwards;
+}
+
+@keyframes cheekyfade {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
 }
