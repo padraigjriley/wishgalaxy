@@ -16,6 +16,8 @@ var coin = false;
 
 var opac = false;
 
+var wisher = false;
+
 document.getElementById("email").classList.add("hideme");
 document.getElementById("second_section").classList.add("hideme");
 document.getElementById("about_page").classList.add("hideme");
@@ -202,11 +204,11 @@ function handleWheel(e) {
     }
   
   if (!tossed) {    
-    document.getElementById("seventh").style.opacity = ((op_index-1500)/100);
-    document.getElementById("form").style.opacity = ((op_index-1500)/100);     
+    document.getElementById("seventh").style.opacity = ((op_index-1800)/100);
+    document.getElementById("form").style.opacity = ((op_index-1800)/100);     
   }
 
-  if (op_index > 1500){
+  if (op_index > 1800){
     document.getElementById('second').classList.add('hideme');
     document.getElementById('third').classList.add('hideme');
     document.getElementById('forth').classList.add('hideme');
@@ -228,7 +230,14 @@ function handleWheel(e) {
   //   document.getElementById('nineth').style.opacity = (1-(op_index)/100);
   // }
 
-  document.getElementById("video_stars").style.opacity = Math.min(((op_index-1300)/800), 0.1);
+  if (op_index > 1700){
+    wisher = true;
+  }
+  else {
+    wisher = false;
+  }
+
+  document.getElementById("video_stars").style.opacity = Math.min(((op_index-1600)/800), 0.1);
 }
 
 var cursorFocus = function(elm) {
@@ -501,11 +510,11 @@ function resetTimer() {
   document.getElementById('rem').classList.remove("involve_quick");
   document.getElementById('rem').innerHTML = "";
   timeout = setTimeout(function(){
-    if ((bool) && (!tossed)){
+    if ((bool) && (!tossed) && (!wisher)){
       document.getElementById('rem').classList.remove("disolve_quick");
       document.getElementById('rem').classList.add("involve_quick");
     }
-  }, 8*1000);
+  }, 5*1000);
 }
 
 function textwrap(cont){
