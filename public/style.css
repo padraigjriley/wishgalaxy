@@ -789,7 +789,7 @@ hr {
   width: 15%;
   justify-content: center;
   text-align: center;
-  opacity: 1;
+  opacity: .2;
   font-family: Geomanist;
   color: white;
   pointer-events: all;
