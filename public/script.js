@@ -24,6 +24,10 @@ var scroll = false;
 var animated_in = false;
 var animated_out = false;
 
+var randombgs=["./images/bg/bg1.jpg", "./images/bg/bg2.jpg", "./images/bg/bg3.jpg", "./images/bg/bg4.jpg", "./images/bg/bg5.jpg", "./images/bg/bg6.jpg", "./images/bg/bg7.jpg", "./images/bg/bg8.jpg", "./images/bg/bg9.jpg", "./images/bg/bg10.jpg", "./images/bg/bg11.jpg", "./images/bg/bg12.jpg", "./images/bg/bg13.jpg", "./images/bg/bg14.jpg", "./images/bg/bg15.jpg", "./images/bg/bg16.jpg", "./images/bg/bg17.jpg", "./images/bg/bg18.jpg", "./images/bg/bg19.jpg"]
+var randnum = Math.floor(Math.random()*randombgs.length);
+document.getElementById("image").style.backgroundImage = 'url("'+randombgs[randnum]+'")';
+
 document.getElementById("email").classList.add("hideme");
 document.getElementById("second_section").classList.add("hideme");
 document.getElementById("about_page").classList.add("hideme");
