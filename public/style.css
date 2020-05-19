@@ -4,7 +4,9 @@ body {
   margin-right:0px;
   padding: 0px;
   margin: 0px;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  /*overflow-y: s;*/
 }
 
 @font-face {
@@ -46,6 +48,7 @@ a:visited { text-decoration: none; color:white; }
   pointer-events: none;
   cursor: none;
   z-index: 60;
+  overflow: hidden;
 }
 
 .image {
@@ -86,7 +89,6 @@ a:visited { text-decoration: none; color:white; }
   width: 100%;
   font-size: 3em;
   letter-spacing: 5px;
-  text-shadow: 1px 1px #3d3b35;
   opacity: 0;
 }
 
@@ -102,28 +104,27 @@ a:visited { text-decoration: none; color:white; }
   opacity: 0;
 }
 
-#wrapper {
-  height: 13000px;
+.wrapper {
+  height: 16000px;
+  width: 100%;
   position: relative;
-  top: 10;
   margin: 0;
   padding: 0;
-  cursor: none;
   z-index: 9;
   overflow: hidden;
   pointer-events: none;
   cursor: none;
 }
 
-.wrapper {
-  overflow: hidden;
-}
-
 .hidden {
+  width: 100%;
   position: relative;
   height: 100vh;
   pointer-events: none;
   cursor: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 section {
@@ -137,7 +138,6 @@ section {
   overflow: hidden;
   pointer-events: none;
   cursor: none;
-  text-shadow: 1px 1px #3d3b35;
 }
 
 
@@ -221,23 +221,22 @@ section {
   font-size: 1.2em;
   font-family: Geomanist;
   color: white;
-  text-shadow: 1px 1px #3d3b35;
   pointer-events: none;
   cursor: none;
 }
 
 .eighth {
-  margin-left: 10%;
-  bottom: 30%;
-  /*opacity: 0;*/
+  margin-left: 5%;
+  bottom: 40%;
+  opacity: 0;
   position: fixed;
   pointer-events: none;
   cursor: none;
 }
 
 .nineth {
-  margin-left: 10%;
-  bottom: 30%;
+  margin-left: 50%;
+  bottom: 25%;
   opacity: 0;
   position: fixed;
   pointer-events: none;
@@ -255,7 +254,6 @@ section {
   bottom: 30%;
   pointer-events: none;
   cursor: none;
-  text-shadow: 1px 1px #3d3b35;
 }
 
 label {
@@ -289,7 +287,6 @@ textarea {
   z-index: 40;
   pointer-events: none;
   cursor: none;
-  text-shadow: 1px 1px #3d3b35;
   opacity: 1;
 }
 
@@ -305,7 +302,7 @@ textarea {
   cursor: none;
   }
 
-  #video_stars {
+#video_stars {
   z-index: 3; 
   position: fixed;
   right: 0;
@@ -334,7 +331,7 @@ textarea {
 .second_section {
   width: 100%;
   height: 100vh;
-  opacity: 0;
+  /*opacity: 0;*/
   position: fixed;
   z-index: 5;
   animation-delay: 1.5s;
@@ -422,7 +419,13 @@ textarea {
 }
 
 .heavens {
-  animation: heavenAnim 10s forwards;
+  animation: heavenAnim 4s forwards;
+  animation-delay: 1s;
+}
+
+.heavens2 {
+  animation: heavenAnim 4s forwards;
+  animation-delay: 3s;
 }
 
 @keyframes heavenAnim {
@@ -549,7 +552,8 @@ textarea {
 .side {
     display: block;
     text-align: center;
-    font-size: 1em;
+    font-size: .8em;
+    letter-spacing: 2px;
     font-family: Geomanist;
     color: white;
     margin: 30px;
@@ -585,7 +589,7 @@ textarea {
   background-color: transparent;
   border: none;
   color: white;
-  font-size: .9em;
+  font-size: 1em;
   cursor: pointer;
   padding: 3px;
 }
@@ -594,6 +598,7 @@ textarea {
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     flex-shrink: 1;
     padding: 0;
@@ -601,7 +606,8 @@ textarea {
     margin-right: auto;
     flex: 1;
     overflow: hidden;
-    margin-top: 105px;
+    margin-top: 130px;
+    letter-spacing: 2px;
 }
 
 .titlething {
@@ -611,10 +617,14 @@ textarea {
 }
 
 .another {
-  margin-top: 0;
-  font-size: .8em;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 105px;
+  font-size: .7em;
   font-family: Geomanist;
   color: white;
+  position: absolute;
 }
 
 .vl2 {
@@ -665,13 +675,13 @@ footer {
     bottom: 10px;
     text-align: center;
     align-items: center;
-    background-color: #1c1c1c;
-
+    /*background-color: #1c1c1c;*/
+    letter-spacing: 1px;
 }
 
 .footer {
   font-size: .6em;
-  background-color: #1c1c1c;
+  /*background-color: #1c1c1c;*/
 }
 
 hr {
@@ -748,20 +758,16 @@ hr {
 }
 
 .rem {
+  border-left: 1px solid white;
+  height: 100px;
   position: fixed;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  font-size: 1em;
-  font-family: Geomanist;
-  color: white;
-  overflow: hidden;
-  z-index: 97;
+  margin-left: 50%;
+  bottom: 0px;
   pointer-events: none;
   cursor: none;
-  bottom: 150px;
-  width: 100%;
-  justify-content: center;
+  position: fixed;
+  opacity: 1;
+  z-index: 97;
 }
 
 .wish_galaxy {
@@ -775,6 +781,7 @@ hr {
   opacity: 0;
   cursor: none;
   pointer-events: all;
+  overflow: hidden;
 }
 
 .wish {
@@ -782,11 +789,9 @@ hr {
   width: 15%;
   justify-content: center;
   text-align: center;
-  opacity: .35;
-  font-size: 1.2em;
+  opacity: 1;
   font-family: Geomanist;
   color: white;
-  text-shadow: 1px 1px #3d3b35;
   pointer-events: all;
   cursor: none;
   transition-duration: .2s;
@@ -798,50 +803,121 @@ hr {
   transform: scale(1.2,1.2);
 }
 
+.wish_outer {
+  font-size: 1.3em;
+}
+
+.wish_mid {
+  font-size: .9em;
+}
+
+.wish_inner {
+  font-size: .7em;
+}
+
 .wish1 {
   position: fixed;
-  margin-left: 10%;
-  margin-top: 17%;
+  margin-left: 5%;
+  margin-top: 10%;
 }
 
 .wish2 {
   position: fixed;
   margin-left: 25%;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .wish3 {
+  position: fixed;
+  margin-left: 40%;
+  margin-top: 7%;
+}
+
+.wish4 {
+  position: fixed;
+  margin-left: 60%;
+  margin-top: 6%;
+}
+.wish5 {
   position: fixed;
   margin-left: 78%;
   margin-top: 20%;
 }
 
-.wish4 {
-  position: fixed;
-  margin-left: 37%;
-  margin-top: 25%;
-}
-
-.wish5 {
-  position: fixed;
-  margin-left: 60%;
-  margin-top: 10%;
-}
 
 .wish6 {
   position: fixed;
-  margin-left: 15%;
-  margin-top: 35%;
+  margin-left: 75%;
+  margin-top: 30%;
 }
+
+
 
 .wish7 {
   position: fixed;
-  margin-left: 40%;
-  margin-top: 10%;
+  margin-left: 57%;
+  margin-top: 45%;
 }
+
+
 
 .wish8 {
   position: fixed;
-  margin-left: 70%;
+  margin-left: 35%;
+  margin-top: 40%;
+}
+
+.wish9 {
+  position: fixed;
+  margin-left: 12%;
+  margin-top: 26%;
+}
+
+.wish10 {
+  position: fixed;
+  margin-left: 27%;
+  margin-top: 12%;
+}
+
+
+.wish11 {
+  position: fixed;
+  margin-left: 51%;
+  margin-top: 13%;
+}
+
+.wish12 {
+  position: fixed;
+  margin-left: 58%;
+  margin-top: 20%;
+}
+
+.wish13 {
+  position: fixed;
+  margin-left: 51%;
+  margin-top: 25%;
+}
+
+.wish14 {
+  position: fixed;
+  margin-left: 43%;
+  margin-top: 30%;
+}
+
+.wish15 {
+  position: fixed;
+  margin-left: 24%;
+  margin-top: 21%;
+}
+
+.wish16 {
+  position: fixed;
+  margin-left: 40%;
+  margin-top: 20%;
+}
+
+.wish17 {
+  position: fixed;
+  margin-left: 5%;
   margin-top: 40%;
 }

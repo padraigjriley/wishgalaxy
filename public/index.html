@@ -24,18 +24,19 @@
 	<div class="about" id="about_page">
 		<button class="button2" onclick="button_clicked()" id="button"></button>
 		<div class="side" id="left_side">
-				01<br><hr><br><a href="https://wartherdixon.com/">WARTHER DIXON<br>ARTIST DUO</a>
+				01<br><hr><br><a href="https://wartherdixon.com/" target="_blank">WARTHER DIXON<br>ARTIST DUO</a>
 		</div>
-		<div class="middle" id="middle">
-			<div class="vl2" id="vl2"></div>
+		<div class="vl2" id="vl2"></div>
 			<a id ="another" class="another" href ="./index.html">
 				MAKE ANOTHER WISH<br><br><br><br>
 			</a>
+		<div class="middle" id="middle">
+			
 			<h1 id="about_heading" onclick="reveal_about()">ABOUT</h1>
 			<p class ="about_text" id="about_text">
-				THE WISH WELL IS AN ONGOING INTERACTIVE ARTWORK.<br>THE PROJECT EXPLORES...<br>BY SOUTH AFRICAN ARTIST DUO WARTHER DIXON.<br><br>TO LIVE FOREVER. A CHANCE AT HAPPINESS.<br>TO FIND LOVE. A CHANCE TO TO SAY GOODBYE.<br>WEALTH BEYOND COMPARE. FOR MORE WISHES.<br><br>YOUR WISH IS A GIFT. A WAY TO RE-EXAMINE LIFE AND<br>ITS POSSIBILITIES. THE WISH WELL IS A SPACE FOR THESE<br>POSSIBILITIES TO EXIST.<br>
+				THE WISH WELL IS AN ONGOING INTERACTIVE ARTWORK.<br>THE PROJECT EXPLORES...<br>BY SOUTH AFRICAN ARTIST DUO WARTHER DIXON.<br><br>TO LIVE FOREVER. A CHANCE AT HAPPINESS.<br>TO FIND LOVE. A CHANCE TO TO SAY GOODBYE.<br>WEALTH BEYOND COMPARE. FOR MORE WISHES.<br><br>YOUR WISH IS A GIFT. A WAY TO RE-EXAMINE LIFE AND<br>ITS POSSIBILITIES. THE WISH WELL IS A SPACE FOR THESE<br>POSSIBILITIES TO EXIST.<br><br><br>
 			</p>
-			<h1 id="coin_heading" onclick="reveal_coin()">COIN</h1>
+			<h1 id="coin_heading" onclick="reveal_coin()">THE COIN</h1>
 			<div class="coin_text" id="coin_text">
 				THIS IS A COIN.<br>
 				<img src="./images/coin.png">
@@ -44,7 +45,7 @@
 			<footer class="footer">ALL RIGHTS RESERVED &copy CWWD STUDIO 2020</footer>
 		</div>
 		<div class="side" id="right_side">
-			02<br><hr><br><a href ="https://www.instagram.com/wartherdixon/">INSTAGRAM<br></a>
+			02<br><hr><br><a href ="https://www.instagram.com/wartherdixon/" target="_blank">INSTAGRAM<br></a>
 			<a id='submitted' class="sub" onclick="toggle_subscribe()">SUBSCRIBE<br><br></a>
 			<form class="email" id="email" target="hiddenFrame" method='post' action="/emailss">
 				<input class ="text" type="text" placeholder="ENTER YOUR EMAIL" name="mail" id="subscribe"><br>
@@ -57,11 +58,11 @@
 
 	<section id="first_section">
 			<div id="first" class="first" data-aos="custom1" data-aos-id="aos_first" data-aos-anchor="#hidden1">IN UNCERTAIN TIMES</div>
-			<div id="second" class="second" data-aos="custom2" data-aos-id="aos_second" data-aos-anchor="#hidden3">THIS IS A SPACE FOR YOU</div>
-			<div id="third" class="third" data-aos="custom3" data-aos-id="aos_third" data-aos-anchor="#hidden5">TO MAKE A WISH</div>
-			<div id="forth" class="forth" data-aos="custom4" data-aos-id="aos_forth" data-aos-anchor="#hidden7">OR WISH SOMEONE WELL</div>
-			<div id="fifth" class="fifth" data-aos="custom5" data-aos-id="aos_fifth" data-aos-anchor="#hidden9">MAYBE YOU DIDN'T GET THE CHANCE</div>
-			<div id="sixth" class="sixth" data-aos="custom6" data-aos-id="aos_sixth" data-aos-anchor="#hidden11">TO SAY GOODBYE</div>
+			<div id="second" class="second" data-aos="custom2" data-aos-id="aos_second" data-aos-anchor="#hidden4">THIS IS A SPACE FOR YOU</div>
+			<div id="third" class="third" data-aos="custom3" data-aos-id="aos_third" data-aos-anchor="#hidden7">TO MAKE A WISH</div>
+			<div id="forth" class="forth" data-aos="custom4" data-aos-id="aos_forth" data-aos-anchor="#hidden10">OR WISH SOMEONE WELL</div>
+			<div id="fifth" class="fifth" data-aos="custom5" data-aos-id="aos_fifth" data-aos-anchor="#hidden13">MAYBE YOU DIDN'T GET THE CHANCE</div>
+			<div id="sixth" class="sixth" data-aos="custom6" data-aos-id="aos_sixth" data-aos-anchor="#hidden17">TO SAY GOODBYE</div>
 	</section>
 
 	<form class="form" id="form" target="hiddenFrame" method='post' action="/wishss">
@@ -88,17 +89,32 @@
 			<div id="hidden9" class="hidden"></div>
 			<div id="hidden10" class="hidden"></div>
 			<div id="hidden11" class="hidden"></div>
+			<div id="hidden12" class="hidden"></div>
+			<div id="hidden13" class="hidden"></div>
+			<div id="hidden14" class="hidden"></div>
+			<div id="hidden15" class="hidden"></div>
+			<div id="hidden16" class="hidden"></div>
+			<div id="hidden17" class="hidden"></div>
 	</div>
 
 	<div class="hideme wish_galaxy" id="wish_galaxy">
-		<div class ="wish wish1">PEOPLE WOULD LISTEN TO ME</div>
-		<div class ="wish wish2">1000 MORE WISHES</div>
-		<div class ="wish wish3">KINDNESS</div>
-		<div class ="wish wish4">WORLD PEACE</div>
-		<div class ="wish wish5">THAT I COULD PAY BACK MY STUDENT LOANS</div>
-		<div class ="wish wish6">THAT MY SON WOULD DO HIS HOMEWORK</div>
-		<div class ="wish wish7">TRUMP MUST QUIT AND GO HOME!</div>
-		<div class ="wish wish8">THAT I CAN GET PREGNANT</div>
+		<div class ="wish wish1 wish_outer">WORLD PEACE</div>
+		<div class ="wish wish2 wish_outer">I COULD GET PREGNANT</div>
+		<div class ="wish wish3 wish_outer">I WAS RICH</div>
+		<div class ="wish wish4 wish_outer">FOR 10000 MORE WISHES</div>
+		<div class ="wish wish5 wish_outer">TRUMP MUST QUIT AND GO HOME</div>
+		<div class ="wish wish6 wish_outer">I COULD GET A PROMOTION</div>
+		<div class ="wish wish7 wish_outer">FOR A NEW CAR</div>
+		<div class ="wish wish8 wish_outer">MY SON WOULD DO HIS HOMEWORK</div>
+		<div class ="wish wish9 wish_outer">FOR HAPPINESS</div>
+		<div class ="wish wish10 wish_mid">MY MOMS CANCER WOULD GO AWAY</div>
+		<div class ="wish wish11 wish_mid">COVID-19 WOULD GO AWAY</div>
+		<div class ="wish wish12 wish_mid">PEOPLE WOULD BE NICER TO EACH OTHER</div>
+		<div class ="wish wish13 wish_mid">I COULD GET FIT FOR SUMMER</div>
+		<div class ="wish wish14 wish_mid">FOR A MILLION RAND!</div>
+		<div class ="wish wish15 wish_mid">MY DOG NEVER DIES</div>
+		<div class ="wish wish16 wish_inner">FOR LOVE</div>
+		<div class ="wish wish17 wish_outer">I HAD MORE FRIENDS</div>
 	</div>
 
 	<div class="video_container" id="video_container">
