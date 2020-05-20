@@ -488,6 +488,10 @@ function anim_out(cont){
       easing: "easeInExpo",
       duration: 750,
       delay: (el, i) => 300 + 30 * i,
+      opacity: [1,0],
+        easing: "easeInOutQuad",
+        duration: 2000,
+        delay: (el, i) => 50 * (i+1),
       complete: function() {
           animated_out = !animated_out;
         }
