@@ -146,8 +146,6 @@ var cursorFocus = function(elm) {
   window.scrollTo(x, y);
 }
 
-cursorFocus(wish);
-
 var textarea = document.getElementById("wish");
 var limit = 400; //height limit
 
@@ -202,9 +200,6 @@ function cointoss() {
 document.addEventListener("click",function(e){
     if ((seventh) && (!galaxy) && (!form)){
       cointoss();
-    }
-    if (bool){
-      cursorFocus(wish);
     }
 });
 
