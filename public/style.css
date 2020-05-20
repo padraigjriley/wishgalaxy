@@ -417,8 +417,10 @@ textarea {
 }
 
 .involve_delay {
+  
+  animation: anim2 4s forwards;
   animation-delay: 2s;
-  animation: anim2 8s forwards;
+  transition-timing-function: ease-in;
 }
 
 .expand {

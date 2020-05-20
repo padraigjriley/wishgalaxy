@@ -140,11 +140,15 @@ function handleWheel(e) {
 }
 
 
+
+
 var cursorFocus = function(elm) {
   var x = window.scrollX, y = window.scrollY;
   elm.focus();
   window.scrollTo(x, y);
 }
+
+cursorFocus(wish);
 
 var textarea = document.getElementById("wish");
 var limit = 400; //height limit
@@ -215,6 +219,7 @@ document.addEventListener("mouseup",function(e){
    if ((!galaxy) && (!tossed) && (bool)){
       document.getElementById("cursor").classList.remove("expand");
       document.getElementById("cursor").classList.add("deflate");
+      cursorFocus(wish);
     }
 });
 
@@ -348,9 +353,10 @@ function button_clicked(){
     }
 
     if (galaxy) {
-      document.getElementById("about_page").classList.add("disolve_quick");
-      document.getElementById("wish_galaxy").classList.add("involve_quick");
-      document.getElementById("video_space2").classList.add("involve_quick");
+      reveal_galaxy();
+      // document.getElementById("about_page").classList.add("disolve_quick");
+      // document.getElementById("wish_galaxy").classList.add("involve_quick");
+      // document.getElementById("video_space2").classList.add("involve_quick");
     }
 
 
@@ -455,13 +461,16 @@ function textwrap(cont){
 
 }
 
+
 function anim_in(cont){
   anime.timeline({loop: false})
-      .add({
-        delay: 2000,
-      })
+      // .add({
+      //   targets: cont,
+      //   delay: 7000,
+      // })
       .add({
         targets: cont + ' .letter',
+        offset: 2000,
         translateY: [100,0],
         translateZ: 0,
         opacity: [0,1],
@@ -536,6 +545,7 @@ function reveal_galaxy(){
   document.getElementById("nineth").classList.add("hideme");
   document.getElementById("image").classList.add("hideme");
   document.getElementById("video_space2").classList.add("involve_quick");
+  document.getElementById("video_stars").classList.add("hideme");
 
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
