@@ -464,10 +464,6 @@ function textwrap(cont){
 
 function anim_in(cont){
   anime.timeline({loop: false})
-      // .add({
-      //   targets: cont,
-      //   delay: 7000,
-      // })
       .add({
         targets: cont + ' .letter',
         offset: 2000,
@@ -553,3 +549,5 @@ function reveal_galaxy(){
   bool = true;
   window.scrollTo(0,document.body.scrollHeight);
 }
+
+
