@@ -14,6 +14,7 @@ var seventh = false;
 var galaxy = false;
 var about = false;
 var coin = false;
+var galaxy_text = false;
 
 var opac = false;
 
@@ -23,6 +24,8 @@ var scroll = false;
 
 var animated_in = false;
 var animated_out = false;
+
+var form = true;
 
 var randombgs=["./images/bg/bg1.jpg", "./images/bg/bg2.jpg", "./images/bg/bg3.jpg", "./images/bg/bg4.jpg", "./images/bg/bg5.jpg", "./images/bg/bg6.jpg", "./images/bg/bg7.jpg", "./images/bg/bg8.jpg", "./images/bg/bg9.jpg", "./images/bg/bg10.jpg", "./images/bg/bg11.jpg", "./images/bg/bg12.jpg", "./images/bg/bg13.jpg", "./images/bg/bg14.jpg", "./images/bg/bg15.jpg", "./images/bg/bg16.jpg", "./images/bg/bg17.jpg", "./images/bg/bg18.jpg", "./images/bg/bg19.jpg"]
 var randnum = Math.floor(Math.random()*randombgs.length);
@@ -37,7 +40,7 @@ document.getElementById("coin_text").classList.add("hideme");
 document.getElementById("vl2").classList.add("hideme");
 
 document.getElementById("middle").classList.add("hideme");
-document.getElementById("another").classList.add("hideme");
+document.getElementById("another_div").classList.add("hideme");
 
 window.scrollTo(0, 0);
 
@@ -72,103 +75,68 @@ function handleWheel(e) {
     scroll = !scroll;
     anim_out('.first');
     first = true;
+    anim_in('.second');
   }
 
   //////////////////////////////
 
-  if ((!scroll) && (animated_in) && (animated_out) && first && !second){
-    scroll = !scroll;
-    anim_in('.second');
-  }
-
-  if ((scroll) && (!animated_in) && (animated_out) && first && !second){
+  if ((!scroll) && (!animated_in) && (animated_out) && first && !second){
     scroll = !scroll;
     anim_out('.second');
     second = true;
-  }
-
-  /////////////////////////////////////
-
-   if ((!scroll) && (!animated_in) && (!animated_out) && (!third) && second){
-    scroll = !scroll;
     anim_in('.third');
   }
+
+  ////////////////////////////////////
 
   if ((scroll) && (animated_in) && (!animated_out) && (!third) && second){
     scroll = !scroll;
     anim_out('.third');
     third = true;
+    anim_in('.forth');
   }
 
   ////////////////////////////////////
 
-  if ((!scroll) && (animated_in) && (animated_out) && (!forth) && third){
-    scroll = !scroll;
-    anim_in('.forth');
-  }
 
-  if ((scroll) && (!animated_in) && (animated_out) && (!forth) && third){
+  if ((!scroll) && (!animated_in) && (animated_out) && (!forth) && third){
     scroll = !scroll;
     anim_out('.forth');
     forth = true;
+    anim_in('.fifth');
   }
 
   /////////////////////////////////
 
-  if ((!scroll) && (!animated_in) && (!animated_out) && (!fifth) && forth){
-    scroll = !scroll;
-    anim_in('.fifth');
-  }
 
   if ((scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
     scroll = !scroll;
     anim_out('.fifth');
     fifth = true;
+    anim_in('.sixth');
   }
 
   /////////////////////////////////
 
-  if ((!scroll) && (animated_in) && (animated_out) && (!sixth) && fifth){
-    scroll = !scroll;
-    anim_in('.sixth');
-  }
 
-  if ((scroll) && (!animated_in) && (animated_out) && (!sixth) && fifth){
+  if ((!scroll) && (!animated_in) && (animated_out) && (!sixth) && fifth){
     scroll = !scroll;
     anim_out('.sixth');
     document.getElementById("video_stars").classList.add("cheekyfade");
     sixth = true;
-  }
-
-  ////////////////////////////////
-
-  if ((!scroll) && (!animated_in) && (!animated_out) && (sixth)){
-    scroll = !scroll;
-    document.getElementById('seventh').classList.add('involve');
-    document.getElementById('form').classList.add('involve');
+    document.getElementById('form').classList.add('involve_delay');
+    cursorFocus(wish);
     wisher = true;
     seventh = true;
   }
 
+  ////////////////////////////////
 
-  // if ((progress > 300) && (bool) && (!tossed)){
-  //     document.getElementById("button").removeAttribute("onclick");
-  //   }
-
-  // if ((bool) && (!tossed)) {
-  //     document.getElementById("button").style.opacity = (1 - (op_index)/20);
-  //   }
-  
-  // if (!tossed) {    
-  //   document.getElementById("seventh").style.opacity = ((op_index-1800)/100);
-  //   document.getElementById("form").style.opacity = ((op_index-1800)/100);     
-  // }
 
   if (op_index > 1500){
     window.scrollTo(0,0);
   }
 
-  // document.getElementById("video_stars").style.opacity = Math.min(((op_index-1600)/800), 0.1);
 }
 
 
@@ -186,6 +154,11 @@ var limit = 400; //height limit
 textarea.oninput = function() {
   textarea.style.height = "";
   textarea.style.height = Math.min(textarea.scrollHeight, limit) + "px";
+  if (seventh && form){
+    document.getElementById('seventh').classList.add('involve');
+    form = false;
+  }
+  
 };
 
 function cointoss() {
@@ -208,7 +181,7 @@ function cointoss() {
   document.getElementById("button").setAttribute("onclick", "button_clicked()");
   document.getElementById('button').classList.remove('disolve_quick');
   document.getElementById("button").style.opacity = 0;
-  document.getElementById('wish_galaxy').classList.remove('hideme');
+  // document.getElementById('wish_galaxy').classList.remove('hideme');
   document.getElementById('second_section').classList.remove('hideme');
 
   document.getElementById("eighth").classList.add("heavens");
@@ -227,7 +200,7 @@ function cointoss() {
 }
 
 document.addEventListener("click",function(e){
-    if ((seventh) && (!galaxy)){
+    if ((seventh) && (!galaxy) && (!form)){
       cointoss();
     }
     if (bool){
@@ -270,6 +243,7 @@ function HeavensEndFunction() {
 }
 
 function GalaxyFunction() {
+  document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.add("involve");
   document.getElementById("video_space2").classList.add("involve");
   galaxy = true;
@@ -286,7 +260,6 @@ function button_clicked(){
     document.getElementById("container").classList.add('hideme');
     document.getElementById("first_section").classList.add('hideme');
     document.getElementById("container").classList.add('hideme');
-    // document.getElementById("image").classList.add('hideme');
 
     document.getElementById("button").classList.remove("button");
     document.getElementById("button").classList.add("button2");
@@ -297,8 +270,10 @@ function button_clicked(){
 
     about = true;
     coin = true;
+    galaxy_text = true;
     reveal_about();
     reveal_coin();
+    reveal_galaxy_text();
 
     document.getElementById("middle").classList.remove("hideme");
 
@@ -328,7 +303,7 @@ function button_clicked(){
       document.getElementById("nineth").classList.remove("heavens2");
       document.getElementById("eighth").classList.remove("involve_quick");
       document.getElementById("second_section").classList.add("hideme");
-      document.getElementById("another").classList.remove("hideme");
+      document.getElementById("another_div").classList.remove("hideme");
       document.getElementById("vl2").classList.remove("hideme");
     }
   } 
@@ -339,15 +314,10 @@ function button_clicked(){
     document.getElementById("wrapper").classList.remove("hideme");
     document.getElementById("button").classList.remove("button2");
     document.getElementById("button").classList.add("button");
-
     document.getElementById("about_page").classList.remove("involve_quick");
-    // document.getElementById("about_page").classList.add("hideme");
-    // document.getElementById("about_page").classList.remove("about")
-
     document.getElementById("coin_text").classList.add("hideme");
     document.getElementById("about_text").classList.add("hideme");
     document.getElementById("middle").classList.add("hideme");
-
     document.getElementById("image").classList.remove('hideme');
 
     if (!tossed) {
@@ -377,7 +347,7 @@ function button_clicked(){
       document.getElementById("container").classList.remove('hideme');
       document.getElementById("button").classList.remove('heavens');
       document.getElementById("vl2").classList.add("hideme");
-      document.getElementById("another").classList.add("hideme");
+      document.getElementById("another_div").classList.add("hideme");
       document.getElementById("button").style.opacity = 1;
       document.getElementById("wish_galaxy").classList.remove("hideme");
     }
@@ -407,9 +377,11 @@ function reveal_about() {
   about = !about;
   if (about){
     coin = false;
+    galaxy_text = false;
     document.getElementById("about_text").classList.remove("hideme");
     document.getElementById("coin_text").classList.add("hideme");
     document.getElementById("middle").style.justifyContent = "initial";
+    document.getElementById("galaxy_text").classList.add("hideme");
   }
   if (!about){
     document.getElementById("middle").style.justifyContent = "center";
@@ -421,15 +393,33 @@ function reveal_coin() {
   coin = !coin;
   if (coin){
     about = false;
+    galaxy_text = false;
     document.getElementById("middle").style.justifyContent = "initial";
     document.getElementById("about_text").classList.add("hideme");
     document.getElementById("coin_text").classList.remove("hideme");
+    document.getElementById("galaxy_text").classList.add("hideme");
   }
   if (!coin){
     document.getElementById("middle").style.justifyContent = "center";
     document.getElementById("coin_text").classList.add("hideme");
   }
+}
 
+
+function reveal_galaxy_text() {
+  galaxy_text = !galaxy_text;
+  if (galaxy_text){
+    coin = false;
+    about = false;
+    document.getElementById("galaxy_text").classList.remove("hideme");
+    document.getElementById("coin_text").classList.add("hideme");
+    document.getElementById("about_text").classList.add("hideme");
+    document.getElementById("middle").style.justifyContent = "initial";
+  }
+  if (!galaxy_text){
+    document.getElementById("middle").style.justifyContent = "center";
+    document.getElementById("galaxy_text").classList.add("hideme");
+  }
 }
 
 function submitted() {
@@ -473,6 +463,9 @@ function textwrap(cont){
 function anim_in(cont){
   anime.timeline({loop: false})
       .add({
+        delay: 2000,
+      })
+      .add({
         targets: cont + ' .letter',
         translateY: [100,0],
         translateZ: 0,
@@ -482,7 +475,7 @@ function anim_in(cont){
         delay: (el, i) => 300 + 30 * i,
         opacity: [0,1,0,1],
         easing: "easeInOutQuad",
-        duration: 1400,
+        duration: 2000,
         delay: (el, i) => 50 * (i+1),
         complete: function() {
           animated_in = !animated_in;
@@ -538,14 +531,13 @@ function reveal_galaxy(){
   document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.remove("disolve_quick");
   document.getElementById("wish_galaxy").classList.add("involve");
-  // document.getElementById("about_page").classList.add("disolve");
-  // document.getElementById("about_page").classList.remove("about");
+
   document.getElementById("about_page").classList.remove("involve_quick");
   document.getElementById("eighth").classList.add("hideme");
   document.getElementById("nineth").classList.add("hideme");
   document.getElementById("image").classList.add("hideme");
   document.getElementById("video_space2").classList.add("involve_quick");
-  // document.getElementById("about_page").classList.add("hideme");
+
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
   tossed = true;
