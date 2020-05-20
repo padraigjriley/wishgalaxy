@@ -70,5 +70,17 @@ app.post('/emailss', (req, res) => {
 
 })
 
+app.post('/loginss', (req, res) => {
+	var uname = req.body.uname
+	var psw = req.body.psw
+	if ((uname == "cait") && (psw == "wendy")){
+		console.log("credentials correct!")
+		return res.redirect('admin.html');
+	}
+	else {
+		console.log("credentials incorrect!")
+	}
+})
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('app is listening'))
