@@ -544,4 +544,3 @@ function reveal_galaxy(){
   bool = true;
   window.scrollTo(0,document.body.scrollHeight);
 }
-
