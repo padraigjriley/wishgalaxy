@@ -430,13 +430,6 @@ function submitted() {
   document.getElementById('submitted').classList.remove('sub');
 }
 
-AOS.init({
-  duration: 1200,
-  easing: 'ease-in-out-back',
-  mirror: true,
-  anchorPlacement: 'top-bottom'
-});
-
 var timeout;
 
 document.onmousemove = resetTimer;
