@@ -207,18 +207,16 @@ document.addEventListener("click",function(e){
     }
 });
 
-document.addEventListener("mousedown",function(e){
-   if ((!tossed) && (bool) && (!galaxy)){
-      document.getElementById("cursor").classList.remove("involve_quicker")
-      document.getElementById("cursor").classList.remove("deflate");
-      document.getElementById("cursor").classList.add("expand");
-    }
-});
+// document.addEventListener("mousedown",function(e){
+//    if ((!tossed) && (bool) && (!galaxy)){
+//       document.getElementById("cursor").classList.remove("involve_quicker")
+//       document.getElementById("cursor").classList.remove("deflate");
+//       document.getElementById("cursor").classList.add("expand");
+//     }
+// });
 
 document.addEventListener("mouseup",function(e){
    if ((!galaxy) && (!tossed) && (bool)){
-      document.getElementById("cursor").classList.remove("expand");
-      document.getElementById("cursor").classList.add("deflate");
       cursorFocus(wish);
     }
 });
@@ -229,6 +227,7 @@ function CursorEndFunction() {
   document.getElementById("cursor").classList.add("pointer");
   document.getElementById("cursor").classList.add("grow");
   document.getElementById("image").classList.add('hideme');
+  document.getElementById("cursor").style.background = "white"
 }
 
 function HeavensEndFunction() {
@@ -267,6 +266,7 @@ function button_clicked(){
     document.getElementById("about_page").classList.remove("hideme");
     document.getElementById("about_page").classList.add("involve_quick");
     document.getElementById("about_page").classList.add("about");
+    document.getElementById("cursor").style.background = "white"
 
     about = true;
     coin = true;
@@ -319,6 +319,8 @@ function button_clicked(){
     document.getElementById("about_text").classList.add("hideme");
     document.getElementById("middle").classList.add("hideme");
     document.getElementById("image").classList.remove('hideme');
+
+    document.getElementById("cursor").style.background = "radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)";
 
     if (!tossed) {
 
@@ -542,5 +544,3 @@ function reveal_galaxy(){
   bool = true;
   window.scrollTo(0,document.body.scrollHeight);
 }
-
-
