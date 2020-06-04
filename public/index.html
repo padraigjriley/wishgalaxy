@@ -143,11 +143,21 @@
 
 	<iframe name="hiddenFrame" class="hideme"></iframe>
 	
+	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
 	<script type="text/javascript" src="./plugins/jquery.ripples.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="ripple_script.js"></script>
 	<script type="text/javascript" src="cursor_script.js"></script>
 	<script type="text/javascript" src="./plugins/anime.min.js"></script>
+	<script type="text/javascript" src="./plugins/jquery-stars.js"></script>
+	<script type="text/javascript">
+		jQuery('#image').jstars({
+			image_path: './images/images/', // folder with magic image
+			image: 'jstar-map.png',
+			style: 'yellow',       // optional, color, default: white
+			frequency: 19         // optional, from 1 to 19
+		});
+	</script>
 
 </body>
 </html>
