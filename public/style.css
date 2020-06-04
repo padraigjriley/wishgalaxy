@@ -82,6 +82,9 @@ a:visited { text-decoration: none; color:white; }
  z-index: 99;
  opacity: 0;
  border-radius: 100%;
+ box-shadow:  0 0 30px 3px #fff,  /* inner white */
+              0 0 30px 5px #FEDB37, /* middle magenta */
+              0 0 30px 5px #FDB931; /* outer cyan */
 }
 
 .zero {
