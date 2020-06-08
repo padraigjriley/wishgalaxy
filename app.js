@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const { Pool, Client } = require('pg')
 var dateTime = require('node-datetime');
 var dt = dateTime.create();
-dt.offsetInHours(2);
 var now = dt.format('Y-m-d H:M:S');
 
 app.use(express.static('public'))
@@ -41,8 +40,9 @@ pool.connect(err => {
 app.post('/wishss', (req, res) => {
 	var wished = req.body.textarea
 	console.log('Wish: ' + wished)
-	var dt = dateTime.create();
-	var now = dt.format('Y-m-d H:M:S');
+	var dt = dateTime.create()
+	var now = dt.format('Y-m-d H:M:S')
+	dt.offsetInHours(2)
 	var wish_string = "INSERT INTO wishes(wish, date)VALUES('"+wished+"', '" + now + "')"
 
 	pool.query(
@@ -59,6 +59,7 @@ app.post('/emailss', (req, res) => {
 	console.log('Email: ' + emailed)
 	var dt = dateTime.create()
 	var now = dt.format('Y-m-d H:M:S')
+	dt.offsetInHours(2)
 	var email_string = "INSERT INTO emails(email, date)VALUES('"+emailed+"', '" + now + "')"
 	console.log(email_string)
 
