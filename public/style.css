@@ -82,6 +82,7 @@ a:visited { text-decoration: none; color:white; }
  z-index: 99;
  opacity: 0;
  border-radius: 100%;
+ background: radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
  box-shadow:  0 0 30px 3px #fff,  /* inner white */
               0 0 30px 5px #FEDB37, /* middle magenta */
               0 0 30px 5px #FDB931; /* outer cyan */
@@ -981,4 +982,18 @@ hr {
   to {
     opacity: 0.1;
   }
+}
+
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("http://i.stack.imgur.com/MnyxU.gif");
+    background-repeat: no-repeat;
+    background-position: center;
 }
