@@ -446,8 +446,10 @@
 			
 			gl = this.context;
 			
-			e.offsetX = e.offsetX +60 || (e.pageX - this.$el.offset().left);
-			e.offsetY = e.offsetY +60 || (e.pageY - this.$el.offset().top);
+			/////////////////// THIS IS WHERE YOU UPDATE RIPPLE POSITION (20 NOW -- HALF RADIUS)
+
+			e.offsetX = e.offsetX +20 || (e.pageX - this.$el.offset().left);
+			e.offsetY = e.offsetY +20 || (e.pageY - this.$el.offset().top);
 
 			var elWidth = this.$el.outerWidth();
 			var elHeight = this.$el.outerHeight();
