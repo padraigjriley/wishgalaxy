@@ -541,6 +541,7 @@ function reveal_galaxy(){
   document.getElementById("video_space2").classList.add("involve_quick");
   document.getElementById("video_stars").classList.add("hideme");
   document.getElementById("cursor").style.background = "white";
+  document.getElementById("goldball").classList.add("hideme");
 
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
