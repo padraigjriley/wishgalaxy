@@ -224,6 +224,7 @@ document.addEventListener("mouseup",function(e){
 function CursorEndFunction() {
   document.getElementById("cursor").classList.remove("cursor");
   document.getElementById("cursor").classList.remove("shrink");
+  document.getElementById("goldball").classList.add("hideme");
   document.getElementById("cursor").classList.add("pointer");
   document.getElementById("cursor").classList.add("grow");
   document.getElementById("image").classList.add('hideme');
@@ -267,6 +268,7 @@ function button_clicked(){
     document.getElementById("about_page").classList.add("involve_quick");
     document.getElementById("about_page").classList.add("about");
     document.getElementById("cursor").style.background = "white"
+    document.getElementById("goldball").classList.add("hideme");
 
     about = true;
     coin = true;
@@ -321,6 +323,7 @@ function button_clicked(){
     document.getElementById("image").classList.remove('hideme');
 
     document.getElementById("cursor").style.background = "radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)";
+    document.getElementById("goldball").classList.remove("hideme");
 
     if (!tossed) {
 
