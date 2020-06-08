@@ -35,8 +35,8 @@ document.getElementById("email").classList.add("hideme");
 document.getElementById("second_section").classList.add("hideme");
 document.getElementById("about_page").classList.add("hideme");
 
-document.getElementById("about_text").classList.add("hideme");
-document.getElementById("coin_text").classList.add("hideme");
+// document.getElementById("about_text").classList.add("hideme");
+// document.getElementById("coin_text").classList.add("hideme");
 document.getElementById("vl2").classList.add("hideme");
 
 document.getElementById("middle").classList.add("hideme");
@@ -271,9 +271,9 @@ function button_clicked(){
     about = true;
     coin = true;
     galaxy_text = true;
-    reveal_about();
-    reveal_coin();
-    reveal_galaxy_text();
+    // reveal_about();
+    // reveal_coin();
+    // reveal_galaxy_text();
 
     document.getElementById("middle").classList.remove("hideme");
 
@@ -315,8 +315,8 @@ function button_clicked(){
     document.getElementById("button").classList.remove("button2");
     document.getElementById("button").classList.add("button");
     document.getElementById("about_page").classList.remove("involve_quick");
-    document.getElementById("coin_text").classList.add("hideme");
-    document.getElementById("about_text").classList.add("hideme");
+    // document.getElementById("coin_text").classList.add("hideme");
+    // document.getElementById("about_text").classList.add("hideme");
     document.getElementById("middle").classList.add("hideme");
     document.getElementById("image").classList.remove('hideme');
 
@@ -376,54 +376,54 @@ function toggle_subscribe() {
   }
 }
 
-function reveal_about() {
-  about = !about;
-  if (about){
-    coin = false;
-    galaxy_text = false;
-    document.getElementById("about_text").classList.remove("hideme");
-    document.getElementById("coin_text").classList.add("hideme");
-    document.getElementById("middle").style.justifyContent = "initial";
-    document.getElementById("galaxy_text").classList.add("hideme");
-  }
-  if (!about){
-    document.getElementById("middle").style.justifyContent = "center";
-    document.getElementById("about_text").classList.add("hideme");
-  }
-}
+// function reveal_about() {
+//   about = !about;
+//   if (about){
+//     coin = false;
+//     galaxy_text = false;
+//     document.getElementById("about_text").classList.remove("hideme");
+//     document.getElementById("coin_text").classList.add("hideme");
+//     document.getElementById("middle").style.justifyContent = "initial";
+//     document.getElementById("galaxy_text").classList.add("hideme");
+//   }
+//   if (!about){
+//     document.getElementById("middle").style.justifyContent = "center";
+//     document.getElementById("about_text").classList.add("hideme");
+//   }
+// }
 
-function reveal_coin() {
-  coin = !coin;
-  if (coin){
-    about = false;
-    galaxy_text = false;
-    document.getElementById("middle").style.justifyContent = "initial";
-    document.getElementById("about_text").classList.add("hideme");
-    document.getElementById("coin_text").classList.remove("hideme");
-    document.getElementById("galaxy_text").classList.add("hideme");
-  }
-  if (!coin){
-    document.getElementById("middle").style.justifyContent = "center";
-    document.getElementById("coin_text").classList.add("hideme");
-  }
-}
+// function reveal_coin() {
+//   coin = !coin;
+//   if (coin){
+//     about = false;
+//     galaxy_text = false;
+//     document.getElementById("middle").style.justifyContent = "initial";
+//     document.getElementById("about_text").classList.add("hideme");
+//     document.getElementById("coin_text").classList.remove("hideme");
+//     document.getElementById("galaxy_text").classList.add("hideme");
+//   }
+//   if (!coin){
+//     document.getElementById("middle").style.justifyContent = "center";
+//     document.getElementById("coin_text").classList.add("hideme");
+//   }
+// }
 
 
-function reveal_galaxy_text() {
-  galaxy_text = !galaxy_text;
-  if (galaxy_text){
-    coin = false;
-    about = false;
-    document.getElementById("galaxy_text").classList.remove("hideme");
-    document.getElementById("coin_text").classList.add("hideme");
-    document.getElementById("about_text").classList.add("hideme");
-    document.getElementById("middle").style.justifyContent = "initial";
-  }
-  if (!galaxy_text){
-    document.getElementById("middle").style.justifyContent = "center";
-    document.getElementById("galaxy_text").classList.add("hideme");
-  }
-}
+// function reveal_galaxy_text() {
+//   galaxy_text = !galaxy_text;
+//   if (galaxy_text){
+//     coin = false;
+//     about = false;
+//     document.getElementById("galaxy_text").classList.remove("hideme");
+//     document.getElementById("coin_text").classList.add("hideme");
+//     document.getElementById("about_text").classList.add("hideme");
+//     document.getElementById("middle").style.justifyContent = "initial";
+//   }
+//   if (!galaxy_text){
+//     document.getElementById("middle").style.justifyContent = "center";
+//     document.getElementById("galaxy_text").classList.add("hideme");
+//   }
+// }
 
 function submitted() {
   document.getElementById('subscribe').classList.add('hideme');
@@ -565,3 +565,22 @@ onReady(function () {
     show('image', true);
     show('loading', false);
 });
+
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    console.log("here")
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      console.log("aiiiii")
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}

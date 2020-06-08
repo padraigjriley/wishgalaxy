@@ -545,6 +545,10 @@ textarea {
   color: transparent;
 }
 
+.collapsible {
+
+}
+
 .about {
   width: 100%;
   height: 100vh;
@@ -663,7 +667,7 @@ textarea {
   opacity: 1;
 }
 
-h1 {
+.collapsible {
     font-size: 3em;
     color: white;
     cursor: none;
@@ -678,18 +682,14 @@ h1 {
     cursor: pointer;
 }
 
-h1:hover{
-  cursor: pointer;
-}
-
-p {
+/*p {
     display: flex;
     text-align: center;
     font-family: Geomanist;
     font-size: .8em;
     color: white;
     overflow: hidden;
-}
+}*/
 
 footer {
     font-size: .6em;
@@ -747,20 +747,22 @@ hr {
   overflow: hidden;
 }
 
-.galaxy_text {
+.content {
   width: 100%;
   text-align: center;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-family: Geomanist;
-  font-size: .8em;
+  font-size: .64em;
   color: white;
   overflow: hidden;
   letter-spacing: 2px;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
 }
 
-.galaxy_text a {
+.content a {
   display: flex;
   flex-direction: row;
   margin: auto;
