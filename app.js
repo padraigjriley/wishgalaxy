@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const { Pool, Client } = require('pg')
 var dateTime = require('node-datetime');
 var dt = dateTime.create();
+dt.offsetInHours(2);
 var now = dt.format('Y-m-d H:M:S');
 
 app.use(express.static('public'))
