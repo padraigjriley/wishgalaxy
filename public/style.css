@@ -747,7 +747,35 @@ hr {
   overflow: hidden;
 }
 
-.content {
+.about_text {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Geomanist;
+  font-size: .64em;
+  color: white;
+  overflow: hidden;
+  letter-spacing: 2px;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.coin_text {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Geomanist;
+  font-size: .64em;
+  color: white;
+  overflow: hidden;
+  letter-spacing: 2px;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.galaxy_text {
   width: 100%;
   text-align: center;
   justify-content: center;
@@ -762,7 +790,7 @@ hr {
   transition: max-height 0.2s ease-out;
 }
 
-.content a {
+.galaxy_text a {
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -788,7 +816,7 @@ hr {
   z-index: 99;
 }
 
-.coin_text {
+/*.coin_text {
   width: 100%;
   text-align: center;
   justify-content: center;
@@ -799,7 +827,7 @@ hr {
   color: white;
   overflow: scroll;
   letter-spacing: 2px;
-}
+}*/
 
 .coin_text img {
   display: flex;

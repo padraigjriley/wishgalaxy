@@ -566,21 +566,58 @@ onReady(function () {
     show('loading', false);
 });
 
-
+var about_text = document.getElementById("about_text");
+var coin_text = document.getElementById("coin_text");
+var galaxy_text2 = document.getElementById("galaxy_text");
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    console.log("here")
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+
+var about_heading = document.getElementById("about_heading");
+var coin_heading = document.getElementById("coin_heading");
+var galaxy_heading = document.getElementById("galaxy_heading");
+
+about_heading.addEventListener("click", function() {
+  if (about_text.style.maxHeight){
+      about_text.style.maxHeight = null;
     } else {
-      console.log("aiiiii")
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+      about_text.style.maxHeight = about_text.scrollHeight + "px";
+      coin_text.style.maxHeight = null;
+      galaxy_text2.style.maxHeight = null; 
+    }
+});
+
+coin_heading.addEventListener("click", function() {
+  if (coin_text.style.maxHeight){
+      coin_text.style.maxHeight = null;
+
+    } else {
+      coin_text.style.maxHeight = coin_text.scrollHeight + "px";
+      about_text.style.maxHeight = null;
+      galaxy_text2.style.maxHeight = null;
+    }
+});
+
+galaxy_heading.addEventListener("click", function() {
+  if (galaxy_text2.style.maxHeight){
+      galaxy_text2.style.maxHeight = null;
+    } else {
+      galaxy_text2.style.maxHeight = galaxy_text2.scrollHeight + "px";
+      about_text.style.maxHeight = null;
+      coin_text.style.maxHeight = null;
+    }
+});
+
+
+// for (i = 0; i < coll.length; i++) {
+//   coll[i].addEventListener("click", function() {
+//     var content = this.nextElementSibling;
+//     if (content.style.maxHeight){
+//       content.style.maxHeight = null;
+//     } else {
+//       content.style.maxHeight = content.scrollHeight + "px";
+//     }
+//   });
+// }
+
