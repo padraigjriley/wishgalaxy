@@ -83,9 +83,57 @@ a:visited { text-decoration: none; color:white; }
  opacity: 0;
  border-radius: 100%;
  background: radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
- box-shadow:  0 0 30px 3px #fff,  /* inner white */
-              0 0 30px 5px #FEDB37, /* middle magenta */
-              0 0 30px 5px #FDB931; /* outer cyan */
+ /*box-shadow:  0 0 30px 3px #fff,  
+              0 0 30px 5px #FEDB37, 
+              0 0 30px 5px #FDB931; */
+ box-shadow: 0 0 30px 3px red;  
+ animation: cursorShadow 20s infinite;     
+ animation-timing-function: ease-in-out;     
+}
+
+@keyframes cursorShadow{
+  7% {
+    box-shadow: 0 0 30px 3px red;  
+  }
+  14% {
+    box-shadow: 0 0 30px 3px orange;  
+  }
+  21% {
+    box-shadow: 0 0 30px 3px yellow;  
+  }
+  28% {
+    box-shadow: 0 0 30px 3px green;  
+  }
+  35% {
+    box-shadow: 0 0 30px 3px blue;  
+  }
+  42% {
+    box-shadow: 0 0 30px 3px indigo;  
+  }
+  49% {
+    box-shadow: 0 0 30px 3px violet;  
+  }
+  56% {
+    box-shadow: 0 0 30px 3px violet;  
+  }
+  63% {
+    box-shadow: 0 0 30px 3px indigo;  
+  }
+  70% {
+    box-shadow: 0 0 30px 3px blue;  
+  }
+  77% {
+    box-shadow: 0 0 30px 3px green;  
+  }
+  84% {
+    box-shadow: 0 0 30px 3px yellow;
+  }
+  91% {
+    box-shadow: 0 0 30px 3px orange;
+  }
+  100% {
+    box-shadow: 0 0 30px 3px red;
+  }
 }
 
 .goldball {
