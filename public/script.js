@@ -325,6 +325,10 @@ function button_clicked(){
     document.getElementById("cursor").style.background = "radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)";
     document.getElementById("goldball").classList.remove("hideme");
 
+    about_text.style.maxHeight = null;
+    coin_text.style.maxHeight = null;
+    galaxy_text2.style.maxHeight = null;
+
     if (!tossed) {
 
       document.getElementById("container").classList.remove('hideme');
