@@ -222,12 +222,12 @@ document.addEventListener("mouseup",function(e){
 });
 
 function CursorEndFunction() {
+  document.getElementById("image").classList.add('hideme');
   document.getElementById("cursor").classList.remove("cursor");
   document.getElementById("cursor").classList.remove("shrink");
   document.getElementById("goldball").classList.add("hideme");
   document.getElementById("cursor").classList.add("pointer");
   document.getElementById("cursor").classList.add("grow");
-  document.getElementById("image").classList.add('hideme');
   document.getElementById("cursor").style.background = "white"
 }
 
