@@ -1,3 +1,3 @@
 $(document).ready(function() {
-$('.image').ripples('show');
+$('.image').ripples();
 });
