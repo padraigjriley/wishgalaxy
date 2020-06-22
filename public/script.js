@@ -36,6 +36,7 @@ document.getElementById("second_section").classList.add("hideme");
 document.getElementById("about_page").classList.add("hideme");
 
 document.getElementById("vl2").classList.add("hideme");
+document.getElementById("vl").classList.add("hideme");
 
 document.getElementById("middle").classList.add("hideme");
 document.getElementById("another_div").classList.add("hideme");
@@ -434,6 +435,7 @@ function anim_out(cont){
 
 function showit() {
   document.getElementById("zero").classList.add("involve_quick");
+  document.getElementById("vl").classList.remove("hideme");
   document.getElementById("vl").classList.add("involve_quick");
   document.getElementById("button").classList.add("involve_quick");
   document.getElementById("cursor").classList.add("involve_quick");
