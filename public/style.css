@@ -500,7 +500,6 @@ textarea {
 .second_section {
   width: 100%;
   height: 100vh;
-  /*opacity: 0;*/
   position: fixed;
   z-index: 5;
   animation-delay: 1.5s;
@@ -516,17 +515,31 @@ textarea {
 
 .shrink {
   animation: coinAnim 6s forwards;
+  -webkit-animation: coinAnim 6s forwards;
 }
 
 .grow {
   animation: grow 7s forwards;
+  -webkit-animation: grow 7s forwards;
 }
 
 .involve {
   animation: spaceAnim 4s forwards;
+  -webkit-animation: spaceAnim 4s forwards;
 }
 
 @keyframes coinAnim {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes coinAnim {
   from {
     transform: scale(1);
     opacity: 1;
@@ -546,7 +559,27 @@ textarea {
   }
 }
 
+@-webkit-keyframes spaceAnim {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes grow {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(3);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes grow {
   from {
     transform: scale(0);
     opacity: 0;
@@ -566,7 +599,25 @@ textarea {
   }
 }
 
+@-webkit-keyframes anim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes anim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes anim {
   from {
     opacity: 1;
   }
@@ -577,34 +628,48 @@ textarea {
 
 .disolve {
   animation: anim 2s forwards;
+  -webkit-animation: anim 2s forwards;
 }
 
 .involve_delay {
-  
+  -webkit-animation: anim2 4s forwards;
   animation: anim2 4s forwards;
   animation-delay: 2s;
   transition-timing-function: ease-in;
 }
 
 .expand {
-    animation: cursorAnim .5s forwards;
+  -webkit-animation: cursorAnim .5s forwards;
+  animation: cursorAnim .5s forwards;
 }
 
 .deflate {
+  -webkit-animation: cursorAnim2 .5s forwards;
   animation: cursorAnim2 .5s forwards;
 }
 
 .heavens {
+  -webkit-animation: heavenAnim 4s forwards;
   animation: heavenAnim 4s forwards;
   animation-delay: 3s;
 }
 
 .heavens2 {
+  -webkit-animation: heavenAnim 4s forwards;
   animation: heavenAnim 4s forwards;
   animation-delay: 5s;
 }
 
 @keyframes heavenAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes heavenAnim {
   from {
     opacity: 0;
   }
@@ -622,7 +687,25 @@ textarea {
     }
 }
 
+@-webkit-keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(3);
+    }
+}
+
 @keyframes cursorAnim2 {
+    from {
+        transform: scale(3);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes cursorAnim2 {
     from {
         transform: scale(3);
     }
@@ -1136,6 +1219,15 @@ hr {
 }
 
 @keyframes cheekyfade {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes cheekyfade {
   from{
     opacity: 0;
   }
