@@ -473,7 +473,7 @@ textarea {
   cursor: none;
   }
 
-#video_stars {
+.video_stars {
   z-index: 3; 
   position: fixed;
   right: 0;
@@ -486,7 +486,7 @@ textarea {
   overflow: hidden;
 }
 
-#video_space2 {
+.video_space2 {
   z-index: 3; 
   position: fixed;
   right: 0;
