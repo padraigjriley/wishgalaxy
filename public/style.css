@@ -629,10 +629,6 @@ textarea {
   color: transparent;
 }
 
-.collapsible {
-
-}
-
 .about {
   width: 100%;
   height: 100vh;
@@ -752,7 +748,7 @@ textarea {
 }
 
 .collapsible {
-    font-size: 3em;
+    font-size: 3.5vw;
     color: white;
     cursor: none;
     font-family: "Voyage-Regular";
@@ -938,19 +934,18 @@ hr {
 
 .wish:hover {
   opacity: 1;
-  /*transform: scale(1.2,1.2);*/
 }
 
 .wish_outer {
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .wish_mid {
-  font-size: .8em;
+  font-size: .8vw;
 }
 
 .wish_inner {
-  font-size: .6em;
+  font-size: .6vw;
 }
 
 .wish1 {
