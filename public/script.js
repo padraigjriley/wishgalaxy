@@ -160,7 +160,7 @@ textarea.oninput = function() {
 };
 
 function cointoss() {
-  // zoomOutMobile();
+  zoomOutMobile();
   tossed = true;
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("cursor").classList.remove("deflate");
@@ -441,7 +441,7 @@ function anim_out(cont){
 }
 
 function showit() {
-  // zoomOutMobile()
+  zoomOutMobile()
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.remove("hideme");
   document.getElementById("vl").classList.add("involve_quick");
@@ -561,12 +561,12 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 
-// function zoomOutMobile() {
-//   var viewport = document.querySelector('meta[name="viewport"]');
+function zoomOutMobile() {
+  var viewport = document.querySelector('meta[name="viewport"]');
 
-//   if ( (viewport) && (isMobile)) {
-//     viewport.content = "initial-scale=1";
-//     viewport.content = "width=device-width";
-//     console.log("here");
-//   }
-// }
+  if ( (viewport) && (isMobile)) {
+    viewport.content = "initial-scale=1";
+    viewport.content = "width=device-width";
+    console.log("here");
+  }
+}
