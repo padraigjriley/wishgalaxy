@@ -34,7 +34,7 @@ var randnum = Math.floor(Math.random()*randombgs.length);
 document.getElementById("image").style.backgroundImage = 'url("'+randombgs[randnum]+'")';
 
 document.getElementById("email").classList.add("hideme");
-document.getElementById("second_section").classList.add("hideme");
+// document.getElementById("second_section").classList.add("hideme");
 document.getElementById("about_page").classList.add("hideme");
 
 document.getElementById("vl2").classList.add("hideme");
