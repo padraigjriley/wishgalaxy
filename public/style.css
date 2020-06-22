@@ -763,7 +763,7 @@ textarea {
 }
 
 footer {
-    font-size: .6em;
+    font-size: .6vw;
     font-family: Geomanist;
     color: white;
     position: fixed;
@@ -774,7 +774,7 @@ footer {
 }
 
 .footer {
-  font-size: .6em;
+  font-size: .6vw;
 }
 
 hr {
