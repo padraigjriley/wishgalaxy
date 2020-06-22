@@ -1,3 +1,5 @@
 $(document).ready(function() {
-$('.image').ripples();
+	$('.image').ripples({
+		perturbance: 0.01
+	});
 });
