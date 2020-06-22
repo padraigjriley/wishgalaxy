@@ -80,6 +80,8 @@ a:visited { text-decoration: none; color:white; }
  opacity: 0;
  border-radius: 100%;
  background: radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+ -webkit-box-shadow: 0 0 30px 3px red;
+ -moz-box-shadow: 0 0 30px 3px red;
  box-shadow: 0 0 30px 3px red;  
  animation: cursorShadow 20s infinite;     
  animation-timing-function: ease-in-out;     
@@ -87,45 +89,73 @@ a:visited { text-decoration: none; color:white; }
 
 @keyframes cursorShadow{
   7% {
+    -webkit-box-shadow: 0 0 30px 3px red;
+    -moz-box-shadow: 0 0 30px 3px red;
     box-shadow: 0 0 30px 3px red;  
   }
   14% {
+    -webkit-box-shadow: 0 0 30px 3px orange;
+    -moz-box-shadow: 0 0 30px 3px orange;
     box-shadow: 0 0 30px 3px orange;  
   }
   21% {
+    -webkit-box-shadow: 0 0 30px 3px yellow;
+    -moz-box-shadow: 0 0 30px 3px yellow;
     box-shadow: 0 0 30px 3px yellow;  
   }
   28% {
+    -webkit-box-shadow: 0 0 30px 3px green;
+    -moz-box-shadow: 0 0 30px 3px green;
     box-shadow: 0 0 30px 3px green;  
   }
   35% {
+    -webkit-box-shadow: 0 0 30px 3px blue;
+    -moz-box-shadow: 0 0 30px 3px blue;
     box-shadow: 0 0 30px 3px blue;  
   }
   42% {
+    -webkit-box-shadow: 0 0 30px 3px indigo;
+    -moz-box-shadow: 0 0 30px 3px indigo;
     box-shadow: 0 0 30px 3px indigo;  
   }
   49% {
+    -webkit-box-shadow: 0 0 30px 3px violet;
+    -moz-box-shadow: 0 0 30px 3px violet;
     box-shadow: 0 0 30px 3px violet;  
   }
   56% {
+    -webkit-box-shadow: 0 0 30px 3px violet;
+    -moz-box-shadow: 0 0 30px 3px violet;
     box-shadow: 0 0 30px 3px violet;  
   }
   63% {
+    -webkit-box-shadow: 0 0 30px 3px indigo;
+    -moz-box-shadow: 0 0 30px 3px indigo;
     box-shadow: 0 0 30px 3px indigo;  
   }
   70% {
+    -webkit-box-shadow: 0 0 30px 3px blue;
+    -moz-box-shadow: 0 0 30px 3px blue;
     box-shadow: 0 0 30px 3px blue;  
   }
   77% {
+    -webkit-box-shadow: 0 0 30px 3px green;
+    -moz-box-shadow: 0 0 30px 3px green;
     box-shadow: 0 0 30px 3px green;  
   }
   84% {
+    -webkit-box-shadow: 0 0 30px 3px yellow;
+    -moz-box-shadow: 0 0 30px 3px yellow;
     box-shadow: 0 0 30px 3px yellow;
   }
   91% {
+    -webkit-box-shadow: 0 0 30px 3px orange;
+    -moz-box-shadow: 0 0 30px 3px orange;
     box-shadow: 0 0 30px 3px orange;
   }
   100% {
+    -webkit-box-shadow: 0 0 30px 3px red;
+    -moz-box-shadow: 0 0 30px 3px red;
     box-shadow: 0 0 30px 3px red;
   }
 }
@@ -532,7 +562,7 @@ textarea {
   border-radius: 50%;
   background-color: white;
   border: none;
-  -mox-box-shadow: 0 0 5px white;
+  -moz-box-shadow: 0 0 5px white;
   -webkit-box-shadow: 0 0 5px white;
   box-shadow: 0 0 5px white;
   pointer-events: none;
@@ -687,8 +717,8 @@ textarea {
 
 .titlething {
   font-size: 1.2em;
-    font-family: Geomanist;
-    color: white;
+  font-family: Geomanist;
+  color: white;
 }
 
 .another_div {
@@ -735,15 +765,6 @@ textarea {
     cursor: pointer;
 }
 
-/*p {
-    display: flex;
-    text-align: center;
-    font-family: Geomanist;
-    font-size: .8em;
-    color: white;
-    overflow: hidden;
-}*/
-
 footer {
     font-size: .6em;
     font-family: Geomanist;
@@ -752,13 +773,11 @@ footer {
     bottom: 10px;
     text-align: center;
     align-items: center;
-    /*background-color: #1c1c1c;*/
     letter-spacing: 1px;
 }
 
 .footer {
   font-size: .6em;
-  /*background-color: #1c1c1c;*/
 }
 
 hr {
@@ -860,7 +879,7 @@ hr {
   border-radius: 50%;
   z-index: 40;
   position: fixed;
-  -mox-box-shadow: 0 0 5px white;
+  -moz-box-shadow: 0 0 5px white;
   -webkit-box-shadow: 0 0 5px white;
   box-shadow: 0 0 5px white;
   pointer-events: none;
