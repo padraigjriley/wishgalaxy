@@ -162,7 +162,7 @@ textarea.oninput = function() {
 };
 
 function cointoss() {
-  // zoomOutMobile();
+  zoomOutMobile();
   tossed = true;
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("cursor").classList.remove("deflate");
@@ -443,7 +443,7 @@ function anim_out(cont){
 }
 
 function showit() {
-  // zoomOutMobile()
+  zoomOutMobile()
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.remove("hideme");
   document.getElementById("vl").classList.add("involve_quick");
@@ -573,3 +573,12 @@ window.addEventListener("load",function() {
         window.scrollTo(0, 1);
     }, 0);
 });
+
+function zoomOutMobile() {
+  var viewport = document.querySelector('meta[name="viewport"]');
+
+  if ( viewport ) {
+    viewport.content = "initial-scale=0.1";
+    viewport.content = "width=1200";
+  }
+}
