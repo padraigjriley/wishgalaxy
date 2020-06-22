@@ -441,6 +441,7 @@ function anim_out(cont){
 }
 
 function showit() {
+  zoomOutMobile()
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.remove("hideme");
   document.getElementById("vl").classList.add("involve_quick");
@@ -563,8 +564,9 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 function zoomOutMobile() {
   var viewport = document.querySelector('meta[name="viewport"]');
 
-  if ( ( viewport ) && (isMobile)) {
-    viewport.content = "initial-scale=0.1";
-    viewport.content = "width=1200";
+  if ( (viewport) && (isMobile)) {
+    viewport.content = "initial-scale=1";
+    viewport.content = "width=device-width";
+    console.log("here");
   }
 }
