@@ -27,6 +27,8 @@ var animated_out = false;
 
 var form = true;
 
+var ready=false;
+
 var randombgs=["./images/bg/bg1.jpg", "./images/bg/bg2.jpg", "./images/bg/bg3.jpg", "./images/bg/bg4.jpg", "./images/bg/bg5.jpg", "./images/bg/bg6.jpg", "./images/bg/bg7.jpg", "./images/bg/bg8.jpg", "./images/bg/bg9.jpg", "./images/bg/bg10.jpg", "./images/bg/bg11.jpg", "./images/bg/bg12.jpg", "./images/bg/bg13.jpg", "./images/bg/bg14.jpg", "./images/bg/bg15.jpg", "./images/bg/bg16.jpg", "./images/bg/bg17.jpg", "./images/bg/bg18.jpg", "./images/bg/bg19.jpg"]
 var randnum = Math.floor(Math.random()*randombgs.length);
 document.getElementById("image").style.backgroundImage = 'url("'+randombgs[randnum]+'")';
@@ -41,10 +43,10 @@ document.getElementById("vl").classList.add("hideme");
 document.getElementById("middle").classList.add("hideme");
 document.getElementById("another_div").classList.add("hideme");
 
-window.scrollTo(0, 0);
+window.scrollTo(0,1);
 
 window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
+  window.scrollTo(0,1);
 }
 
 textwrap('.first');
@@ -61,7 +63,7 @@ function handleWheel(e) {
 
   op_index = Math.round((progress/1000)*100);
 
-  if ((!scroll) && (!animated_in) && (!animated_out) && (!first)){
+  if ((ready) && (!scroll) && (!animated_in) && (!animated_out) && (!first)){
     scroll = !scroll;
     anim_in('.first');
     document.getElementById("zero").classList.add('disolve_quick');
@@ -70,7 +72,7 @@ function handleWheel(e) {
     document.getElementById("button").removeAttribute("onclick");
   }
 
-  if ((scroll) && (animated_in) && (!animated_out) && (!first)){
+  if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!first)){
     scroll = !scroll;
     anim_out('.first');
     first = true;
@@ -79,7 +81,7 @@ function handleWheel(e) {
 
   //////////////////////////////
 
-  if ((!scroll) && (!animated_in) && (animated_out) && first && !second){
+  if ((ready) && (!scroll) && (!animated_in) && (animated_out) && first && !second){
     scroll = !scroll;
     anim_out('.second');
     second = true;
@@ -88,7 +90,7 @@ function handleWheel(e) {
 
   ////////////////////////////////////
 
-  if ((scroll) && (animated_in) && (!animated_out) && (!third) && second){
+  if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!third) && second){
     scroll = !scroll;
     anim_out('.third');
     third = true;
@@ -98,7 +100,7 @@ function handleWheel(e) {
   ////////////////////////////////////
 
 
-  if ((!scroll) && (!animated_in) && (animated_out) && (!forth) && third){
+  if ((ready) && (!scroll) && (!animated_in) && (animated_out) && (!forth) && third){
     scroll = !scroll;
     anim_out('.forth');
     forth = true;
@@ -108,7 +110,7 @@ function handleWheel(e) {
   /////////////////////////////////
 
 
-  if ((scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
+  if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
     scroll = !scroll;
     anim_out('.fifth');
     fifth = true;
@@ -118,7 +120,7 @@ function handleWheel(e) {
   /////////////////////////////////
 
 
-  if ((!scroll) && (!animated_in) && (animated_out) && (!sixth) && fifth){
+  if ((ready) && (!scroll) && (!animated_in) && (animated_out) && (!sixth) && fifth){
     scroll = !scroll;
     anim_out('.sixth');
     document.getElementById("video_stars").classList.add("cheekyfade");
@@ -133,7 +135,7 @@ function handleWheel(e) {
 
 
   if (op_index > 1500){
-    window.scrollTo(0,0);
+    window.scrollTo(0, 1);
   }
 
 }
@@ -176,7 +178,7 @@ function cointoss() {
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
   document.getElementById("first_section").classList.add("hideme");
-  window.scrollTo(0,0);
+  window.scrollTo(0, 1);
   document.getElementById("button").setAttribute("onclick", "button_clicked()");
   document.getElementById('button').classList.remove('disolve_quick');
   document.getElementById("button").style.opacity = 0;
@@ -337,7 +339,7 @@ function button_clicked(){
       document.getElementById("cursor").classList.add("cursor");
       document.getElementById("cursor").classList.add("involve_quicker");
 
-      window.scrollTo(0,0);
+      window.scrollTo(0,1);
     }
 
     if (tossed) {
@@ -509,6 +511,10 @@ function show(id, value) {
 onReady(function () {
     show('image', true);
     show('loading', false);
+    ready=true;
+    if (isMobile){
+      window.scrollTo(0,1);
+    }
 });
 
 var about_text = document.getElementById("about_text");
