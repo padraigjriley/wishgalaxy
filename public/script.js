@@ -162,7 +162,7 @@ textarea.oninput = function() {
 };
 
 function cointoss() {
-  zoomOutMobile();
+  // zoomOutMobile();
   tossed = true;
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("cursor").classList.remove("deflate");
@@ -443,7 +443,7 @@ function anim_out(cont){
 }
 
 
-  zoomOutMobile()
+  // zoomOutMobile()
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.remove("hideme");
   document.getElementById("vl").classList.add("involve_quick");
