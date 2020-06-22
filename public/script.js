@@ -442,7 +442,7 @@ function anim_out(cont){
     });
 }
 
-function showit() {
+
   zoomOutMobile()
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.remove("hideme");
@@ -452,7 +452,7 @@ function showit() {
   var y = document.getElementById("button");
   y.addEventListener("webkitAnimationEnd", buttonEndFunction);
   y.addEventListener("animationend", buttonEndFunction);
-}
+
 
 function buttonEndFunction() {
   document.getElementById("button").classList.remove("involve_quick");
