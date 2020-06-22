@@ -653,7 +653,7 @@ textarea {
 .side {
     display: block;
     text-align: center;
-    font-size: .8em;
+    font-size: .8vw;
     letter-spacing: 2px;
     font-family: Geomanist;
     color: white;
@@ -823,7 +823,7 @@ hr {
   align-items: center;
   text-align: center;
   font-family: Geomanist;
-  font-size: .64em;
+  font-size: .64vw;
   color: white;
   overflow: hidden;
   letter-spacing: 2px;
@@ -837,7 +837,7 @@ hr {
   align-items: center;
   text-align: center;
   font-family: Geomanist;
-  font-size: .64em;
+  font-size: .64vw;
   color: white;
   overflow: hidden;
   letter-spacing: 2px;
@@ -851,7 +851,7 @@ hr {
   align-items: center;
   text-align: center;
   font-family: Geomanist;
-  font-size: .64em;
+  font-size: .64vw;
   color: white;
   overflow: hidden;
   letter-spacing: 2px;
