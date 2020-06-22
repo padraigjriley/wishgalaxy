@@ -41,10 +41,10 @@ document.getElementById("vl").classList.add("hideme");
 document.getElementById("middle").classList.add("hideme");
 document.getElementById("another_div").classList.add("hideme");
 
-window.scrollTo(0, 0);
+// window.scrollTo(0, 0);
 
 window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 1);
 }
 
 textwrap('.first');
