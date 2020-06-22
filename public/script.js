@@ -27,6 +27,8 @@ var animated_out = false;
 
 var form = true;
 
+ready=false;
+
 var randombgs=["./images/bg/bg1.jpg", "./images/bg/bg2.jpg", "./images/bg/bg3.jpg", "./images/bg/bg4.jpg", "./images/bg/bg5.jpg", "./images/bg/bg6.jpg", "./images/bg/bg7.jpg", "./images/bg/bg8.jpg", "./images/bg/bg9.jpg", "./images/bg/bg10.jpg", "./images/bg/bg11.jpg", "./images/bg/bg12.jpg", "./images/bg/bg13.jpg", "./images/bg/bg14.jpg", "./images/bg/bg15.jpg", "./images/bg/bg16.jpg", "./images/bg/bg17.jpg", "./images/bg/bg18.jpg", "./images/bg/bg19.jpg"]
 var randnum = Math.floor(Math.random()*randombgs.length);
 document.getElementById("image").style.backgroundImage = 'url("'+randombgs[randnum]+'")';
@@ -41,10 +43,12 @@ document.getElementById("vl").classList.add("hideme");
 document.getElementById("middle").classList.add("hideme");
 document.getElementById("another_div").classList.add("hideme");
 
-// window.scrollTo(0, 0);
+// window.scrollTo(0, 1);
 
 window.onbeforeunload = function () {
-  window.scrollTo(0, 1);
+  if (ready){
+    window.scrollTo(0, 1);
+  }
 }
 
 textwrap('.first');
@@ -133,7 +137,7 @@ function handleWheel(e) {
 
 
   if (op_index > 1500){
-    window.scrollTo(0,0);
+    window.scrollTo(0, 1);
   }
 
 }
@@ -176,7 +180,7 @@ function cointoss() {
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
   document.getElementById("first_section").classList.add("hideme");
-  window.scrollTo(0,0);
+  window.scrollTo(0,1);
   document.getElementById("button").setAttribute("onclick", "button_clicked()");
   document.getElementById('button').classList.remove('disolve_quick');
   document.getElementById("button").style.opacity = 0;
@@ -337,7 +341,7 @@ function button_clicked(){
       document.getElementById("cursor").classList.add("cursor");
       document.getElementById("cursor").classList.add("involve_quicker");
 
-      window.scrollTo(0,0);
+      window.scrollTo(0,1);
     }
 
     if (tossed) {
@@ -442,6 +446,7 @@ function anim_out(cont){
 
 function showit() {
   zoomOutMobile()
+  ready=true;
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.remove("hideme");
   document.getElementById("vl").classList.add("involve_quick");
