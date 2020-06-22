@@ -209,6 +209,12 @@ document.addEventListener("click",function(e){
     }
 });
 
+document.addEventListener("click",function(e){
+   if ((!galaxy) && (!tossed) && (bool) && (isMobile) && (wisher)){
+      cursorFocus(wish);
+    }
+});
+
 function CursorEndFunction() {
   document.getElementById("image").classList.add('hideme');
   document.getElementById("cursor").classList.remove("cursor");
