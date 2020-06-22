@@ -869,19 +869,6 @@ hr {
   z-index: 99;
 }
 
-/*.coin_text {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Geomanist;
-  font-size: .8em;
-  color: white;
-  overflow: scroll;
-  letter-spacing: 2px;
-}*/
-
 .coin_text img {
   display: flex;
   flex-direction: row;
@@ -897,7 +884,7 @@ hr {
   pointer-events: none;
   cursor: none;
   position: fixed;
-  opacity: 1;
+  opacity: 0;
   z-index: 97;
 }
 
