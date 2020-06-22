@@ -35,8 +35,6 @@ document.getElementById("email").classList.add("hideme");
 document.getElementById("second_section").classList.add("hideme");
 document.getElementById("about_page").classList.add("hideme");
 
-// document.getElementById("about_text").classList.add("hideme");
-// document.getElementById("coin_text").classList.add("hideme");
 document.getElementById("vl2").classList.add("hideme");
 
 document.getElementById("middle").classList.add("hideme");
@@ -207,15 +205,8 @@ document.addEventListener("click",function(e){
     }
 });
 
-// document.addEventListener("mousedown",function(e){
-//    if ((!tossed) && (bool) && (!galaxy)){
-//       document.getElementById("cursor").classList.remove("involve_quicker")
-//       document.getElementById("cursor").classList.remove("deflate");
-//       document.getElementById("cursor").classList.add("expand");
-//     }
-// });
 
-document.addEventListener("mouseup",function(e){
+document.addEventListener("click",function(e){
    if ((!galaxy) && (!tossed) && (bool)){
       cursorFocus(wish);
     }
@@ -273,13 +264,8 @@ function button_clicked(){
     about = true;
     coin = true;
     galaxy_text = true;
-    // reveal_about();
-    // reveal_coin();
-    // reveal_galaxy_text();
 
     document.getElementById("middle").classList.remove("hideme");
-
-    //document.getElementById("wish_galaxy").classList.add("disolve_quick");
 
     if (!tossed) {
       document.getElementById("first_section").classList.remove("involve_quick");
@@ -317,8 +303,6 @@ function button_clicked(){
     document.getElementById("button").classList.remove("button2");
     document.getElementById("button").classList.add("button");
     document.getElementById("about_page").classList.remove("involve_quick");
-    // document.getElementById("coin_text").classList.add("hideme");
-    // document.getElementById("about_text").classList.add("hideme");
     document.getElementById("middle").classList.add("hideme");
     document.getElementById("image").classList.remove('hideme');
 
@@ -363,9 +347,6 @@ function button_clicked(){
 
     if (galaxy) {
       reveal_galaxy();
-      // document.getElementById("about_page").classList.add("disolve_quick");
-      // document.getElementById("wish_galaxy").classList.add("involve_quick");
-      // document.getElementById("video_space2").classList.add("involve_quick");
     }
 
 
@@ -382,55 +363,6 @@ function toggle_subscribe() {
     cursorFocus(subscribe)
   }
 }
-
-// function reveal_about() {
-//   about = !about;
-//   if (about){
-//     coin = false;
-//     galaxy_text = false;
-//     document.getElementById("about_text").classList.remove("hideme");
-//     document.getElementById("coin_text").classList.add("hideme");
-//     document.getElementById("middle").style.justifyContent = "initial";
-//     document.getElementById("galaxy_text").classList.add("hideme");
-//   }
-//   if (!about){
-//     document.getElementById("middle").style.justifyContent = "center";
-//     document.getElementById("about_text").classList.add("hideme");
-//   }
-// }
-
-// function reveal_coin() {
-//   coin = !coin;
-//   if (coin){
-//     about = false;
-//     galaxy_text = false;
-//     document.getElementById("middle").style.justifyContent = "initial";
-//     document.getElementById("about_text").classList.add("hideme");
-//     document.getElementById("coin_text").classList.remove("hideme");
-//     document.getElementById("galaxy_text").classList.add("hideme");
-//   }
-//   if (!coin){
-//     document.getElementById("middle").style.justifyContent = "center";
-//     document.getElementById("coin_text").classList.add("hideme");
-//   }
-// }
-
-
-// function reveal_galaxy_text() {
-//   galaxy_text = !galaxy_text;
-//   if (galaxy_text){
-//     coin = false;
-//     about = false;
-//     document.getElementById("galaxy_text").classList.remove("hideme");
-//     document.getElementById("coin_text").classList.add("hideme");
-//     document.getElementById("about_text").classList.add("hideme");
-//     document.getElementById("middle").style.justifyContent = "initial";
-//   }
-//   if (!galaxy_text){
-//     document.getElementById("middle").style.justifyContent = "center";
-//     document.getElementById("galaxy_text").classList.add("hideme");
-//   }
-// }
 
 function submitted() {
   document.getElementById('subscribe').classList.add('hideme');
@@ -462,7 +394,6 @@ function textwrap(cont){
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 }
-
 
 function anim_in(cont){
   anime.timeline({loop: false})
@@ -509,7 +440,7 @@ function showit() {
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.add("involve_quick");
   document.getElementById("button").classList.add("involve_quick");
-  document.getElementById("cursor").classList.add("involve_quick")
+  document.getElementById("cursor").classList.add("involve_quick");
   var y = document.getElementById("button");
   y.addEventListener("webkitAnimationEnd", buttonEndFunction);
   y.addEventListener("animationend", buttonEndFunction);
@@ -616,16 +547,3 @@ galaxy_heading.addEventListener("click", function() {
       coin_text.style.maxHeight = null;
     }
 });
-
-
-// for (i = 0; i < coll.length; i++) {
-//   coll[i].addEventListener("click", function() {
-//     var content = this.nextElementSibling;
-//     if (content.style.maxHeight){
-//       content.style.maxHeight = null;
-//     } else {
-//       content.style.maxHeight = content.scrollHeight + "px";
-//     }
-//   });
-// }
-

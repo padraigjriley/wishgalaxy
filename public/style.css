@@ -7,7 +7,6 @@ body {
   height: 100%;
   width: 100%;
   cursor: none;
-  /*overflow-y: s;*/
 }
 
 @font-face {
@@ -66,7 +65,6 @@ a:visited { text-decoration: none; color:white; }
   overflow: hidden;
   object-fit: fill;
   cursor: none;
-  /*background-image: url("./images/bg.jpg");*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,15 +75,11 @@ a:visited { text-decoration: none; color:white; }
  width: 40px;
  height: 40px;
  pointer-events: none;
- /*content: url('./images/coinage.png');*/
  cursor: none;
  z-index: 99;
  opacity: 0;
  border-radius: 100%;
  background: radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
- /*box-shadow:  0 0 30px 3px #fff,  
-              0 0 30px 5px #FEDB37, 
-              0 0 30px 5px #FDB931; */
  box-shadow: 0 0 30px 3px red;  
  animation: cursorShadow 20s infinite;     
  animation-timing-function: ease-in-out;     
@@ -206,6 +200,7 @@ section {
   overflow: hidden;
   pointer-events: none;
   cursor: none;
+  word-wrap: break-word;
 }
 
 
@@ -213,6 +208,7 @@ section {
   margin-left: 10%;
   bottom: 30%;
   position: fixed;
+  word-wrap: break-word;
 }
 
 .first .letter {
