@@ -631,11 +631,13 @@ if (isMobile){
   let about_text = document.getElementById('about_text')
   let coin_text = document.getElementById('coin_text')
   let galaxy_text = document.getElementById('galaxy_text')
-  let side = document.getElementsByClassName('side')
+  let lside = document.getElementsId('left_side')
+  let rside = document.getElementsId('right_side')
 
   about_text.style.fontSize = "1.2vw"
   coin_text.style.fontSize = "1.2vw"
   galaxy_text.style.fontSize = "1.2vw"
   coll.style.fontSize = "2vw"
-  side.style.fontSize = ".7vw"
+  lside.style.fontSize = "1vw"
+  rside.style.fontSize = "1vw"
 }
