@@ -270,6 +270,14 @@ function GalaxyFunction() {
   document.getElementById("wish_galaxy").classList.add("involve");
   document.getElementById("video_space2").classList.add("involve");
   galaxy = true;
+  if (isMobile){
+    setInterval(function(){ 
+      twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
+      twink_wish.classList.add('twinkle')
+      // twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
+      // twink_wish.addEventListener("animationend", twinkle_wait(twink_wish));
+    }, 1500);
+  }
 }
 
 function button_clicked(){
