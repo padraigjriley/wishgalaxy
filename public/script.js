@@ -556,6 +556,7 @@ function show(id, value) {
 onReady(function () {
     show('image', true);
     show('loading', false);
+    show('cursor', true);
     ready=true;
 });
 
