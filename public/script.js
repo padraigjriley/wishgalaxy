@@ -381,7 +381,6 @@ function button_clicked(){
       reveal_galaxy();
     }
 
-
   }
 }
 
@@ -518,33 +517,15 @@ function reveal_galaxy(){
   bool = true;
   window.scrollTo(0,document.body.scrollHeight);
   
-
-  
   if (isMobile){
     setInterval(function(){ 
       twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
-      twink_wish.classList.add('twinkle_in')
-      twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
-      twink_wish.addEventListener("animationend", twinkle_wait(twink_wish));
-    }, 1000);
+      twink_wish.classList.add('twinkle')
+      // twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
+      // twink_wish.addEventListener("animationend", twinkle_wait(twink_wish));
+    }, 1500);
   }
   
-
- 
-
-}
-
-function myMove(elem) {
-  var pos = 0;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (pos == 350000) {
-      clearInterval(id);
-    } else {
-      pos++;
-      elem.classList.add("twinkle");
-    }
-  }
 }
 
 function onReady(callback) {
@@ -661,7 +642,5 @@ if (isMobile){
   for (i=0;i<wish_out.length;i++){
     wish_out[i].style.fontSize = "2vw" 
   }
-
-
 
 }

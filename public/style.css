@@ -1243,8 +1243,8 @@ hr {
 }
 
 .twinkle{
-  animation: twinkle 1s alternate infinite;
-  animation-delay: 2s;
+  animation: twinkle 5s alternate infinite;
+  /*animation-delay: 2s;*/
 }
 
 .twinkle_in{
