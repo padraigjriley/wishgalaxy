@@ -626,3 +626,14 @@ function zoomOutMobile() {
     viewport.content = "width=1200";
   }
 }
+
+if (isMobile){
+  let about_text = document.getElementById('about_text')
+  let coin_text = document.getElementById('coin_text')
+  let galaxy_text = document.getElementById('galaxy_text')
+
+  about_text.style.fontSize = "1vw"
+  coin_text.style.fontSize = "1vw"
+  galaxy_text.style.fontSize = "1vw"
+  
+}
