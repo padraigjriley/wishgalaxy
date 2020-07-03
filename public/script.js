@@ -64,6 +64,8 @@ document.getElementById("vl").classList.add("hideme");
 document.getElementById("middle").classList.add("hideme");
 document.getElementById("another_div").classList.add("hideme");
 
+document.getElementById('goldball').style.content = "url('./images/coinage.png')"
+
 window.scrollTo(0,0);
 
 window.onbeforeunload = function () {
