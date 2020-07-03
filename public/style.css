@@ -1089,6 +1089,7 @@ hr {
   transition-duration: .2s;
   transition-timing-function: ease-in;
   cursor: none;
+  animation-timing-function: ease-in-out;
 }
 
 .wish:hover {
@@ -1237,16 +1238,38 @@ hr {
   }
 }
 
+@keyframes twinkle {
+  from{
+    opacity: .2;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.twinkle{
+  animation: twinkle 1s alternate infinite;
+  animation-delay: 2s;
+}
+
+.twinkle_in{
+  animation: twinkle 5s forwards;
+}
+
+.twinkle_out{
+  animation: twinkle 2s reverse;
+  } 
+
 #loading {
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: rgba(192, 192, 192, 0.5);
-    background-image: url("http://i.stack.imgur.com/MnyxU.gif");
+    background-image: url("/loader.gif");
     background-repeat: no-repeat;
     background-position: center;
 }

@@ -29,6 +29,27 @@ var form = true;
 
 var ready=false;
 
+let wish1 = document.getElementById("wish1")
+let wish2 = document.getElementById("wish2")
+let wish3 = document.getElementById("wish3")
+let wish4 = document.getElementById("wish4")
+let wish5 = document.getElementById("wish5")
+let wish6 = document.getElementById("wish6")
+let wish7 = document.getElementById("wish7")
+let wish8 = document.getElementById("wish8")
+let wish9 = document.getElementById("wish9")
+let wish10 = document.getElementById("wish10")
+let wish11 = document.getElementById("wish11")
+let wish12 = document.getElementById("wish12")
+let wish13 = document.getElementById("wish13")
+let wish14 = document.getElementById("wish14")
+let wish15 = document.getElementById("wish15")
+let wish16 = document.getElementById("wish16")
+let wish17 = document.getElementById("wish17")
+
+all_wishes = [wish1, wish2, wish3, wish4, wish5, wish6, wish7, wish8, wish9, wish10, wish11, wish12, wish13, wish14, wish15, wish16, wish17]
+
+
 var randombgs=["./images/bg/bg1.jpg", "./images/bg/bg2.jpg", "./images/bg/bg3.jpg", "./images/bg/bg4.jpg", "./images/bg/bg5.jpg", "./images/bg/bg6.jpg", "./images/bg/bg7.jpg", "./images/bg/bg8.jpg", "./images/bg/bg9.jpg", "./images/bg/bg10.jpg", "./images/bg/bg11.jpg", "./images/bg/bg12.jpg", "./images/bg/bg13.jpg", "./images/bg/bg14.jpg", "./images/bg/bg15.jpg", "./images/bg/bg16.jpg", "./images/bg/bg17.jpg", "./images/bg/bg18.jpg", "./images/bg/bg19.jpg"]
 var randnum = Math.floor(Math.random()*randombgs.length);
 document.getElementById("image").style.backgroundImage = 'url("'+randombgs[randnum]+'")';
@@ -237,6 +258,11 @@ function HeavensEndFunction() {
   var h = document.getElementById("nineth");
   h.addEventListener("webkitAnimationEnd", GalaxyFunction);
   h.addEventListener("animationend", GalaxyFunction);
+}
+
+function twinkle_wait(wishes){
+  wishes.classList.remove('twinkle_in')
+  wishes.classList.add('twinkle_out')
 }
 
 function GalaxyFunction() {
@@ -491,6 +517,34 @@ function reveal_galaxy(){
   tossed = true;
   bool = true;
   window.scrollTo(0,document.body.scrollHeight);
+  
+
+  
+  if (isMobile){
+    setInterval(function(){ 
+      twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
+      twink_wish.classList.add('twinkle_in')
+      twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
+      twink_wish.addEventListener("animationend", twinkle_wait(twink_wish));
+    }, 1000);
+  }
+  
+
+ 
+
+}
+
+function myMove(elem) {
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350000) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.classList.add("twinkle");
+    }
+  }
 }
 
 function onReady(callback) {
