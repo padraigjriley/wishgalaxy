@@ -239,7 +239,7 @@ a:visited { text-decoration: none; color:white; }
   height: 40px;
   width: 40px;
   position: fixed;
-  content: url('./images/coinage.png');
+  /*content: url('./images/coinage.png');*/
   z-index: 99;
   opacity: .3;
 }
