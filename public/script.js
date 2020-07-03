@@ -627,20 +627,23 @@ function zoomOutMobile() {
   }
 }
 
-if (isMobile){
-  let about_text = document.getElementById('about_text')
-  let coin_text = document.getElementById('coin_text')
-  let galaxy_text = document.getElementById('galaxy_text')
+// if (isMobile){
+  // let about_text = document.getElementById('about_text')
+  // let coin_text = document.getElementById('coin_text')
+  let galaxy_text22 = document.getElementById('galaxy_text')
   let lside = document.getElementById('left_side')
   let rside = document.getElementById('right_side')
-  let about_heading = document.getElementById('about_heading')
-  let coin_heading = document.getElementById('about_heading')
-  let galaxy_heading = document.getElementById('about_heading')
+  // let about_heading = document.getElementById('about_heading')
+  // let coin_heading = document.getElementById('about_heading')
+  // let galaxy_heading = document.getElementById('about_heading')
 
-  about_text.style.fontSize = "1.2vw"
-  coin_text.style.fontSize = "1.2vw"
-  galaxy_text.style.fontSize = "1.2vw"
-  coll.style.fontSize = "2vw"
-  lside.style.fontSize = "1vw"
-  rside.style.fontSize = "1vw"
-}
+  about_text.style.fontSize = "1.5vw"
+  coin_text.style.fontSize = "1.5vw"
+  galaxy_text22.style.fontSize = "1.5vw"
+  about_heading.style.fontSize = "5vw"
+  coin_heading.style.fontSize = "5vw"
+  galaxy_heading.style.fontSize = "5vw"
+  lside.style.fontSize = "1.3vw"
+  rside.style.fontSize = "1.3vw"
+
+// }
