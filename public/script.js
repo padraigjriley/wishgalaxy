@@ -633,6 +633,9 @@ if (isMobile){
   let galaxy_text = document.getElementById('galaxy_text')
   let lside = document.getElementById('left_side')
   let rside = document.getElementById('right_side')
+  let about_heading = document.getElementById('about_heading')
+  let coin_heading = document.getElementById('about_heading')
+  let galaxy_heading = document.getElementById('about_heading')
 
   about_text.style.fontSize = "1.2vw"
   coin_text.style.fontSize = "1.2vw"
