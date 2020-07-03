@@ -637,6 +637,10 @@ if (isMobile){
   // let coin_heading = document.getElementById('about_heading')
   // let galaxy_heading = document.getElementById('about_heading')
 
+  let wish_in = document.getElementById('wish_inner')
+  let wish_out = document.getElementById('wish_outer')
+  let wish_mid = document.getElementById('wish_mid')
+
   about_text.style.fontSize = "1.5vw"
   coin_text.style.fontSize = "1.5vw"
   galaxy_text22.style.fontSize = "1.5vw"
@@ -646,9 +650,9 @@ if (isMobile){
   lside.style.fontSize = "1.3vw"
   rside.style.fontSize = "1.3vw"
 
-  for (i=0;i<all_wishes.length;i++){
-    all_wishes[i].style.fontSize = "2vw"
-  }
+  wish_in.style.fontSize = "1.2vw"
+  wish_mid.style.fontSize = "1.6vw"
+  wish_out.style.fontSize = "2vw" 
 
 
 
