@@ -631,8 +631,8 @@ if (isMobile){
   let about_text = document.getElementById('about_text')
   let coin_text = document.getElementById('coin_text')
   let galaxy_text = document.getElementById('galaxy_text')
-  let lside = document.getElementsId('left_side')
-  let rside = document.getElementsId('right_side')
+  let lside = document.getElementById('left_side')
+  let rside = document.getElementById('right_side')
 
   about_text.style.fontSize = "1.2vw"
   coin_text.style.fontSize = "1.2vw"
