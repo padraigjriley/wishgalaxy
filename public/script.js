@@ -627,7 +627,7 @@ function zoomOutMobile() {
   }
 }
 
-// if (isMobile){
+if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
   let galaxy_text22 = document.getElementById('galaxy_text')
@@ -646,10 +646,10 @@ function zoomOutMobile() {
   lside.style.fontSize = "1.3vw"
   rside.style.fontSize = "1.3vw"
 
-  for (i=0;i<all_wishes.length-1;i++){
+  for (i=0;i<all_wishes.length;i++){
     all_wishes[i].style.fontSize = "2vw"
   }
 
 
 
-// }
+}
