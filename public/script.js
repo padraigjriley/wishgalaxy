@@ -517,7 +517,7 @@ function reveal_galaxy(){
   document.getElementById("nineth").classList.add("hideme");
   document.getElementById("image").classList.add("hideme");
   document.getElementById("video_space2").classList.add("involve_quick");
-  document.getElementById("video_stars").classList.add("hideme");
+  document.getElementById("video_space").classList.add("hideme");
   document.getElementById("cursor").style.background = "white";
   document.getElementById("goldball").classList.add("hideme");
   galaxy_text2.style.maxHeight = null;
@@ -619,6 +619,32 @@ function zoomOutMobile() {
   }
 }
 
+var vid_stars = document.createElement("video")
+vid_stars.src="./videos/video_stars.mp4"
+vid_stars.type="video/mp4"
+vid_stars.id="video_space"
+vid_stars.classList.add("video_stars")
+vid_stars.autoplay="true"
+vid_stars.muted = "true"
+vid_stars.playsinline= "true"
+vid_stars.defaultMuted="true"
+vid_stars.loop="true"
+
+var vid_space = document.createElement("video")
+
+vid_space.type="video/mp4"
+vid_space.id="video_space2"
+vid_space.classList.add("video_space2")
+vid_space.autoplay="true"
+vid_space.muted = "true"
+vid_space.playsinline= "true"
+vid_space.defaultMuted="true"
+vid_space.loop="true"
+
+document.getElementById('video_container').appendChild(vid_space)
+document.getElementById('video_container').appendChild(vid_stars)
+
+
 if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
@@ -654,4 +680,6 @@ if (isMobile){
     wish_out[i].style.fontSize = "2.4vw" 
   }
 
-}
+  vid_space.src="./videos/video_space_mobile.mp4"
+
+}else{vid_space.src="./videos/video_space.mp4"}
