@@ -627,10 +627,11 @@ vid_stars.classList.add("video_stars")
 vid_stars.autoplay="true"
 vid_stars.muted = "true"
 vid_stars.playsinline= "true"
-vid_stars.defaultMuted="true"
 vid_stars.loop="true"
 // vid_stars.webview.allowsInlineMediaPlayback = "true";
-vid_stars.setAttribute('webkit-playsinline', 'webkit-playsinline');
+vid_stars.setAttribute('webkit-playsinline', 'true');
+vid_stars.setAttribute('playsinline', 'true');
+vid_stars.setAttribute('defaultMuted', 'true');
 
 var vid_space = document.createElement("video")
 
@@ -640,10 +641,11 @@ vid_space.classList.add("video_space2")
 vid_space.autoplay="true"
 vid_space.muted = "true"
 vid_space.playsinline= "true"
-vid_space.defaultMuted="true"
 vid_space.loop="true"
 // webview.allowsInlineMediaPlayback = "true";
-vid_space.setAttribute('webkit-playsinline', 'webkit-playsinline');
+vid_space.setAttribute('webkit-playsinline', 'true');
+vid_space.setAttribute('playsinline', 'true');
+vid_space.setAttribute('defaultMuted', 'true');
 
 document.getElementById('video_container').appendChild(vid_space)
 document.getElementById('video_container').appendChild(vid_stars)
