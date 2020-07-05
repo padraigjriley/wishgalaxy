@@ -517,7 +517,7 @@ function reveal_galaxy(){
   document.getElementById("nineth").classList.add("hideme");
   document.getElementById("image").classList.add("hideme");
   document.getElementById("video_space2").classList.add("involve_quick");
-  document.getElementById("video_space").classList.add("hideme");
+  document.getElementById("video_stars").classList.add("hideme");
   document.getElementById("cursor").style.background = "white";
   document.getElementById("goldball").classList.add("hideme");
   galaxy_text2.style.maxHeight = null;
@@ -628,7 +628,6 @@ vid_stars.autoplay="true"
 vid_stars.muted = "true"
 vid_stars.playsinline= "true"
 vid_stars.loop="true"
-// vid_stars.webview.allowsInlineMediaPlayback = "true";
 vid_stars.setAttribute('webkit-playsinline', 'true');
 vid_stars.setAttribute('playsinline', 'true');
 vid_stars.setAttribute('defaultMuted', 'true');
@@ -636,19 +635,19 @@ vid_stars.setAttribute('defaultMuted', 'true');
 var vid_space = document.createElement("video")
 
 vid_space.type="video/mp4"
+
 vid_space.id="video_space2"
 vid_space.classList.add("video_space2")
 vid_space.autoplay="true"
 vid_space.muted = "true"
 vid_space.playsinline= "true"
 vid_space.loop="true"
-// webview.allowsInlineMediaPlayback = "true";
 vid_space.setAttribute('webkit-playsinline', 'true');
 vid_space.setAttribute('playsinline', 'true');
 vid_space.setAttribute('defaultMuted', 'true');
 
-document.getElementById('video_container').appendChild(vid_space)
 document.getElementById('video_container').appendChild(vid_stars)
+document.getElementById('video_container').appendChild(vid_space)
 
 
 if (isMobile){
@@ -687,5 +686,7 @@ if (isMobile){
   }
 
   vid_space.src="./videos/video_space_mobile.mp4"
+
+
 
 }else{vid_space.src="./videos/video_space.mp4"}
