@@ -622,7 +622,7 @@ function zoomOutMobile() {
 var vid_stars = document.createElement("video")
 vid_stars.src="./videos/video_stars.mp4"
 vid_stars.type="video/mp4"
-vid_stars.id="video_space"
+vid_stars.id="video_stars"
 vid_stars.classList.add("video_stars")
 vid_stars.autoplay="true"
 vid_stars.muted = "true"
@@ -636,7 +636,7 @@ vid_stars.setAttribute('defaultMuted', 'true');
 var vid_space = document.createElement("video")
 
 vid_space.type="video/mp4"
-vid_space.id="video_stars"
+vid_space.id="video_space2"
 vid_space.classList.add("video_space2")
 vid_space.autoplay="true"
 vid_space.muted = "true"
