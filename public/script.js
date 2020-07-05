@@ -620,7 +620,7 @@ function zoomOutMobile() {
 }
 
 var vid_stars = document.createElement("video")
-vid_stars.src="./videos/video_stars.mp4"
+
 vid_stars.type="video/mp4"
 vid_stars.id="video_stars"
 vid_stars.classList.add("video_stars")
@@ -686,7 +686,13 @@ if (isMobile){
   }
 
   vid_space.src="./videos/video_space_mobile.mp4"
+  vid_stars.src="./videos/video_stars_mobile.mp4"
 
 
 
-}else{vid_space.src="./videos/video_space.mp4"}
+}else{
+  vid_space.src="./videos/video_space.mp4"
+  vid_stars.src="./videos/video_stars.mp4"
+}
+
+
