@@ -270,7 +270,7 @@ function twinkle_wait(wishes){
 function GalaxyFunction() {
   document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.add("involve");
-  document.getElementById("video_space2").classList.add("involve");
+  document.getElementById("video_stars").classList.add("involve");
   galaxy = true;
   if (isMobile){
     setInterval(function(){ 
@@ -516,7 +516,7 @@ function reveal_galaxy(){
   document.getElementById("eighth").classList.add("hideme");
   document.getElementById("nineth").classList.add("hideme");
   document.getElementById("image").classList.add("hideme");
-  document.getElementById("video_space2").classList.add("involve_quick");
+  document.getElementById("video_stars").classList.add("involve_quick");
   document.getElementById("video_space").classList.add("hideme");
   document.getElementById("cursor").style.background = "white";
   document.getElementById("goldball").classList.add("hideme");
@@ -636,8 +636,8 @@ vid_stars.setAttribute('defaultMuted', 'true');
 var vid_space = document.createElement("video")
 
 vid_space.type="video/mp4"
-vid_space.id="video_space2"
-vid_space.classList.add("video_space2")
+vid_space.id="video_stars"
+vid_space.classList.add("video_stars")
 vid_space.autoplay="true"
 vid_space.muted = "true"
 vid_space.playsinline= "true"
