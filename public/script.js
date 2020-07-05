@@ -633,25 +633,25 @@ if (isMobile){
   let wish_out = document.getElementsByClassName('wish_outer')
   let wish_mid = document.getElementsByClassName('wish_mid')
 
-  about_text.style.fontSize = "1.5vw"
-  coin_text.style.fontSize = "1.5vw"
-  galaxy_text22.style.fontSize = "1.5vw"
-  about_heading.style.fontSize = "5vw"
-  coin_heading.style.fontSize = "5vw"
-  galaxy_heading.style.fontSize = "5vw"
-  lside.style.fontSize = "1.3vw"
-  rside.style.fontSize = "1.3vw"
+  about_text.style.fontSize = "1.9vw"
+  coin_text.style.fontSize = "1.9vw"
+  galaxy_text22.style.fontSize = "1.9vw"
+  about_heading.style.fontSize = "4.8vw"
+  coin_heading.style.fontSize = "4.8vw"
+  galaxy_heading.style.fontSize = "4.8vw"
+  lside.style.fontSize = "1.7vw"
+  rside.style.fontSize = "1.7vw"
 
   for (i=0;i<wish_in.length;i++){
-    wish_in[i].style.fontSize = "1.2vw"
+    wish_in[i].style.fontSize = "1.6vw"
   }
   
   for (i=0;i<wish_mid.length;i++){
-    wish_mid[i].style.fontSize = "1.6vw"
+    wish_mid[i].style.fontSize = "2vw"
   }
 
   for (i=0;i<wish_out.length;i++){
-    wish_out[i].style.fontSize = "2vw" 
+    wish_out[i].style.fontSize = "2.4vw" 
   }
 
 }

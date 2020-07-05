@@ -817,10 +817,11 @@ textarea {
     letter-spacing: 2px;
     font-family: Geomanist;
     color: white;
-    margin: 30px;
+    margin: 15px;
     padding-top: 25%;
-    flex: 1;
+    /*flex: 1;*/
     flex-shrink: 1;
+    width: 20%;
 }
 
 .email {
@@ -870,6 +871,7 @@ textarea {
     margin-top: 130px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    width: 60%;
 }
 
 .titlething {
