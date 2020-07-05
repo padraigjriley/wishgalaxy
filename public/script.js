@@ -629,6 +629,8 @@ vid_stars.muted = "true"
 vid_stars.playsinline= "true"
 vid_stars.defaultMuted="true"
 vid_stars.loop="true"
+// vid_stars.webview.allowsInlineMediaPlayback = "true";
+vid_stars.setAttribute('webkit-playsinline', 'webkit-playsinline');
 
 var vid_space = document.createElement("video")
 
@@ -640,6 +642,8 @@ vid_space.muted = "true"
 vid_space.playsinline= "true"
 vid_space.defaultMuted="true"
 vid_space.loop="true"
+// webview.allowsInlineMediaPlayback = "true";
+vid_space.setAttribute('webkit-playsinline', 'webkit-playsinline');
 
 document.getElementById('video_container').appendChild(vid_space)
 document.getElementById('video_container').appendChild(vid_stars)
