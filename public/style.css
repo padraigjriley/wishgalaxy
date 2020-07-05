@@ -485,6 +485,17 @@ textarea {
   overflow: hidden;
 }
 
+.video_space2 {
+  z-index: 3; 
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  overflow: hidden;
+}
+
 /*.second_section {
   width: 100%;
   height: 100vh;
