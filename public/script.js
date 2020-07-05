@@ -691,7 +691,7 @@ if (isMobile){
 
 
 }else{
-  vid_space.src="./videos/video_space.mp4"
+  vid_space.src="./videos/video_space_mobile.mp4"
   vid_stars.src="./videos/video_stars.mp4"
 }
 
