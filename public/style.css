@@ -463,37 +463,61 @@ textarea {
 }
 
 .video_container {
-  position: fixed;
-  right: 0;
+  position: absolute;
+  top: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  width: 100%; 
+  height: 100%;
   overflow: hidden;
-  object-fit: fill;
+  /*object-fit: fill;*/
   pointer-events: none;
   cursor: none;
   }
 
+.video_container video{
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .video_stars {
   z-index: 3; 
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  /*position: absolute;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*min-width: 100%;*/
+  /*min-height: 100%;*/
   opacity: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  /*left: -50%;*/
+  /*background-position: center center;*/
+  /*background-size: contain;*/
 }
 
 .video_space2 {
   z-index: 3; 
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  /*position: fixed;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*min-width: 100%;*/
+  /*min-height: 100%;*/
   opacity: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  /*left: -90%;*/
+  /*background-position: center center;*/
+  /*background-size: contain;*/
+  /*min-width: 100%;*/
+  /*min-height: 100%;*/
 }
 
 /*.second_section {
