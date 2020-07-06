@@ -135,18 +135,19 @@ function handleWheel(e) {
   /////////////////////////////////
 
 
-  if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
+  if ((ready) && (scroll) && (!animated_in) && (!animated_out) && (!fifth) && forth){
     scroll = !scroll;
     anim_out('.fifth');
     anim_out('.fifth2');
     fifth = true;
     anim_in('.sixth');
+    //console.log("scroll: "+scroll+" animated_in: "+animated_in+ " animated_out: "+animated_out)
   }
 
   /////////////////////////////////
 
 
-  if ((ready) && (!scroll) && (!animated_in) && (animated_out) && (!sixth) && fifth){
+  if ((ready) && (!scroll) && (animated_in) && (!animated_out) && (!sixth) && fifth){
     scroll = !scroll;
     anim_out('.sixth');
     document.getElementById("video_stars").classList.add("cheekyfade");
@@ -707,5 +708,3 @@ if (isMobile){
   vid_space.src="./videos/video_space.mp4"
   vid_stars.src="./videos/video_stars.mp4"
 }
-
-
