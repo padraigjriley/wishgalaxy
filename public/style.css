@@ -363,6 +363,7 @@ section {
   margin-left: 10%;
   bottom: 30%;
   position: fixed;
+  white-space: pre;
 }
 
 .fifth2 {

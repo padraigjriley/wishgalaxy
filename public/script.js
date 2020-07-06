@@ -80,7 +80,7 @@ textwrap('.second');
 textwrap('.third');
 textwrap('.forth');
 textwrap('.fifth');
-textwrap('.fifth2');
+// textwrap('.fifth2');
 textwrap('.sixth');
 
 var progress = 0;
@@ -132,16 +132,16 @@ function handleWheel(e) {
     anim_out('.forth');
     forth = true;
     anim_in('.fifth');
-    anim_in('.fifth2');
+    // anim_in('.fifth2');
   }
 
   /////////////////////////////////
 
 
-  if ((ready) && (scroll) && (!animated_in) && (!animated_out) && (!fifth) && forth){
+  if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
     scroll = !scroll;
     anim_out('.fifth');
-    anim_out('.fifth2');
+    // anim_out('.fifth2');
     fifth = true;
     anim_in('.sixth');
     //console.log("scroll: "+scroll+" animated_in: "+animated_in+ " animated_out: "+animated_out)
@@ -150,7 +150,7 @@ function handleWheel(e) {
   /////////////////////////////////
 
 
-  if ((ready) && (!scroll) && (animated_in) && (!animated_out) && (!sixth) && fifth){
+  if ((ready) && (!scroll) && (!animated_in) && (animated_out) && (!sixth) && fifth){
     scroll = !scroll;
     anim_out('.sixth');
     document.getElementById("video_stars").classList.add("cheekyfade");
@@ -522,6 +522,7 @@ function reveal_galaxy(){
   document.getElementById("button").classList.add("button");
   document.getElementById("container").classList.remove("hideme");
   document.getElementById("button").classList.remove("hideme");
+  document.getElementById("button").classList.remove("heavens");
   document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.remove("disolve_quick");
   document.getElementById("wish_galaxy").classList.add("involve");
