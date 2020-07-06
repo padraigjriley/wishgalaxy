@@ -650,7 +650,7 @@ document.getElementById('video_container').appendChild(vid_stars)
 document.getElementById('video_container').appendChild(vid_space)
 
 
-if (isMobile){
+// if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
   let galaxy_text22 = document.getElementById('galaxy_text')
@@ -663,15 +663,21 @@ if (isMobile){
   let wish_in = document.getElementsByClassName('wish_inner')
   let wish_out = document.getElementsByClassName('wish_outer')
   let wish_mid = document.getElementsByClassName('wish_mid')
+  let first_section = document.getElementById('first_section')
+  let second_section = document.getElementById('second_section')
+  let zero = document.getElementById('zero')
 
+  zero.style.fontSize = "4vw"
+  first_section.style.fontSize = "3.8vw"
+  second_section.style.fontSize = "3.8vw"
   about_text.style.fontSize = "1.9vw"
   coin_text.style.fontSize = "1.9vw"
   galaxy_text22.style.fontSize = "1.9vw"
   about_heading.style.fontSize = "4.8vw"
   coin_heading.style.fontSize = "4.8vw"
   galaxy_heading.style.fontSize = "4.8vw"
-  lside.style.fontSize = "1.7vw"
-  rside.style.fontSize = "1.7vw"
+  lside.style.fontSize = "2vw"
+  rside.style.fontSize = "2vw"
 
   for (i=0;i<wish_in.length;i++){
     wish_in[i].style.fontSize = "1.6vw"
@@ -690,9 +696,9 @@ if (isMobile){
 
 
 
-}else{
-  vid_space.src="./videos/video_space.mp4"
-  vid_stars.src="./videos/video_stars.mp4"
-}
+// }else{
+//   vid_space.src="./videos/video_space.mp4"
+//   vid_stars.src="./videos/video_stars.mp4"
+// }
 
 
