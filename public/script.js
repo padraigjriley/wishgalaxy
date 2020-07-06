@@ -650,7 +650,7 @@ document.getElementById('video_container').appendChild(vid_stars)
 document.getElementById('video_container').appendChild(vid_space)
 
 
-// if (isMobile){
+if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
   let galaxy_text22 = document.getElementById('galaxy_text')
@@ -696,9 +696,9 @@ document.getElementById('video_container').appendChild(vid_space)
 
 
 
-// }else{
-//   vid_space.src="./videos/video_space.mp4"
-//   vid_stars.src="./videos/video_stars.mp4"
-// }
+}else{
+  vid_space.src="./videos/video_space.mp4"
+  vid_stars.src="./videos/video_stars.mp4"
+}
 
 
