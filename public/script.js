@@ -77,6 +77,7 @@ textwrap('.second');
 textwrap('.third');
 textwrap('.forth');
 textwrap('.fifth');
+textwrap('.fifth2');
 textwrap('.sixth');
 
 var progress = 0;
@@ -128,6 +129,7 @@ function handleWheel(e) {
     anim_out('.forth');
     forth = true;
     anim_in('.fifth');
+    anim_in('.fifth2');
   }
 
   /////////////////////////////////
@@ -136,6 +138,7 @@ function handleWheel(e) {
   if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
     scroll = !scroll;
     anim_out('.fifth');
+    anim_out('.fifth2');
     fifth = true;
     anim_in('.sixth');
   }
@@ -628,6 +631,7 @@ vid_stars.autoplay="true"
 vid_stars.muted = "true"
 vid_stars.playsinline= "true"
 vid_stars.loop="true"
+vid_stars.controls = "false"
 vid_stars.setAttribute('webkit-playsinline', 'true');
 vid_stars.setAttribute('playsinline', 'true');
 vid_stars.setAttribute('defaultMuted', 'true');
@@ -642,6 +646,7 @@ vid_space.autoplay="true"
 vid_space.muted = "true"
 vid_space.playsinline= "true"
 vid_space.loop="true"
+vid_space.controls = "false"
 vid_space.setAttribute('webkit-playsinline', 'true');
 vid_space.setAttribute('playsinline', 'true');
 vid_space.setAttribute('defaultMuted', 'true');
@@ -666,10 +671,12 @@ if (isMobile){
   let first_section = document.getElementById('first_section')
   let second_section = document.getElementById('second_section')
   let zero = document.getElementById('zero')
+  // let fifth2 = document.getElementById('fifth')
 
+  // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
   zero.style.fontSize = "4vw"
-  first_section.style.fontSize = "3.8vw"
-  second_section.style.fontSize = "3.8vw"
+  first_section.style.fontSize = "4vw"
+  second_section.style.fontSize = "4vw"
   about_text.style.fontSize = "1.9vw"
   coin_text.style.fontSize = "1.9vw"
   galaxy_text22.style.fontSize = "1.9vw"

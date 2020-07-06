@@ -365,6 +365,18 @@ section {
   position: fixed;
 }
 
+.fifth2 {
+  margin-left: 12%;
+  bottom: 25%;
+  position: fixed;
+}
+
+.fifth2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
+}
+
 .fifth .letter {
   display: inline-block;
   line-height: 1em;
