@@ -3,6 +3,7 @@ var op_index = 0;
 var bool = true;
 var sub = false;
 
+
 var first = false;
 var second = false;
 var third = false;
@@ -28,6 +29,8 @@ var animated_out = false;
 var form = true;
 
 var ready=false;
+
+var cur = false;
 
 let wish1 = document.getElementById("wish1")
 let wish2 = document.getElementById("wish2")
@@ -207,15 +210,15 @@ function cointoss() {
   document.getElementById("first_section").classList.add("hideme");
   window.scrollTo(0, 0);
   document.getElementById("button").setAttribute("onclick", "button_clicked()");
-  document.getElementById('button').classList.remove('disolve_quick');
   document.getElementById("button").style.opacity = 0;
   document.getElementById('second_section').classList.remove('hideme');
 
   document.getElementById("eighth").classList.add("heavens");
   document.getElementById("nineth").classList.add("heavens2");
+  //document.getElementById('button').classList.remove('disolve_quick');
 
-  document.getElementById('button').classList.remove('hideme');
-  document.getElementById('button').classList.add('heavens');
+  //document.getElementById('button').classList.remove('hideme');
+  //document.getElementById('button').classList.add('heavens');
 
   var x = document.getElementById("cursor");
   x.addEventListener("webkitAnimationEnd", CursorEndFunction);
@@ -275,6 +278,10 @@ function GalaxyFunction() {
   document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.add("involve");
   document.getElementById("video_space2").classList.add("involve");
+  document.getElementById('button').classList.remove('disolve_quick');
+
+  document.getElementById('button').classList.remove('hideme');
+  document.getElementById('button').classList.add('heavens');
   galaxy = true;
   if (isMobile){
     setInterval(function(){ 
@@ -422,6 +429,9 @@ document.onmousemove = resetTimer;
 window.addEventListener("scroll", resetTimer);
 
 function resetTimer() {
+
+  cur = true;
+  show('cursor', true);
   clearTimeout(timeout);
   document.getElementById('rem').classList.add("disolve_quick");
   document.getElementById('rem').classList.remove("involve_quick");
@@ -560,7 +570,7 @@ function show(id, value) {
 onReady(function () {
     show('image', true);
     show('loading', false);
-    show('cursor', true);
+    // show('cursor', true);
     ready=true;
 });
 
@@ -707,4 +717,8 @@ if (isMobile){
 }else{
   vid_space.src="./videos/video_space.mp4"
   vid_stars.src="./videos/video_stars.mp4"
+}
+
+if (!cur){
+  cursor.display="none"
 }

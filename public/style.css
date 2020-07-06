@@ -1,5 +1,5 @@
 body {
-  background-color:transparent;
+  background-color:black;
   margin-left:0px;
   margin-right:0px;
   padding: 0px;
@@ -366,7 +366,7 @@ section {
 }
 
 .fifth2 {
-  margin-left: 12%;
+  margin-left: 50vw;
   bottom: 22%;
   position: fixed;
 }
