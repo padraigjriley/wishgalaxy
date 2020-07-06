@@ -642,7 +642,6 @@ vid_stars.autoplay="true"
 vid_stars.muted = "true"
 vid_stars.playsinline= "true"
 vid_stars.loop="true"
-vid_stars.controls = "false"
 vid_stars.setAttribute('webkit-playsinline', 'true');
 vid_stars.setAttribute('playsinline', 'true');
 vid_stars.setAttribute('defaultMuted', 'true');
@@ -657,7 +656,6 @@ vid_space.autoplay="true"
 vid_space.muted = "true"
 vid_space.playsinline= "true"
 vid_space.loop="true"
-vid_space.controls = "false"
 vid_space.setAttribute('webkit-playsinline', 'true');
 vid_space.setAttribute('playsinline', 'true');
 vid_space.setAttribute('defaultMuted', 'true');
