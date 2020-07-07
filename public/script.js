@@ -665,7 +665,7 @@ document.getElementById('video_container').appendChild(vid_stars)
 document.getElementById('video_container').appendChild(vid_space)
 
 // 
-if (isMobile){
+// if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
   let galaxy_text22 = document.getElementById('galaxy_text')
@@ -685,8 +685,8 @@ if (isMobile){
 
   // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
   zero.style.fontSize = "5vw"
-  first_section.style.fontSize = "4vw"
-  second_section.style.fontSize = "4vw"
+  first_section.style.fontSize = "4.2vw"
+  second_section.style.fontSize = "4.2vw"
   about_text.style.fontSize = "1.9vw"
   coin_text.style.fontSize = "1.9vw"
   galaxy_text22.style.fontSize = "1.9vw"
@@ -715,17 +715,17 @@ if (isMobile){
   first_section.style.textAlign = "center"
   first_section.style.width = "50%"
 
-  first_section.style.fontWeight = "900"
-  second_section.style.fontWeight = "900"
-  zero.style.fontWeight = "900"
-  fifth.style.width = "50%"
+  first_section.style.fontWeight = "1900"
+  second_section.style.fontWeight = "1900"
+  zero.style.fontWeight = "1900"
+  document.getElementById('fifth').style.width = "50vw"
 
 
 
-}else{
-  vid_space.src="./videos/video_space.mp4"
-  vid_stars.src="./videos/video_stars.mp4"
-}
+// }else{
+//   vid_space.src="./videos/video_space.mp4"
+//   vid_stars.src="./videos/video_stars.mp4"
+// }
 
 if (!cur){
   cursor.display="none"
