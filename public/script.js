@@ -684,7 +684,7 @@ if (isMobile){
   // let fifth2 = document.getElementById('fifth')
 
   // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
-  zero.style.fontSize = "5vw"
+  zero.style.fontSize = "6vw"
   first_section.style.fontSize = "4vw"
   second_section.style.fontSize = "4vw"
   about_text.style.fontSize = "1.9vw"
