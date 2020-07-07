@@ -685,8 +685,8 @@ if (isMobile){
 
   // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
   zero.style.fontSize = "5vw"
-  first_section.style.fontSize = "4.2vw"
-  second_section.style.fontSize = "4.2vw"
+  first_section.style.fontSize = "4vw"
+  second_section.style.fontSize = "4vw"
   about_text.style.fontSize = "1.9vw"
   coin_text.style.fontSize = "1.9vw"
   galaxy_text22.style.fontSize = "1.9vw"
@@ -715,8 +715,8 @@ if (isMobile){
   first_section.style.textAlign = "center"
   first_section.style.width = "50%"
 
-  first_section.style.fontWeight = "1900"
-  second_section.style.fontWeight = "1900"
+  first_section.style.fontWeight = "900"
+  second_section.style.fontWeight = "900"
   zero.style.fontWeight = "1900"
   document.getElementById('fifth').style.width = "50vw"
 
