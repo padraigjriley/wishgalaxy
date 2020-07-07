@@ -718,7 +718,7 @@ if (isMobile){
   first_section.style.fontWeight = "900"
   second_section.style.fontWeight = "900"
   zero.style.fontWeight = "1900"
-  document.getElementById('fifth').style.width = "52vw"
+  document.getElementById('fifth').style.width = "54%"
 
 
 
