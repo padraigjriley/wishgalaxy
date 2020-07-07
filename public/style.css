@@ -309,12 +309,19 @@ section {
   word-wrap: break-word;
 }
 
+.first_section {
+  /*width: 50%;*/
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
 
 .first {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
   word-wrap: break-word;
+  display: inline-block;
 }
 
 .first .letter {
@@ -324,9 +331,10 @@ section {
 }
 
 .second {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
+  display: inline-block;
 }
 
 .second .letter {
@@ -336,9 +344,10 @@ section {
 }
 
 .third {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
+  display: inline-block;
 }
 
 .third .letter {
@@ -348,9 +357,10 @@ section {
 }
 
 .forth {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
+  display: inline-block;
 }
 
 .forth .letter {
@@ -360,13 +370,14 @@ section {
 }
 
 .fifth {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
-  white-space: pre;
+  display: inline-block;
+  /*white-space: pre;*/
 }
 
-.fifth2 {
+/*.fifth2 {
   margin-left: 50vw;
   bottom: 22%;
   position: fixed;
@@ -376,7 +387,7 @@ section {
   display: inline-block;
   line-height: 1em;
   opacity: 0;
-}
+}*/
 
 .fifth .letter {
   display: inline-block;
@@ -385,9 +396,10 @@ section {
 }
 
 .sixth {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
+  display: inline-block;
 }
 
 .sixth .letter {

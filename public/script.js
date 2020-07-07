@@ -711,6 +711,13 @@ if (isMobile){
   vid_space.src="./videos/video_space_mobile.mp4"
   vid_stars.src="./videos/video_stars_mobile.mp4"
 
+  first_section.style.marginLeft = "0"
+  first_section.style.textAlign = "center"
+  first_section.style.width = "50%"
+
+  first_section.style.fontWeight = "bold"
+  second_section.style.fontWeight = "bold"
+
 
 
 }else{
