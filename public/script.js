@@ -664,7 +664,7 @@ vid_space.setAttribute('defaultMuted', 'true');
 document.getElementById('video_container').appendChild(vid_stars)
 document.getElementById('video_container').appendChild(vid_space)
 
-
+// 
 if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
@@ -711,12 +711,14 @@ if (isMobile){
   vid_space.src="./videos/video_space_mobile.mp4"
   vid_stars.src="./videos/video_stars_mobile.mp4"
 
-  first_section.style.marginLeft = "0"
+  first_section.style.marginLeft = "-10%"
   first_section.style.textAlign = "center"
   first_section.style.width = "50%"
 
-  first_section.style.fontWeight = "bold"
-  second_section.style.fontWeight = "bold"
+  first_section.style.fontWeight = "900"
+  second_section.style.fontWeight = "900"
+  zero.style.fontWeight = "900"
+  fifth.style.width = "50%"
 
 
 

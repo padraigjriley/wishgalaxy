@@ -312,7 +312,8 @@ section {
 .first_section {
   /*width: 50%;*/
   margin-left: 10%;
-  margin-right: 5%;
+  margin-right: 25%;
+  word-wrap: break-word;
 }
 
 
@@ -320,7 +321,6 @@ section {
   /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
-  word-wrap: break-word;
   display: inline-block;
 }
 
@@ -374,6 +374,7 @@ section {
   bottom: 30%;
   position: fixed;
   display: inline-block;
+  /*width: 50%;*/
   /*white-space: pre;*/
 }
 
