@@ -665,7 +665,7 @@ document.getElementById('video_container').appendChild(vid_stars)
 document.getElementById('video_container').appendChild(vid_space)
 
 // 
-if (isMobile){
+// if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
   let galaxy_text22 = document.getElementById('galaxy_text')
@@ -718,14 +718,14 @@ if (isMobile){
   first_section.style.fontWeight = "900"
   second_section.style.fontWeight = "900"
   zero.style.fontWeight = "1900"
-  document.getElementById('fifth').style.width = "60vw"
+  document.getElementById('fifth').style.width = "52vw"
 
 
 
-}else{
-  vid_space.src="./videos/video_space.mp4"
-  vid_stars.src="./videos/video_stars.mp4"
-}
+// }else{
+//   vid_space.src="./videos/video_space.mp4"
+//   vid_stars.src="./videos/video_stars.mp4"
+// }
 
 if (!cur){
   cursor.display="none"
