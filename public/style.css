@@ -20,6 +20,12 @@ body {
   src: url("./fonts/geomanist-regular-webfont.ttf");
 }
 
+.side input, textarea{
+        outline: none;
+        -webkit-outline: none;
+        border: none;
+        -webkit-border: none;
+    }
 
 ::selection {
     color: none;
@@ -314,6 +320,8 @@ section {
   margin-left: 10%;
   margin-right: 25%;
   word-wrap: break-word;
+  z-index: 99;
+  opacity: 1;
 }
 
 
@@ -475,7 +483,9 @@ textarea {
   height: 25px;
   background: none;
   border: none;
+  -webkit-border: none;
   outline: none;
+  -webkit-outline: none;
   border-bottom: 1px solid white;
   overflow: auto;
   cursor: none;
@@ -486,6 +496,9 @@ textarea {
   pointer-events: none;
   cursor: none;
   opacity: 1;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  border-radius: 0;
 }
 
 .video_container {
@@ -559,7 +572,9 @@ textarea {
 }*/
 
 .hideme {
+  -webkit-opacity: 0;
   opacity: 0;
+  -webkit-display: none;
   display: none;
 }
 
@@ -1004,21 +1019,48 @@ hr {
   }
 }
 
+@-webkit-keyframes disolve_quick {
+  from { 
+    -webkit-opacity: 1;
+    opacity: 1;
+  }
+  to {
+    -webkit-opacity: 0;
+    opacity: 0;
+    display: none;
+  }
+}
+
 .disolve_quick {
+  -webkit-animation: disolve_quick 1s forwards;
   animation: disolve_quick 1s forwards;
   overflow: hidden;
 }
 
 @keyframes involve_quick {
   from { 
+    -webkit-opacity: 0;
     opacity: 0;
   }
   to {
+    -webkit-opacity: 1;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes involve_quick {
+  from { 
+    -webkit-opacity: 0;
+    opacity: 0;
+  }
+  to {
+    -webkit-opacity: 1;
     opacity: 1;
   }
 }
 
 .involve_quick {
+  -webkit-animation: involve_quick 1s forwards;
   animation: involve_quick 1s forwards;
   overflow: hidden;
 }
