@@ -330,6 +330,7 @@ section {
   bottom: 30%;
   position: fixed;
   display: inline-block;
+  word-wrap: break-word;
 }
 
 .first .letter {
@@ -343,6 +344,7 @@ section {
   bottom: 30%;
   position: fixed;
   display: inline-block;
+  word-wrap: break-word;
 }
 
 .second .letter {

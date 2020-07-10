@@ -89,199 +89,201 @@ var second2=false;
 
 function mobileAnim(){
   
-  go=false;
-  document.getElementById('form').classList.add('hideme');
-  anime.timeline({loop: false})
-  .add({
-        targets: '.first' + ' .letter',
-        //offset: 2000,
-        translateY: [100,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 2400,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [0,1,0,1],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        complete: function() {
-          document.getElementById('form').blur()
-        }
-      })
+  if (bool && !galaxy){
+    go=false;
+    document.getElementById('form').classList.add('hideme');
+    anime.timeline({loop: false})
+    .add({
+          targets: '.first' + ' .letter',
+          //offset: 2000,
+          translateY: [100,0],
+          translateZ: 0,
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 2400,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [0,1,0,1],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          complete: function() {
+            document.getElementById('form').blur()
+          }
+        })
 
-    .add({
-        targets: '.first' + ' .letter',
-        translateY: [0,-100],
-        translateZ: 0,
-        opacity: [1,0],
-        easing: "easeInExpo",
-        duration: 750,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [1,0],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        complete: function() {
-          document.getElementById('form').blur()
-        }
+      .add({
+          targets: '.first' + ' .letter',
+          translateY: [0,-100],
+          translateZ: 0,
+          opacity: [1,0],
+          easing: "easeInExpo",
+          duration: 750,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [1,0],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          complete: function() {
+            document.getElementById('form').blur()
+          }
 
-      })
-    .add({
-        targets: '.second' + ' .letter',
-        offset: 4000,
-        translateY: [100,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 2400,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [0,1,0,1],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-        
-      })
-    .add({
-        targets: '.second' + ' .letter',
-        translateY: [0,-100],
-        translateZ: 0,
-        opacity: [1,0],
-        easing: "easeInExpo",
-        duration: 750,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [1,0],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.third' + ' .letter',
-        offset: 8000,
-        translateY: [100,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 2400,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [0,1,0,1],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.third' + ' .letter',
-        translateY: [0,-100],
-        translateZ: 0,
-        opacity: [1,0],
-        easing: "easeInExpo",
-        duration: 750,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [1,0],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.forth' + ' .letter',
-        offset: 12000,
-        translateY: [100,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 2400,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [0,1,0,1],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.forth' + ' .letter',
-        translateY: [0,-100],
-        translateZ: 0,
-        opacity: [1,0],
-        easing: "easeInExpo",
-        duration: 750,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [1,0],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.fifth' + ' .letter',
-        offset: 16000,
-        translateY: [100,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 2400,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [0,1,0,1],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.fifth' + ' .letter',
-        translateY: [0,-100],
-        translateZ: 0,
-        opacity: [1,0],
-        easing: "easeInExpo",
-        duration: 750,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [1,0],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.sixth' + ' .letter',
-        offset: 20000,
-        translateY: [100,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 2400,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [0,1,0,1],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        
-      })
-    .add({
-        targets: '.sixth' + ' .letter',
-        translateY: [0,-100],
-        translateZ: 0,
-        opacity: [1,0],
-        easing: "easeInExpo",
-        duration: 750,
-        delay: (el, i) => 300 + 30 * i,
-        opacity: [1,0],
-        easing: "easeInOutQuad",
-        duration: 2000,
-        delay: (el, i) => 50 * (i+1),
-        complete: function() {
-          document.getElementById('form').classList.remove('hideme');
-          document.getElementById("video_stars").classList.add("cheekyfade");
-          sixth = true;
-          document.getElementById('form').classList.add('involve');
-          wisher = true;
-          seventh = true;
-          cursorFocus(wish);
-        }
-      })
-  cursorFocus(wish);
+        })
+      .add({
+          targets: '.second' + ' .letter',
+          offset: 4000,
+          translateY: [100,0],
+          translateZ: 0,
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 2400,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [0,1,0,1],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+          
+        })
+      .add({
+          targets: '.second' + ' .letter',
+          translateY: [0,-100],
+          translateZ: 0,
+          opacity: [1,0],
+          easing: "easeInExpo",
+          duration: 750,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [1,0],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.third' + ' .letter',
+          offset: 8000,
+          translateY: [100,0],
+          translateZ: 0,
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 2400,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [0,1,0,1],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.third' + ' .letter',
+          translateY: [0,-100],
+          translateZ: 0,
+          opacity: [1,0],
+          easing: "easeInExpo",
+          duration: 750,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [1,0],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.forth' + ' .letter',
+          offset: 12000,
+          translateY: [100,0],
+          translateZ: 0,
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 2400,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [0,1,0,1],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.forth' + ' .letter',
+          translateY: [0,-100],
+          translateZ: 0,
+          opacity: [1,0],
+          easing: "easeInExpo",
+          duration: 750,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [1,0],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.fifth' + ' .letter',
+          offset: 16000,
+          translateY: [100,0],
+          translateZ: 0,
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 2400,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [0,1,0,1],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.fifth' + ' .letter',
+          translateY: [0,-100],
+          translateZ: 0,
+          opacity: [1,0],
+          easing: "easeInExpo",
+          duration: 750,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [1,0],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.sixth' + ' .letter',
+          offset: 21000,
+          translateY: [100,0],
+          translateZ: 0,
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 2400,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [0,1,0,1],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          
+        })
+      .add({
+          targets: '.sixth' + ' .letter',
+          translateY: [0,-100],
+          translateZ: 0,
+          opacity: [1,0],
+          easing: "easeInExpo",
+          duration: 750,
+          delay: (el, i) => 300 + 30 * i,
+          opacity: [1,0],
+          easing: "easeInOutQuad",
+          duration: 2000,
+          delay: (el, i) => 50 * (i+1),
+          complete: function() {
+            document.getElementById('form').classList.remove('hideme');
+            document.getElementById("video_stars").classList.add("cheekyfade");
+            sixth = true;
+            document.getElementById('form').classList.add('involve');
+            wisher = true;
+            seventh = true;
+            cursorFocus(wish);
+          }
+        })
+    cursorFocus(wish);
+  }
   
 }
 
@@ -902,8 +904,8 @@ if (isMobile){
 
   // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
   zero.style.fontSize = "6vw"
-  first_section.style.fontSize = "4vw"
-  second_section.style.fontSize = "4vw"
+  first_section.style.fontSize = "5.5vw"
+  second_section.style.fontSize = "5.5vw"
   about_text.style.fontSize = "1.9vw"
   coin_text.style.fontSize = "1.9vw"
   galaxy_text22.style.fontSize = "1.9vw"
@@ -935,7 +937,10 @@ if (isMobile){
   first_section.style.fontWeight = "900"
   second_section.style.fontWeight = "900"
   zero.style.fontWeight = "900"
-  document.getElementById('fifth').style.width = "54%"
+  document.getElementById('fifth').style.width = "70%"
+  document.getElementById('second').style.width = "59%"
+  document.getElementById('forth').style.width = "70%"
+  
 
 
 }else{
