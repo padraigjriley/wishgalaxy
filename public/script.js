@@ -294,11 +294,11 @@ function handleWheel(e) {
 
   op_index = Math.round((progress/1000)*100);
 
-  if(isMobile && go && bool){
+  if(isMobile && go && bool &&!galaxy){
     document.getElementById("zero").classList.add('disolve_quick');
     document.getElementById("vl").classList.add('disolve_quick');
-    document.getElementById("button").classList.add('disolve_quick');
-    document.getElementById("button").removeAttribute("onclick");
+    document.getElementById("button1").classList.add('disolve_quick');
+    document.getElementById("button1").removeAttribute("onclick");
     mobileAnim()
   }
 
@@ -309,8 +309,8 @@ function handleWheel(e) {
     anim_in('.first');
     document.getElementById("zero").classList.add('disolve_quick');
     document.getElementById("vl").classList.add('disolve_quick');
-    document.getElementById("button").classList.add('disolve_quick');
-    document.getElementById("button").removeAttribute("onclick");
+    document.getElementById("button1").classList.add('disolve_quick');
+    document.getElementById("button1").removeAttribute("onclick");
   }
 
   if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!first)){
@@ -426,8 +426,8 @@ function cointoss() {
   document.getElementById("vl").classList.add("hideme");
   document.getElementById("first_section").classList.add("hideme");
   window.scrollTo(0, 0);
-  document.getElementById("button").setAttribute("onclick", "button_clicked()");
-  document.getElementById("button").style.opacity = 0;
+  document.getElementById("button1").setAttribute("onclick", "button_clicked()");
+  document.getElementById("button1").style.opacity = 0;
   document.getElementById('second_section').classList.remove('hideme');
 
   document.getElementById("eighth").classList.add("heavens");
@@ -495,10 +495,10 @@ function GalaxyFunction() {
   document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.add("involve");
   document.getElementById("video_space2").classList.add("involve");
-  document.getElementById('button').classList.remove('disolve_quick');
+  document.getElementById('button1').classList.remove('disolve_quick');
 
-  document.getElementById('button').classList.remove('hideme');
-  document.getElementById('button').classList.add('heavens');
+  document.getElementById('button1').classList.remove('hideme');
+  document.getElementById('button1').classList.add('heavens');
   galaxy = true;
   if (isMobile){
     setInterval(function(){ 
@@ -521,8 +521,8 @@ function button_clicked(){
     document.getElementById("container").classList.add('hideme');
     document.getElementById("first_section").classList.add('hideme');
 
-    document.getElementById("button").classList.remove("button");
-    document.getElementById("button").classList.add("button2");
+    document.getElementById("button1").classList.remove("button");
+    document.getElementById("button1").classList.add("button2");
 
     document.getElementById("about_page").classList.remove("hideme");
     document.getElementById("about_page").classList.add("involve_quick");
@@ -569,8 +569,8 @@ function button_clicked(){
   if (bool){
 
     document.getElementById("wrapper").classList.remove("hideme");
-    document.getElementById("button").classList.remove("button2");
-    document.getElementById("button").classList.add("button");
+    document.getElementById("button1").classList.remove("button2");
+    document.getElementById("button1").classList.add("button");
     document.getElementById("about_page").classList.remove("involve_quick");
     document.getElementById("middle").classList.add("hideme");
     document.getElementById("image").classList.remove('hideme');
@@ -606,10 +606,10 @@ function button_clicked(){
 
     if (tossed) {
       document.getElementById("container").classList.remove('hideme');
-      document.getElementById("button").classList.remove('heavens');
+      document.getElementById("button1").classList.remove('heavens');
       document.getElementById("vl2").classList.add("hideme");
       document.getElementById("another_div").classList.add("hideme");
-      document.getElementById("button").style.opacity = 1;
+      document.getElementById("button1").style.opacity = 1;
       document.getElementById("wish_galaxy").classList.remove("hideme");
     }
 
@@ -711,33 +711,35 @@ function anim_out(cont){
   document.getElementById("zero").classList.add("involve_quick");
   document.getElementById("vl").classList.remove("hideme");
   document.getElementById("vl").classList.add("involve_quick");
-  document.getElementById("button").classList.add("involve_quick");
+  document.getElementById("button1").classList.add("involve_quick");
   document.getElementById("cursor").classList.add("involve_quick");
-  var y = document.getElementById("button");
+  var y = document.getElementById("button1");
   y.addEventListener("webkitAnimationEnd", buttonEndFunction);
   y.addEventListener("animationend", buttonEndFunction);
 
 
 function buttonEndFunction() {
-  document.getElementById("button").classList.remove("involve_quick");
+  document.getElementById("button1").classList.remove("involve_quick");
   document.getElementById("zero").classList.remove("involve_quick");
   document.getElementById("vl").classList.remove("involve_quick");
   document.getElementById("cursor").classList.remove("involve_quick");
   document.getElementById("cursor").style.opacity = "1";
   document.getElementById("zero").style.opacity = "1";
   document.getElementById("vl").style.opacity = "1";
-  document.getElementById("button").style.opacity = "1";
+  document.getElementById("button1").style.opacity = "1";
 }
 
 function reveal_galaxy(){
   galaxy = true;
   document.getElementById("wrapper").classList.add("hideme");
-  document.getElementById("button").setAttribute("onclick", "button_clicked()");
-  document.getElementById("button").classList.remove("button2");
-  document.getElementById("button").classList.add("button");
+  document.getElementById("button1").setAttribute("onclick", "button_clicked()");
+  document.getElementById("button1").classList.add("button");
+  document.getElementById("button1").classList.remove("button2");
   document.getElementById("container").classList.remove("hideme");
-  document.getElementById("button").classList.remove("hideme");
-  document.getElementById("button").classList.remove("heavens");
+  document.getElementById("button1").classList.remove("hideme");
+  document.getElementById("button1").classList.remove("disolve_quick");
+  document.getElementById("button1").classList.add("involve_quick");
+  document.getElementById("button1").style.opacity="1"
   document.getElementById("wish_galaxy").classList.remove("hideme");
   document.getElementById("wish_galaxy").classList.remove("disolve_quick");
   document.getElementById("wish_galaxy").classList.add("involve");
