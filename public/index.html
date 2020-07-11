@@ -14,7 +14,7 @@
 		<div class="goldball" id="goldball"></div>
 	</div>
 	<div id="image" class="image"></div>
-	
+
 	<div class="container" id="container">
 		<button class="button" onclick="button_clicked()" id="button1"></button>
 		<div id="zero" class="zero">
@@ -35,7 +35,7 @@
 			</a>
 		</div>
 		<div class="middle" id="middle">
-			
+
 			<h1 id="about_heading" class="collapsible">ABOUT</h1>
 			<div class ="about_text" id="about_text">
 				<p>
@@ -57,10 +57,10 @@
 			</div>
 			<h1 id="galaxy_heading" class="collapsible">WISH GALAXY</h1>
 			<div class="galaxy_text" id="galaxy_text">
-				
-				The Wish Galaxy is a collective capture of global wishes sent to live amongst the stars. Replenishing continually and anonymously, for every star there is another wish: an infinite unity of hope. <br><br> 
 
-				<a onclick="reveal_galaxy()">View the Wish Galaxy here.</a> 
+				The Wish Galaxy is a collective capture of global wishes sent to live amongst the stars. Replenishing continually and anonymously, for every star there is another wish: an infinite unity of hope. <br><br>
+
+				<a onclick="reveal_galaxy()">View the Wish Galaxy here.</a>
 
 			</div>
 			<footer class="footer">ALL RIGHTS RESERVED &copy CWWD STUDIO 2020</footer>
@@ -75,7 +75,7 @@
 
 		</div>
 	</div>
-	
+
 	<section id="first_section" class="first_section">
 			<div id="first" class="first">IN UNCERTAIN TIMES</div>
 			<div id="second" class="second">THIS IS A SPACE FOR YOU</div>
@@ -87,9 +87,9 @@
 
 	<form class="form" id="form" target="hiddenFrame" method='post' action="/wishss">
 		<label name="wish" id="label">I WISH   </label>
-		<textarea name="textarea" class="input" type="text" id="wish" autocomplete="off" maxlength="200" form="form"></textarea> 
+		<textarea name="textarea" class="input" type="text" id="wish" autocomplete="off" maxlength="200" form="form"></textarea>
  	</form>
-	
+
 	<div id="seventh" class="seventh">CLICK TO TOSS YOUR COIN</div>
 
 	<section id="second_section" class="second_section">
@@ -148,7 +148,7 @@
 	</div>
 
 	<iframe name="hiddenFrame" class="hideme"></iframe>
-	
+
 	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script type="text/javascript" src="./plugins/jquery.ripples.js"></script>
@@ -165,6 +165,6 @@
 			frequency: 19         // optional, from 1 to 19
 		});
 	</script>
-
+	<script src="/socket.io/socket.io.js"></script>
 </body>
 </html>

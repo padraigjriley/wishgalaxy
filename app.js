@@ -1,20 +1,23 @@
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
-const { Pool, Client } = require('pg')
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const { Pool, Client } = require('pg');
 var dateTime = require('node-datetime');
 var dt = dateTime.create();
 var now = dt.format('Y-m-d H:M:S');
 
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
+
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 
 // Parse URL-encoded bodies (as sent by HTML forms)
-app.use(express.urlencoded({ extended: true}))
+//	app.use(express.urlencoded({ extended: true}))
 
 // Parse JSON bodies (as sent by API clients)
-app.use(express.json());
-app.use(bodyParser.json())
+//app.use(express.json());
+//app.use(bodyParser.json())
 
 // const pool = new Pool({
 // 	host: 'localhost',
@@ -34,7 +37,7 @@ pool.connect(err => {
 		console.error('connection error', err.stack)
 	} else {
 		console.log('connected to db')
-	}	
+	}
 })
 
 app.post('/wishss', (req, res) => {
@@ -69,8 +72,15 @@ app.post('/emailss', (req, res) => {
 			console.log(err, res)
 		}
 	)
-
 })
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+
+	socket.on('make wish', (msg) => {
+    io.emit('make wish', msg);
+  });		
+});
 
 // app.post('/loginss', (req, res) => {
 // 	var uname = req.body.uname
@@ -85,4 +95,4 @@ app.post('/emailss', (req, res) => {
 // })
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log('app is listening'))
+server.listen(port, () => console.log('app is listening'))
