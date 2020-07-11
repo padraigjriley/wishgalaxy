@@ -32,6 +32,7 @@ var ready=false;
 
 var cur = false;
 
+
 let wish1 = document.getElementById("wish1")
 let wish2 = document.getElementById("wish2")
 let wish3 = document.getElementById("wish3")
@@ -88,7 +89,7 @@ textwrap('.sixth');
 var second2=false;
 
 function mobileAnim(){
-  
+
   if (bool && !galaxy){
     go=false;
     document.getElementById('form').classList.add('hideme');
@@ -141,8 +142,8 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
-          
+
+
         })
       .add({
           targets: '.second' + ' .letter',
@@ -156,7 +157,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.third' + ' .letter',
@@ -171,7 +172,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.third' + ' .letter',
@@ -185,7 +186,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.forth' + ' .letter',
@@ -200,7 +201,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.forth' + ' .letter',
@@ -214,7 +215,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.fifth' + ' .letter',
@@ -229,7 +230,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.fifth' + ' .letter',
@@ -243,7 +244,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.sixth' + ' .letter',
@@ -258,7 +259,7 @@ function mobileAnim(){
           easing: "easeInOutQuad",
           duration: 2000,
           delay: (el, i) => 50 * (i+1),
-          
+
         })
       .add({
           targets: '.sixth' + ' .letter',
@@ -284,7 +285,7 @@ function mobileAnim(){
         })
     cursorFocus(wish);
   }
-  
+
 }
 
 var progress = 0;
@@ -405,11 +406,12 @@ textarea.oninput = function() {
     document.getElementById('seventh').classList.add('involve');
     form = false;
   }
-  
+
 };
 
 function cointoss() {
   // zoomOutMobile();
+  var socket = io();
   tossed = true;
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("cursor").classList.remove("deflate");
@@ -448,6 +450,7 @@ function cointoss() {
 
 document.addEventListener("click",function(e){
     if ((seventh) && (!galaxy) && (!form)){
+
       cointoss();
     }
 });
@@ -501,7 +504,7 @@ function GalaxyFunction() {
   document.getElementById('button1').classList.add('heavens');
   galaxy = true;
   if (isMobile){
-    setInterval(function(){ 
+    setInterval(function(){
       twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
       twink_wish.classList.add('twinkle')
       // twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
@@ -563,8 +566,8 @@ function button_clicked(){
       document.getElementById("another_div").classList.remove("hideme");
       document.getElementById("vl2").classList.remove("hideme");
     }
-  } 
-  
+  }
+
   //Exit About page
   if (bool){
 
@@ -683,7 +686,7 @@ function anim_in(cont){
         complete: function() {
           animated_in = !animated_in;
         }
-      });    
+      });
 }
 
 function anim_out(cont){
@@ -758,16 +761,16 @@ function reveal_galaxy(){
   tossed = true;
   bool = true;
   window.scrollTo(0,document.body.scrollHeight);
-  
+
   if (isMobile){
-    setInterval(function(){ 
+    setInterval(function(){
       twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
       twink_wish.classList.add('twinkle')
       // twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
       // twink_wish.addEventListener("animationend", twinkle_wait(twink_wish));
     }, 1500);
   }
-  
+
 }
 
 function onReady(callback) {
@@ -810,7 +813,7 @@ about_heading.addEventListener("click", function() {
     } else {
       about_text.style.maxHeight = about_text.scrollHeight + "px";
       coin_text.style.maxHeight = null;
-      galaxy_text2.style.maxHeight = null; 
+      galaxy_text2.style.maxHeight = null;
     }
 });
 
@@ -841,8 +844,8 @@ if (isMobile && !wisher){
 
 var isMobile = false; //initiate as false
 // device detection
-if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
-    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
+    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) {
     isMobile = true;
 }
 
@@ -885,7 +888,7 @@ vid_space.setAttribute('defaultMuted', 'true');
 document.getElementById('video_container').appendChild(vid_stars)
 document.getElementById('video_container').appendChild(vid_space)
 
-// 
+//
 if (isMobile){
   // let about_text = document.getElementById('about_text')
   // let coin_text = document.getElementById('coin_text')
@@ -920,13 +923,13 @@ if (isMobile){
   for (i=0;i<wish_in.length;i++){
     wish_in[i].style.fontSize = "1.6vw"
   }
-  
+
   for (i=0;i<wish_mid.length;i++){
     wish_mid[i].style.fontSize = "2vw"
   }
 
   for (i=0;i<wish_out.length;i++){
-    wish_out[i].style.fontSize = "2.4vw" 
+    wish_out[i].style.fontSize = "2.4vw"
   }
 
   vid_space.src="./videos/video_space_mobile.mp4"
@@ -942,7 +945,7 @@ if (isMobile){
   document.getElementById('fifth').style.width = "70%"
   document.getElementById('second').style.width = "59%"
   document.getElementById('forth').style.width = "70%"
-  
+
 
 
 }else{
