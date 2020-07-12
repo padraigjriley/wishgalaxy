@@ -1,3 +1,14 @@
+var socket = io();
+
+socket.on('make wish', function(response){
+  var div = document.getElementById('wish_galaxy');
+  response.map(function(data, index){
+    div.innerHTML += "<div>"+data.wish+"</div>";
+  })
+});
+
+socket.emit('make wish', "sus");
+
 var tossed = false;
 var op_index = 0;
 var bool = true;
@@ -31,7 +42,6 @@ var form = true;
 var ready=false;
 
 var cur = false;
-
 
 let wish1 = document.getElementById("wish1")
 let wish2 = document.getElementById("wish2")
@@ -371,7 +381,7 @@ function handleWheel(e) {
     document.getElementById("video_stars").classList.add("cheekyfade");
     sixth = true;
     document.getElementById('form').classList.add('involve_delay');
-    cursorFocus(wish);
+    cursorFocus(document.getElementById("wishtext"));
     wisher = true;
     seventh = true;
   }
@@ -393,10 +403,10 @@ var cursorFocus = function(elm) {
 }
 
 if (!isMobile){
-  cursorFocus(wish);
+  cursorFocus(document.getElementById("wishtext"));
 }
 
-var textarea = document.getElementById("wish");
+var textarea = document.getElementById("wishtext");
 var limit = 400; //height limit
 
 textarea.oninput = function() {
@@ -411,19 +421,19 @@ textarea.oninput = function() {
 
 function cointoss() {
   // zoomOutMobile();
-  var socket = io();
+
   tossed = true;
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("cursor").classList.remove("deflate");
   document.getElementById("cursor").classList.remove("involve_quicker");
-  document.getElementById("wish").classList.add("disolve");
+  document.getElementById("wishtext").classList.add("disolve");
   document.getElementById("label").classList.add("disolve");
   document.getElementById("seventh").classList.add("disolve");
   document.getElementById("cursor").classList.add("shrink");
   document.getElementById("video_stars").classList.remove("disolve_quick");
   document.getElementById("video_stars").classList.remove("cheekyfade");
   document.getElementById("video_stars").classList.add("involve");
-  document.getElementById('form').submit();
+  //document.getElementById('form').submit();
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
   document.getElementById("first_section").classList.add("hideme");
@@ -449,8 +459,9 @@ function cointoss() {
 }
 
 document.addEventListener("click",function(e){
-    if ((seventh) && (!galaxy) && (!form)){
-
+    if ((seventh) && (!galaxy)){
+      console.log(document.getElementById('wishtext').value);
+      socket.emit('make wish', document.getElementById('wishtext').value);
       cointoss();
     }
 });
@@ -458,13 +469,13 @@ document.addEventListener("click",function(e){
 
 document.addEventListener("click",function(e){
    if ((!galaxy) && (!tossed) && (bool) && (!isMobile)){
-      cursorFocus(wish);
+      cursorFocus(document.getElementById("wishtext"));
     }
 });
 
 document.addEventListener("click",function(e){
    if ((!galaxy) && (!tossed) && (bool) && (wisher)){
-      cursorFocus(wish);
+      cursorFocus(document.getElementById("wishtext"));
     }
 });
 

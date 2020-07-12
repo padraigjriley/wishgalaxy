@@ -49,7 +49,7 @@ pool.connect(err => {
 	}
 })
 
-app.post('/wishss', (req, res) => {
+/*app.post('/wishss', (req, res) => {
 	var wished = req.body.textarea
 	console.log('Wish: ' + wished)
 	var dt = dateTime.create()
@@ -63,8 +63,7 @@ app.post('/wishss', (req, res) => {
 			console.log(err, res)
 	}
 	)
-
-})
+})*/
 
 app.post('/emailss', (req, res) => {
 	var emailed = req.body.mail
@@ -85,13 +84,25 @@ app.post('/emailss', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
-	var _query = "SELECT * FROM wishes";
-	pool.query(_query, (error, response)=>{
-		console.log(error, response);
-	})
 
-	socket.on('make wish', (msg) => {
-    io.emit('make wish', msg);
+
+	socket.on('make wish', (message) => {
+		console.log(message);
+		var dt = dateTime.create()
+		dt.offsetInHours(2)
+		var now = dt.format('Y-m-d H:M:S')
+
+		var wish_string = "INSERT INTO wishes(wish, date)VALUES('"+message+"', '" + now + "')"
+
+		pool.query( wish_string, (err, res) => {
+				//console.log(err,res);
+				var query_ = "SELECT * FROM wishes ORDER BY date DESC LIMIT 16";
+
+				pool.query(query_, (error, response)=>{
+					console.log(response.rows);
+					io.emit('make wish', response.rows);
+				})
+			})
   });
 
 	socket.on('post email', (msg) => {
