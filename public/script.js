@@ -2,12 +2,13 @@ var socket = io();
 
 socket.on('make wish', function(response){
   var div = document.getElementById('wish_galaxy');
+  div.innerHTML="";
+  var y = Math.random() * 100;
+  var x = Math.random() * 100;
   response.map(function(data, index){
-    div.innerHTML += "<div>"+data.wish+"</div>";
+    div.innerHTML += "<div class='wish_text_"+index+"'>"+data.wish+"</div>";
   })
 });
-
-socket.emit('make wish', "sus");
 
 var tossed = false;
 var op_index = 0;
