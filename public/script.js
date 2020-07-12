@@ -1,6 +1,7 @@
 var socket = io();
 
 socket.on('make wish', function(response){
+  console.log("new update")
   var div = document.getElementById('wish_galaxy');
   div.innerHTML="";
   var y = Math.random() * 100;
@@ -461,7 +462,7 @@ function cointoss() {
 
 document.addEventListener("click",function(e){
     if ((seventh) && (!galaxy)){
-      console.log(document.getElementById('wishtext').value);
+      //console.log(document.getElementById('wishtext').value);
       socket.emit('make wish', document.getElementById('wishtext').value);
       cointoss();
     }
