@@ -461,7 +461,7 @@ function cointoss() {
 }
 
 document.addEventListener("click",function(e){
-    if ((seventh) && (!galaxy)){
+    if ((seventh) && (!galaxy) && document.getElementById('wishtext').value){
       //console.log(document.getElementById('wishtext').value);
       socket.emit('make wish', document.getElementById('wishtext').value);
       cointoss();
@@ -932,6 +932,7 @@ if (isMobile){
   galaxy_heading.style.fontSize = "4.8vw"
   lside.style.fontSize = "2vw"
   rside.style.fontSize = "2vw"
+  first_section.style.whiteSpace = "pre"
 
   for (i=0;i<wish_in.length;i++){
     wish_in[i].style.fontSize = "1.6vw"
@@ -955,9 +956,9 @@ if (isMobile){
   first_section.style.fontWeight = "900"
   second_section.style.fontWeight = "900"
   zero.style.fontWeight = "900"
-  document.getElementById('fifth').style.width = "70%"
-  document.getElementById('second').style.width = "59%"
-  document.getElementById('forth').style.width = "70%"
+  // document.getElementById('fifth').style.width = "70%"
+  // document.getElementById('second').style.width = "59%"
+  // document.getElementById('forth').style.width = "70%"
 
 
 
