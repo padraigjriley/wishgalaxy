@@ -16,6 +16,8 @@ var op_index = 0;
 var bool = true;
 var sub = false;
 
+let wish = document.getElementById('wish')
+
 
 var first = false;
 var second = false;
@@ -918,6 +920,13 @@ if (isMobile){
   let first_section = document.getElementById('first_section')
   let second_section = document.getElementById('second_section')
   let zero = document.getElementById('zero')
+
+  let firsttext=document.getElementById('first')
+  let secondtext=document.getElementById('second')
+  let thirdtext=document.getElementById('third')
+  let forthtext=document.getElementById('forth')
+  let fifthtext=document.getElementById('fifth')
+  let sixthtext=document.getElementById('sixth')
   // let fifth2 = document.getElementById('fifth')
 
   // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
@@ -949,9 +958,21 @@ if (isMobile){
   vid_space.src="./videos/video_space_mobile.mp4"
   vid_stars.src="./videos/video_stars_mobile.mp4"
 
-  first_section.style.marginLeft = "-10%"
+  first_section.style.maxWidth = "20vw"
+
+  first_section.style.marginLeft = "5%"
+  // first_section.style.marginRight = "auto"
+  
+  
   first_section.style.textAlign = "center"
-  first_section.style.width = "50%"
+  // first_section.style.align = "center"
+  // first_section.style.alignItems = "center"
+
+  firsttext.style.textAlign = "center"
+  // firsttext.style.align = "center"
+  firsttext.style.alignItems = "center"
+
+
 
   first_section.style.fontWeight = "900"
   second_section.style.fontWeight = "900"
