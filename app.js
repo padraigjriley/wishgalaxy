@@ -38,7 +38,7 @@ var io = require('socket.io').listen(server);
 
 const pool = new Pool({
 	connectionString: process.env.DATABASE_URL,
-  	ssl: {rejectUnauthorized: false},
+  ssl: {rejectUnauthorized: false},
 })
 
 pool.connect(err => {
@@ -88,21 +88,28 @@ io.on('connection', (socket) => {
 
 	socket.on('make wish', (message) => {
 		console.log(message);
-		var dt = dateTime.create()
-		dt.offsetInHours(2)
-		var now = dt.format('Y-m-d H:M:S')
-
-		var wish_string = "INSERT INTO wishes(wish, date)VALUES('"+message+"', '" + now + "')"
-
-		pool.query( wish_string, (err, res) => {
-				//console.log(err,res);
+			if(message===""){
 				var query_ = "SELECT * FROM wishes ORDER BY date DESC LIMIT 16";
 
 				pool.query(query_, (error, response)=>{
-					console.log(response.rows);
 					io.emit('make wish', response.rows);
 				})
-			})
+			}else{
+				var dt = dateTime.create()
+				dt.offsetInHours(2)
+				var now = dt.format('Y-m-d H:M:S')
+
+				var wish_string = "INSERT INTO wishes(wish, date)VALUES('"+message+"', '" + now + "')"
+
+				pool.query( wish_string, (err, res) => {
+					//console.log(err,res);
+					var query_ = "SELECT * FROM wishes ORDER BY date DESC LIMIT 16";
+
+					pool.query(query_, (error, response)=>{
+						io.emit('make wish', response.rows);
+					})
+				})
+			}
   });
 
 	socket.on('post email', (msg) => {
