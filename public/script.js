@@ -2,12 +2,10 @@ var socket = io();
 
 socket.on('make wish', function(response){
   console.log("new update")
-  var div = document.getElementById('wish_galaxy');
-  div.innerHTML="";
-  var y = Math.random() * 100;
-  var x = Math.random() * 100;
   response.map(function(data, index){
-    div.innerHTML += "<div class='wish_text_"+index+"'>"+data.wish+"</div>";
+    var y = Math.ceil(Math.random() * 16);
+    var div = document.getElementById('wish'+(index+1));
+    div.innerHTML += (data.wish).toUpperCase();
   })
 });
 
@@ -747,8 +745,10 @@ function buttonEndFunction() {
   document.getElementById("button1").style.opacity = "1";
 }
 
+
 function reveal_galaxy(){
   galaxy = true;
+  socket.emit('make wish', '-');
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("button1").setAttribute("onclick", "button_clicked()");
   document.getElementById("button1").classList.add("button");
