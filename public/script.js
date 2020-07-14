@@ -3,8 +3,9 @@ var socket = io();
 socket.on('make wish', function(response){
   console.log("new update")
   response.map(function(data, index){
-    var y = Math.ceil(Math.random() * 16);
+    //var y = Math.ceil(Math.random() * 16);
     var div = document.getElementById('wish'+(index+1));
+    div.innerHTML = "";
     div.innerHTML += (data.wish).toUpperCase();
   })
 });
@@ -962,8 +963,8 @@ if (isMobile){
 
   first_section.style.marginLeft = "5%"
   // first_section.style.marginRight = "auto"
-  
-  
+
+
   first_section.style.textAlign = "center"
   // first_section.style.align = "center"
   // first_section.style.alignItems = "center"
