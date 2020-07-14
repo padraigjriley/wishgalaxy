@@ -461,7 +461,7 @@ function cointoss() {
 }
 
 document.addEventListener("click",function(e){
-    if ((seventh) && (!galaxy) && document.getElementById('wishtext').value){
+    if ((seventh) && (!galaxy) && document.getElementById('wishtext').value.length>3 && !tossed){
       //console.log(document.getElementById('wishtext').value);
       socket.emit('make wish', document.getElementById('wishtext').value);
       cointoss();
