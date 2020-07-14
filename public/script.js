@@ -1,7 +1,7 @@
 var socket = io();
 
 socket.on('make wish', function(response){
-  console.log("new update")
+  // console.log("new update")
   response.map(function(data, index){
     //var y = Math.ceil(Math.random() * 16);
     var div = document.getElementById('wish'+(index+1));
@@ -467,6 +467,7 @@ document.addEventListener("click",function(e){
       socket.emit('make wish', document.getElementById('wishtext').value);
       cointoss();
     }
+
 });
 
 
@@ -480,6 +481,13 @@ document.addEventListener("click",function(e){
    if ((!galaxy) && (!tossed) && (bool) && (wisher)){
       cursorFocus(document.getElementById("wishtext"));
     }
+    if(isMobile && go && bool &&!galaxy){
+      document.getElementById("zero").classList.add('disolve_quick');
+      document.getElementById("vl").classList.add('disolve_quick');
+      document.getElementById("button1").classList.add('disolve_quick');
+      document.getElementById("button1").removeAttribute("onclick");
+      mobileAnim()
+  }
 });
 
 function CursorEndFunction() {
@@ -658,6 +666,7 @@ function submitted() {
 var timeout;
 
 document.onmousemove = resetTimer;
+document.touchmove = resetTimer;
 window.addEventListener("scroll", resetTimer);
 
 function resetTimer() {
