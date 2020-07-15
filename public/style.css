@@ -67,7 +67,7 @@ a:visited { text-decoration: none; color:white; }
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100vh;
   overflow: hidden;
   object-fit: fill;
@@ -90,27 +90,27 @@ a:visited { text-decoration: none; color:white; }
  background: radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
  -webkit-box-shadow: 0 0 30px 3px red;
  -moz-box-shadow: 0 0 30px 3px red;
- box-shadow: 0 0 30px 3px red;  
- animation: cursorShadow 10s infinite; 
- -webkit-animation: cursorShadow 10s infinite;    
- animation-timing-function: ease-in-out;     
+ box-shadow: 0 0 30px 3px red;
+ animation: cursorShadow 10s infinite;
+ -webkit-animation: cursorShadow 10s infinite;
+ animation-timing-function: ease-in-out;
 }
 
 @keyframes cursorShadow{
   20% {
     -webkit-box-shadow: 0 0 30px 3px red;
     -moz-box-shadow: 0 0 30px 3px red;
-    box-shadow: 0 0 30px 3px red;  
+    box-shadow: 0 0 30px 3px red;
   }
   40% {
     -webkit-box-shadow: 0 0 30px 3px orange;
     -moz-box-shadow: 0 0 30px 3px orange;
-    box-shadow: 0 0 30px 3px orange;  
+    box-shadow: 0 0 30px 3px orange;
   }
   60% {
     -webkit-box-shadow: 0 0 30px 3px yellow;
     -moz-box-shadow: 0 0 30px 3px yellow;
-    box-shadow: 0 0 30px 3px yellow;  
+    box-shadow: 0 0 30px 3px yellow;
   }
   80% {
     -webkit-box-shadow: 0 0 30px 3px orange;
@@ -128,17 +128,17 @@ a:visited { text-decoration: none; color:white; }
   20% {
     -webkit-box-shadow: 0 0 30px 3px red;
     -moz-box-shadow: 0 0 30px 3px red;
-    box-shadow: 0 0 30px 3px red;  
+    box-shadow: 0 0 30px 3px red;
   }
   40% {
     -webkit-box-shadow: 0 0 30px 3px orange;
     -moz-box-shadow: 0 0 30px 3px orange;
-    box-shadow: 0 0 30px 3px orange;  
+    box-shadow: 0 0 30px 3px orange;
   }
   60% {
     -webkit-box-shadow: 0 0 30px 3px yellow;
     -moz-box-shadow: 0 0 30px 3px yellow;
-    box-shadow: 0 0 30px 3px yellow;  
+    box-shadow: 0 0 30px 3px yellow;
   }
   80% {
     -webkit-box-shadow: 0 0 30px 3px orange;
@@ -427,7 +427,7 @@ textarea {
   position: fixed;
   /*top: 0;*/
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100%;
   overflow: hidden;
   /*object-fit: fill;*/
@@ -437,8 +437,8 @@ textarea {
 
 .video_container video{
   /* Make video to at least 100% wide and tall */
-  min-width: 100%; 
-  min-height: 100%; 
+  min-width: 100%;
+  min-height: 100%;
 
   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   /*width: auto;*/
@@ -452,7 +452,7 @@ textarea {
 }
 
 .video_stars {
-  z-index: 3; 
+  z-index: 3;
   /*position: absolute;*/
   /*right: 0;*/
   /*bottom: 0;*/
@@ -466,7 +466,7 @@ textarea {
 }
 
 .video_space2 {
-  z-index: 3; 
+  z-index: 3;
   /*position: fixed;*/
   /*right: 0;*/
   /*bottom: 0;*/
@@ -760,7 +760,7 @@ textarea {
 }
 
 .button2 {
-  border-width: thin; 
+  border-width: thin;
   cursor: none;
   outline: none;
   border-radius: 50%;
@@ -945,7 +945,7 @@ hr {
 }
 
 @keyframes disolve_quick {
-  from { 
+  from {
     opacity: 1;
   }
   to {
@@ -955,7 +955,7 @@ hr {
 }
 
 @-webkit-keyframes disolve_quick {
-  from { 
+  from {
     -webkit-opacity: 1;
     opacity: 1;
   }
@@ -973,7 +973,7 @@ hr {
 }
 
 @keyframes involve_quick {
-  from { 
+  from {
     -webkit-opacity: 0;
     opacity: 0;
   }
@@ -984,7 +984,7 @@ hr {
 }
 
 @-webkit-keyframes involve_quick {
-  from { 
+  from {
     -webkit-opacity: 0;
     opacity: 0;
   }
@@ -1283,7 +1283,7 @@ hr {
 
 .twinkle_out{
   animation: twinkle 2s reverse;
-  } 
+  }
 
 #loading {
     display: block;

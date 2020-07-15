@@ -758,7 +758,7 @@ function buttonEndFunction() {
 
 function reveal_galaxy(){
   galaxy = true;
-  socket.emit('make wish', '-');
+  socket.emit('make wish', '');
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("button1").setAttribute("onclick", "button_clicked()");
   document.getElementById("button1").classList.add("button");
