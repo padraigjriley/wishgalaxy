@@ -968,7 +968,7 @@ if (isMobile){
   vid_space.src="./videos/video_space_mobile.mp4"
   vid_stars.src="./videos/video_stars_mobile.mp4"
 
-  first_section.style.maxWidth = "20vw"
+  first_section.style.maxWidth = "10vw"
 
   first_section.style.marginLeft = "5%"
   // first_section.style.marginRight = "auto"
