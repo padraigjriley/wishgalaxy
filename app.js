@@ -27,19 +27,19 @@ var io = require('socket.io').listen(server);
 // 	password: '123'
 // })
 
-const pool = new Pool({
+/*const pool = new Pool({
  	host: 'ec2-3-222-30-53.compute-1.amazonaws.com',
  	port: 5432,
  	database: 'dab9u3rvn8hud1',
  	user: 'koxpwklkrgbovt',
  	password: 'db42652e3f4ef31807b98457ac4acae0340dea3a0deeb7ad80aeb250dca55952',
   ssl: {rejectUnauthorized: false},
-})
+})*/
 
-/*const pool = new Pool({
+const pool = new Pool({
 	connectionString: process.env.DATABASE_URL,
   ssl: {rejectUnauthorized: false},
-})*/
+})
 
 pool.connect(err => {
 	if (err) {
