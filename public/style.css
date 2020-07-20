@@ -868,10 +868,11 @@ textarea {
     margin-right: auto;
     flex: 1;
     overflow: hidden;
-    margin-top: 130px;
+    /*margin-top: 20vh;*/
     letter-spacing: 2px;
     text-transform: uppercase;
     width: 60%;
+    height: 100vh;
 }
 
 .titlething {
@@ -933,6 +934,7 @@ footer {
     text-align: center;
     align-items: center;
     letter-spacing: 1px;
+    z-index: 1;
 }
 
 .footer {

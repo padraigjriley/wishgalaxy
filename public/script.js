@@ -863,6 +863,7 @@ galaxy_heading.addEventListener("click", function() {
     }
 });
 
+
 if (isMobile && !wisher){
   document.getElementById('form').blur();
 }
@@ -938,6 +939,10 @@ if (isMobile){
   let fifthtext=document.getElementById('fifth')
   let sixthtext=document.getElementById('sixth')
   // let fifth2 = document.getElementById('fifth')
+
+  let middle = document.getElementById('middle')
+// 
+  // middle.style.maginTop="5vh"
 
   // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
   zero.style.fontSize = "6vw"
