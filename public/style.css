@@ -868,7 +868,7 @@ textarea {
     margin-right: auto;
     flex: 1;
     overflow: hidden;
-    /*margin-top: 20vh;*/
+    margin-top: 130px;
     letter-spacing: 2px;
     text-transform: uppercase;
     width: 60%;
