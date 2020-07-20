@@ -226,6 +226,7 @@ a:visited { text-decoration: none; color:white; }
 }*/
 
 .first_section {
+  display: flex;
   /*width: 50%;*/
   margin-left: 10%;
   margin-right: 25%;

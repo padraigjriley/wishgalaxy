@@ -973,19 +973,20 @@ if (isMobile){
   vid_space.src="./videos/video_space_mobile.mp4"
   vid_stars.src="./videos/video_stars_mobile.mp4"
 
-  first_section.style.maxWidth = "10vw"
+  first_section.style.minWidth = "100%"
 
-  first_section.style.marginLeft = "5%"
-  // first_section.style.marginRight = "auto"
+  // first_section.style.marginLeft = "5%"
+  first_section.style.margin = "auto"
 
 
   first_section.style.textAlign = "center"
-  // first_section.style.align = "center"
-  // first_section.style.alignItems = "center"
+  first_section.style.align = "center"
+  first_section.style.alignItems = "center"
+  first_section.style.justifyContent = "center"
 
-  firsttext.style.textAlign = "center"
+  // firsttext.style.textAlign = "center"
   // firsttext.style.align = "center"
-  firsttext.style.alignItems = "center"
+  // firsttext.style.alignItems = "center"
 
 
 
