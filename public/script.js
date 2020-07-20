@@ -942,7 +942,7 @@ if (isMobile){
 
   let middle = document.getElementById('middle')
 // 
-  // middle.style.maginTop="5vh"
+  middle.style.marginTop="5vh"
 
   // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
   zero.style.fontSize = "6vw"

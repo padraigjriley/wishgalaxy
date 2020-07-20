@@ -818,7 +818,7 @@ textarea {
     font-family: Geomanist;
     color: white;
     margin: 15px;
-    padding-top: 25%;
+    padding-top: 45vh;
     /*flex: 1;*/
     flex-shrink: 1;
     width: 20%;
@@ -868,7 +868,7 @@ textarea {
     margin-right: auto;
     flex: 1;
     overflow: hidden;
-    margin-top: 130px;
+    margin-top: 10vh;
     letter-spacing: 2px;
     text-transform: uppercase;
     width: 60%;
