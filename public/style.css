@@ -156,7 +156,6 @@ a:visited { text-decoration: none; color:white; }
   height: 40px;
   width: 40px;
   position: fixed;
-  /*content: url('./images/coinage.png');*/
   z-index: 99;
   opacity: .3;
 }
@@ -211,23 +210,8 @@ a:visited { text-decoration: none; color:white; }
   overflow: hidden;
 }
 
-/*section {
-  font-size: 3vw;
-  color: white;
-  cursor: none;
-  width: 100%;
-  height: 100%;
-  font-family: "Voyage-Regular";
-  letter-spacing: 5px;
-  overflow: hidden;
-  pointer-events: none;
-  cursor: none;
-  word-wrap: break-word;
-}*/
-
 .first_section {
   display: flex;
-  /*width: 50%;*/
   margin-left: 10%;
   margin-right: 25%;
   word-wrap: break-word;
@@ -247,7 +231,6 @@ a:visited { text-decoration: none; color:white; }
 
 
 .first {
-  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
   display: inline-block;
@@ -261,7 +244,6 @@ a:visited { text-decoration: none; color:white; }
 }
 
 .second {
-  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
   display: inline-block;
@@ -275,7 +257,6 @@ a:visited { text-decoration: none; color:white; }
 }
 
 .third {
-  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
   display: inline-block;
@@ -288,7 +269,6 @@ a:visited { text-decoration: none; color:white; }
 }
 
 .forth {
-  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
   display: inline-block;
@@ -301,25 +281,11 @@ a:visited { text-decoration: none; color:white; }
 }
 
 .fifth {
-  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
   display: inline-block;
-  /*width: 50%;*/
-  /*white-space: pre;*/
 }
 
-/*.fifth2 {
-  margin-left: 50vw;
-  bottom: 22%;
-  position: fixed;
-}
-
-.fifth2 .letter {
-  display: inline-block;
-  line-height: 1em;
-  opacity: 0;
-}*/
 
 .fifth .letter {
   display: inline-block;
@@ -328,7 +294,6 @@ a:visited { text-decoration: none; color:white; }
 }
 
 .sixth {
-  /*margin-left: 10%;*/
   bottom: 30%;
   position: fixed;
   display: inline-block;
@@ -426,12 +391,10 @@ textarea {
 
 .video_container {
   position: fixed;
-  /*top: 0;*/
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
-  /*object-fit: fill;*/
   pointer-events: none;
   cursor: none;
   }
@@ -454,33 +417,14 @@ textarea {
 
 .video_stars {
   z-index: 3;
-  /*position: absolute;*/
-  /*right: 0;*/
-  /*bottom: 0;*/
-  /*min-width: 100%;*/
-  /*min-height: 100%;*/
   opacity: 0;
-  /*overflow: hidden;*/
-  /*left: -50%;*/
-  /*background-position: center center;*/
-  /*background-size: contain;*/
 }
 
 .video_space2 {
   z-index: 3;
-  /*position: fixed;*/
-  /*right: 0;*/
-  /*bottom: 0;*/
-  /*min-width: 100%;*/
-  /*min-height: 100%;*/
   opacity: 0;
-  /*overflow: hidden;*/
-  /*left: -90%;*/
-  /*background-position: center center;*/
-  /*background-size: contain;*/
-  /*min-width: 100%;*/
-  /*min-height: 100%;*/
 }
+
 .second_section {
   font-size: 3vw;
   color: white;
@@ -494,18 +438,6 @@ textarea {
   cursor: none;
   word-wrap: break-word;
 }
-
-/*.second_section {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 98;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  overflow: hidden;
-  pointer-events: none;
-  cursor: none;
-}*/
 
 .hideme {
   -webkit-opacity: 0;
@@ -820,7 +752,6 @@ textarea {
     color: white;
     margin: 15px;
     padding-top: 45vh;
-    /*flex: 1;*/
     flex-shrink: 1;
     width: 20%;
 }
@@ -890,6 +821,7 @@ textarea {
   align-items: center;
   justify-content: center;
   margin-top: 105px;
+  cursor: pointer;
 }
 
 .another {
@@ -1277,7 +1209,6 @@ hr {
 
 .twinkle{
   animation: twinkle 4s alternate infinite;
-  /*animation-delay: 2s;*/
 }
 
 .twinkle_in{

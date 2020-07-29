@@ -1,9 +1,7 @@
 var socket = io();
 
 socket.on('make wish', function(response){
-  // console.log("new update")
   response.map(function(data, index){
-    //var y = Math.ceil(Math.random() * 16);
     var div = document.getElementById('wish'+(index+1));
     div.innerHTML = "";
     div.innerHTML += (data.wish).toUpperCase();
@@ -46,6 +44,8 @@ var ready=false;
 
 var cur = false;
 
+var another1 = false
+
 let wish1 = document.getElementById("wish1")
 let wish2 = document.getElementById("wish2")
 let wish3 = document.getElementById("wish3")
@@ -72,7 +72,6 @@ var randnum = Math.floor(Math.random()*randombgs.length);
 document.getElementById("image").style.backgroundImage = 'url("'+randombgs[randnum]+'")';
 
 document.getElementById("email").classList.add("hideme");
-// document.getElementById("second_section").classList.add("hideme");
 document.getElementById("about_page").classList.add("hideme");
 
 document.getElementById("vl2").classList.add("hideme");
@@ -83,33 +82,31 @@ document.getElementById("another_div").classList.add("hideme");
 
 document.getElementById('goldball').style.content = "url('./images/coinage.png')"
 
-window.scrollTo(0,0);
+//window.scrollTo(0,0);
 
 var go=true;
 
-window.onbeforeunload = function () {
-  window.scrollTo(0,0);
-}
+// window.onbeforeunload = function () {
+//   window.scrollTo(0,0);
+// }
 
 textwrap('.first');
 textwrap('.second');
 textwrap('.third');
 textwrap('.forth');
 textwrap('.fifth');
-// textwrap('.fifth2');
 textwrap('.sixth');
 
 var second2=false;
 
 function mobileAnim(){
 
-  if (bool && !galaxy){
+  if (bool && !galaxy && !another1){
     go=false;
     document.getElementById('form').classList.add('hideme');
     anime.timeline({loop: false})
     .add({
           targets: '.first' + ' .letter',
-          //offset: 2000,
           translateY: [100,0],
           translateZ: 0,
           opacity: [0,1],
@@ -293,10 +290,10 @@ function mobileAnim(){
             document.getElementById('form').classList.add('involve');
             wisher = true;
             seventh = true;
-            cursorFocus(wish);
+            cursorFocus(document.getElementById("wishtext"));
           }
         })
-    cursorFocus(wish);
+    cursorFocus(document.getElementById("wishtext"));
   }
 
 }
@@ -360,7 +357,6 @@ function handleWheel(e) {
     anim_out('.forth');
     forth = true;
     anim_in('.fifth');
-    // anim_in('.fifth2');
   }
 
   /////////////////////////////////
@@ -369,10 +365,8 @@ function handleWheel(e) {
   if ((ready) && (scroll) && (animated_in) && (!animated_out) && (!fifth) && forth){
     scroll = !scroll;
     anim_out('.fifth');
-    // anim_out('.fifth2');
     fifth = true;
     anim_in('.sixth');
-    //console.log("scroll: "+scroll+" animated_in: "+animated_in+ " animated_out: "+animated_out)
   }
 
   /////////////////////////////////
@@ -424,19 +418,20 @@ textarea.oninput = function() {
 
 function cointoss() {
   // zoomOutMobile();
-
+  
   tossed = true;
+  seventh = false;
   document.getElementById("wrapper").classList.add("hideme");
   document.getElementById("cursor").classList.remove("deflate");
   document.getElementById("cursor").classList.remove("involve_quicker");
   document.getElementById("wishtext").classList.add("disolve");
   document.getElementById("label").classList.add("disolve");
+  document.getElementById("label").classList.remove("involve_quick");
   document.getElementById("seventh").classList.add("disolve");
   document.getElementById("cursor").classList.add("shrink");
   document.getElementById("video_stars").classList.remove("disolve_quick");
   document.getElementById("video_stars").classList.remove("cheekyfade");
   document.getElementById("video_stars").classList.add("involve");
-  //document.getElementById('form').submit();
   document.getElementById("zero").classList.add("hideme");
   document.getElementById("vl").classList.add("hideme");
   document.getElementById("first_section").classList.add("hideme");
@@ -447,10 +442,7 @@ function cointoss() {
 
   document.getElementById("eighth").classList.add("heavens");
   document.getElementById("nineth").classList.add("heavens2");
-  //document.getElementById('button').classList.remove('disolve_quick');
 
-  //document.getElementById('button').classList.remove('hideme');
-  //document.getElementById('button').classList.add('heavens');
 
   var x = document.getElementById("cursor");
   x.addEventListener("webkitAnimationEnd", CursorEndFunction);
@@ -463,7 +455,6 @@ function cointoss() {
 
 document.addEventListener("click",function(e){
     if ((seventh) && (!galaxy) && document.getElementById('wishtext').value.length>3 && !tossed){
-      //console.log(document.getElementById('wishtext').value);
       socket.emit('make wish', document.getElementById('wishtext').value);
       cointoss();
     }
@@ -524,19 +515,25 @@ function GalaxyFunction() {
 
   document.getElementById('button1').classList.remove('hideme');
   document.getElementById('button1').classList.add('heavens');
-  galaxy = true;
+  document.getElementById('wishtext').value = "";
+  document.getElementById('wishtext').style.height = "";
+  
   if (isMobile){
+
+    for (w=0; w<all_wishes.length; w++){
+      all_wishes[w].classList.remove("twinkle")
+    }
+
     setInterval(function(){
       twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
       twink_wish.classList.add('twinkle')
-      // twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
-      // twink_wish.addEventListener("animationend", twinkle_wait(twink_wish));
     }, 1500);
   }
 }
 
 function button_clicked(){
   bool = !bool;
+  seventh = false;
 
   // Entered About Page
   if (!bool){
@@ -791,8 +788,6 @@ function reveal_galaxy(){
     setInterval(function(){
       twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
       twink_wish.classList.add('twinkle')
-      // twink_wish.addEventListener("webkitAnimationEnd", twinkle_wait(twink_wish));
-      // twink_wish.addEventListener("animationend", twinkle_wait(twink_wish));
     }, 1500);
   }
 
@@ -816,7 +811,6 @@ function show(id, value) {
 onReady(function () {
     show('image', true);
     show('loading', false);
-    // show('cursor', true);
     ready=true;
 });
 
@@ -916,14 +910,10 @@ document.getElementById('video_container').appendChild(vid_space)
 
 //
 if (isMobile){
-  // let about_text = document.getElementById('about_text')
-  // let coin_text = document.getElementById('coin_text')
+
   let galaxy_text22 = document.getElementById('galaxy_text')
   let lside = document.getElementById('left_side')
   let rside = document.getElementById('right_side')
-  // let about_heading = document.getElementById('about_heading')
-  // let coin_heading = document.getElementById('about_heading')
-  // let galaxy_heading = document.getElementById('about_heading')
 
   let wish_in = document.getElementsByClassName('wish_inner')
   let wish_out = document.getElementsByClassName('wish_outer')
@@ -938,13 +928,13 @@ if (isMobile){
   let forthtext=document.getElementById('forth')
   let fifthtext=document.getElementById('fifth')
   let sixthtext=document.getElementById('sixth')
-  // let fifth2 = document.getElementById('fifth')
+
 
   let middle = document.getElementById('middle')
-// 
+
   middle.style.marginTop="5vh"
 
-  // fifth.innerHTML = "MAYBE YOU DIDN'T GET<br>THE CHANCE"
+
   zero.style.fontSize = "6vw"
   first_section.style.fontSize = "5.5vw"
   second_section.style.fontSize = "5.5vw"
@@ -975,7 +965,6 @@ if (isMobile){
 
   first_section.style.minWidth = "100%"
 
-  // first_section.style.marginLeft = "5%"
   first_section.style.margin = "auto"
 
 
@@ -984,18 +973,11 @@ if (isMobile){
   first_section.style.alignItems = "center"
   first_section.style.justifyContent = "center"
 
-  // firsttext.style.textAlign = "center"
-  // firsttext.style.align = "center"
-  // firsttext.style.alignItems = "center"
-
-
-
   first_section.style.fontWeight = "900"
   second_section.style.fontWeight = "900"
   zero.style.fontWeight = "900"
-  // document.getElementById('fifth').style.width = "70%"
-  // document.getElementById('second').style.width = "59%"
-  // document.getElementById('forth').style.width = "70%"
+
+  document.getElementById("wishtext").style.width = "40%"
 
 
 
@@ -1006,4 +988,85 @@ if (isMobile){
 
 if (!cur){
   cursor.display="none"
+}
+
+
+function another_clicked() {
+
+  another1=true;
+
+  document.getElementById("eighth").classList.remove("hideme")
+  document.getElementById("nineth").classList.remove("hideme")
+  document.getElementById("rem").classList.add("hideme")
+
+  document.getElementById("container").classList.remove("hideme")
+  document.getElementById('wish_galaxy').classList.add("hideme")
+  document.getElementById("about_page").classList.add("disolve")
+  document.getElementById("about_page").classList.remove("involve_quick")
+
+  document.getElementById("video_space2").style.opacity = "0"
+  document.getElementById('video_space2').classList.remove("involve")
+  document.getElementById('wish_galaxy').classList.remove("involve")
+  
+  document.getElementById("video_stars").classList.remove("hideme")
+  document.getElementById("image").classList.remove("hideme")
+
+  document.getElementById("video_space2").classList.remove("involve_quick");
+  document.getElementById("cursor").style.background = "";
+  document.getElementById("goldball").classList.remove("hideme");
+
+  document.getElementById("cursor").classList.remove("circle");
+  document.getElementById("cursor").classList.add("cursor");
+  document.getElementById("wishtext").classList.remove("disolve")
+
+  document.getElementById("form").classList.add("involve")
+  document.getElementById("seventh").classList.remove("involve")
+  document.getElementById("seventh").classList.remove("disolve")
+  document.getElementById("label").classList.add("involve_quick")
+  document.getElementById("label").classList.remove("disolve")
+
+  cursorFocus(document.getElementById("wishtext"))
+
+  document.getElementById("wrapper").classList.remove("hideme");
+  document.getElementById("button1").classList.remove("button2");
+  document.getElementById("button1").classList.add("button");
+
+  document.getElementById("middle").classList.add("hideme")
+
+  document.getElementById("wrapper").classList.remove("hideme");
+  document.getElementById("button1").classList.remove("button2");
+  document.getElementById("button1").classList.add("button");
+  document.getElementById("button1").classList.add("hideme")
+  document.getElementById("about_page").classList.remove("involve_quick");
+  document.getElementById("middle").classList.add("hideme");
+  document.getElementById("image").classList.remove('hideme');
+
+  document.getElementById("cursor").style.background = "radial-gradient(circle at 3% 3%, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)";
+  document.getElementById("goldball").classList.remove("hideme");
+
+  document.getElementById("cursor").classList.remove("grow")
+  document.getElementById("cursor").classList.remove("shrink")
+  document.getElementById("cursor").classList.remove("pointer")
+
+  document.getElementById("video_stars").classList.add("cheekyfade");
+
+  about_text.style.maxHeight = null;
+  coin_text.style.maxHeight = null;
+  galaxy_text2.style.maxHeight = null;
+
+  tossed=false;
+  galaxy=false;
+  bool=true;
+  wisher=true;
+
+  var p = document.getElementById("label");
+  p.addEventListener("webkitAnimationEnd", anotherEndFunction);
+  p.addEventListener("animationend", anotherEndFunction);
+
+}
+
+function anotherEndFunction(){
+  seventh=true;
+  form = true;
+  document.getElementById("button1").setAttribute("onclick", "button_clicked()");
 }

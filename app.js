@@ -14,8 +14,14 @@ var io = require('socket.io').listen(server);
 
 
 
+// const pool = new Pool({
+// 	connectionString: process.env.DATABASE_URL,
+//   ssl: {rejectUnauthorized: false},
+// })
+
+
 const pool = new Pool({
-	connectionString: process.env.DATABASE_URL,
+	connectionString: "postgres://koxpwklkrgbovt:db42652e3f4ef31807b98457ac4acae0340dea3a0deeb7ad80aeb250dca55952@ec2-3-222-30-53.compute-1.amazonaws.com:5432/dab9u3rvn8hud1",
   ssl: {rejectUnauthorized: false},
 })
 
