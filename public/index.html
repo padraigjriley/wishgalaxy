@@ -10,132 +10,12 @@
 	<meta property="og:image:type" content="image/jpg">
 	<meta property="og:url" content="http://www.thewish.space">
 </head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="icon" href="./images/coinage.png">
+<link rel="stylesheet" type="text/css" href="galaxy_style.css">
 
 <body>
-	<div id="loading"></div>
+	<div class="overlay"></div>
 
-	<div class="rem" id="rem"></div>
-
-	<div class="cursor" id="cursor">
-		<div class="goldball" id="goldball"></div>
-	</div>
-
-	<div id="image" class="image"></div>
-
-	<div class="container" id="container">
-		<button class="button" onclick="button_clicked()" id="button1"></button>
-		<div id="zero" class="zero">
-			<br><br><br><br><br><br>WELCOME TO<br>THE WISH. SPACE
-		</div>
-		<div class="vl" id="vl"></div>
-	</div>
-
-	<div class="about" id="about_page">
-		<button class="button2" onclick="button_clicked()" id="button2"></button>
-		<div class="side" id="left_side">
-				01<br><hr><br><a href="https://wartherdixon.com/" target="_blank">WARTHER DIXON<br>ARTIST DUO</a>
-		</div>
-		<div class="vl2" id="vl2"></div>
-		<div class="another_div" id="another_div">
-			<a id ="another" class="another" onclick="another_clicked()">
-				MAKE ANOTHER WISH<br><br><br><br>
-			</a>
-		</div>
-		<div class="middle" id="middle">
-
-			<h1 id="about_heading" class="collapsible">ABOUT</h1>
-			<div class ="about_text" id="about_text">
-				<p>
-				The Wish Space is a collaborative project between us and you.
-				The project began as an exploration of our hopes and dreams during this time of global health pandemic and socio-political crises. <br><br>
-				We wanted to recreate the moment of daring hope one experiences when tossing a coin into a fountain. In breaking down the mechanics of that moment, we began to ask a different question: what does the act of making a wish offer? A moment to reflect on desire and possibility? A prompt of imagination? An exercise in hope? <br><br>
-				Whether at home and in isolation or rebuilding and reopening, we collectively face the loss and failings of humankind. <br><br>
-				What will be our new normal? What do we wish for our country and our world? Can we start to re-imagine what’s possible?<br><br>
-				We offer this experience as a gift of self-exploration, solidarity, and community. May it nourish and support us. <br><br>
-				With love,<br><br>
-				Warther Dixon.<br><br>
-				20 July 2020. <br><br>
-
-				</p>
-			</div>
-			<h1 id="coin_heading" class="collapsible">THE COIN</h1>
-			<div class="coin_text" id="coin_text">
-				<p>
-				Traditionally, coins have been tossed into wells and fountains as on offering to the presiding water deity. In exchange, she becomes the custodian of the wish, considering with wisdom the terms by which it may come true. <br><br>
-				The coin that we give you is precious and powerful. It is your intention distilled, imagination realized and will directed into motion. Place your hope into the coin as you release it into the well. 
-
-				</p>
-
-			</div>
-			<h1 id="galaxy_heading" class="collapsible">WISH GALAXY</h1>
-			<div class="galaxy_text" id="galaxy_text">
-
-				The Wish Galaxy is a collective capture of global wishes sent to live amongst the stars. Replenishing continuously and anonymously. For every star there is another wish: an infinite unity of hope.  <br><br>
-
-
-				<a onclick="reveal_galaxy()">Visit the Wish Galaxy here.</a>
-
-			</div>
-			<footer class="footer">ALL RIGHTS RESERVED &copy CWWD STUDIO 2020</footer>
-		</div>
-		<div class="side" id="right_side">
-			02<br><hr><br><a href ="https://www.instagram.com/wartherdixon/" target="_blank">INSTAGRAM<br></a>
-			<a id='submitted' class="sub" onclick="toggle_subscribe()">SUBSCRIBE<br><br></a>
-			<form class="email" id="email" target="hiddenFrame" method='post' action="/emailss">
-				<input class ="text" type="text" placeholder="ENTER YOUR EMAIL" name="mail" id="subscribe"><br>
-				<input class="submit" type="submit" value="SUBMIT" onclick="submitted()" id="submitter">
-			</form>
-
-		</div>
-	</div>
-
-	<div id="first_section" class="first_section">
-			<div id="first" class="first">IN UNCERTAIN TIMES</div>
-			<div id="second" class="second">THIS IS A SPACE FOR 
-YOU</div>
-			<div id="third" class="third">TO MAKE A WISH</div>
-			<div id="forth" class="forth">OR WISH SOMEONE 
-WELL</div>
-			<div id="fifth" class="fifth">MAYBE YOU DIDN'T GET 
-THE CHANCE</div>
-			<div id="sixth" class="sixth">TO SAY GOODBYE</div>
-	</div>
-
-	<div class="form" id="form">
-		<label name="wish" id="label">I WISH   </label>
-		<textarea name="textarea" class="input" type="text" id="wishtext" autocomplete="off" maxlength="200" form="form"></textarea>
- 	</div>
-
-	<div id="seventh" class="seventh">CLICK TO TOSS YOUR COIN</div>
-
-	<div id="second_section" class="second_section">
-		<div id="eighth" class="eighth">THE HEAVENS ARE WATCHING</div>
-		<div id="nineth" class="nineth">WITH LOVE</div>
-	</div>
-
-	<div id="wrapper" class="wrapper">
-			<div id="hidden1" class="hidden"></div>
-			<div id="hidden2" class="hidden"></div>
-			<div id="hidden3" class="hidden"></div>
-			<div id="hidden4" class="hidden"></div>
-			<div id="hidden5" class="hidden"></div>
-			<div id="hidden6" class="hidden"></div>
-			<div id="hidden7" class="hidden"></div>
-			<div id="hidden8" class="hidden"></div>
-			<div id="hidden9" class="hidden"></div>
-			<div id="hidden10" class="hidden"></div>
-			<div id="hidden11" class="hidden"></div>
-			<div id="hidden12" class="hidden"></div>
-			<div id="hidden13" class="hidden"></div>
-			<div id="hidden14" class="hidden"></div>
-			<div id="hidden15" class="hidden"></div>
-			<div id="hidden16" class="hidden"></div>
-			<div id="hidden17" class="hidden"></div>
-	</div>
-
-	<div class="hideme wish_galaxy" id="wish_galaxy">
+	<div class="wish_galaxy" id="wish_galaxy">
 		<div id="wish1" class ="wish wish1 wish_outer"></div>
 		<div id="wish2" class ="wish wish2 wish_outer"></div>
 		<div id="wish3" class ="wish wish3 wish_outer"></div>
@@ -144,7 +24,7 @@ THE CHANCE</div>
 		<div id="wish6" class ="wish wish6 wish_outer"></div>
 		<div id="wish7" class ="wish wish7 wish_outer"></div>
 		<div id="wish8" class ="wish wish8 wish_outer"></div>
-		<div id="wish9" class ="wish wish9 wish_outer"></div>
+		<div id="wish9" class ="wish wish9 wish_mid"></div>
 		<div id="wish10" class ="wish wish10 wish_mid"></div>
 		<div id="wish11" class ="wish wish11 wish_mid"></div>
 		<div id="wish12" class ="wish wish12 wish_mid"></div>
@@ -152,28 +32,15 @@ THE CHANCE</div>
 		<div id="wish14" class ="wish wish14 wish_mid"></div>
 		<div id="wish15" class ="wish wish15 wish_mid"></div>
 		<div id="wish16" class ="wish wish16 wish_inner"></div>
-		<div id="wish17" class ="wish wish17 wish_outer"></div>
+		<div id="wish17" class ="wish wish17 wish_inner"></div>
 	</div>
 
 	<div class="video_container" id="video_container"></div>
 
-	<iframe name="hiddenFrame" class="hideme"></iframe>
-
-	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
-	<script type="text/javascript" src="./plugins/jquery.ripples.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript" src="ripple_script.js"></script>
-	<script type="text/javascript" src="cursor_script.js"></script>
-	<script type="text/javascript" src="./plugins/anime.min.js"></script>
-	<script type="text/javascript" src="./plugins/jquery-stars.js"></script>
-	<script type="text/javascript">
-		jQuery('#image').jstars({
-			image_path: './images/images/', // folder with magic image
-			image: 'jstar-map.png',
-			style: 'white',       // optional, color, default: white
-			frequency: 19         // optional, from 1 to 19
-		});
-	</script>
+	
+	<script type="text/javascript" src="galaxy_script.js"></script>
+	
+	
 </body>
 </html>
