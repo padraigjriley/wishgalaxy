@@ -39,14 +39,13 @@ vid_space.src="./videos/video_space.mp4"
 document.getElementById('video_container').appendChild(vid_space)
 
 
-var socket = io('https://thewishwell.herokuapp.com/');
+var socket = io('https://wishwell-iwish.herokuapp.com/');
 socket.emit('make wish', "");
 socket.on('make wish', function(response){
   response.map(function(data, index){
     var div = document.getElementById('wish'+(index+1));
     div.innerHTML = "";
     div.innerHTML += (data.wish).toUpperCase();
-    console.log(index+1 + data.wish);
   })
 });
 
