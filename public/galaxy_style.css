@@ -81,64 +81,64 @@
 
 .wish1 {
   position: fixed;
-  margin-left: 22vw;
-  margin-top: 54vh;
+  margin-left: 20vw;
+  margin-top: 50vh;
   transform: rotate(90deg);
 }
 
 .wish2 {
   position: fixed;
-  margin-left: 41vw;
-  margin-top: 6vh;
+  margin-left: 42vw;
+  margin-top: 5vh;
   transform: rotate(180deg);
 }
 
 .wish3 {
   position: fixed;
-  margin-left: 63vw;
+  margin-left: 65vw;
   margin-top: 50vh;
   transform: rotate(270deg);
 }
 
 .wish4 {
   position: fixed;
-  margin-left: 41vw;
-  margin-top: 90vh;
+  margin-left: 43vw;
+  margin-top: 89vh;
   transform: rotate(0deg);
 }
 .wish5 {
   position: fixed;
-  margin-left: 30vw;
-  margin-top: 77vh;
+  margin-left: 27vw;
+  margin-top: 78vh;
   transform: rotate(45deg);
 }
 
 .wish6 {
   position: fixed;
-  margin-left: 55vw;
-  margin-top: 77vh;
+  margin-left: 58vw;
+  margin-top: 79vh;
   transform: rotate(-45deg);
 }
 
 
 .wish7 {
   position: fixed;
-  margin-left: 28vw;
-  margin-top: 25vh;
+  margin-left: 25vw;
+  margin-top: 20vh;
   transform: rotate(125deg);
 }
 
 .wish8 {
   position: fixed;
-  margin-left: 55vw;
-  margin-top: 25vh;
+  margin-left: 58vw;
+  margin-top: 18vh;
   transform: rotate(-135deg);
 }
 
 .wish9 {
   position: fixed;
-  margin-left: 29vw;
-  margin-top: 60vh;
+  margin-left: 31vw;
+  margin-top: 64vh;
   transform: rotate(57.5deg);
 
 }
@@ -153,37 +153,37 @@
 
 .wish11 {
   position: fixed;
-  margin-left: 41vw;
-  margin-top: 30vh;
+  margin-left: 42vw;
+  margin-top: 24vh;
   transform: rotate(180deg);
 }
 
 .wish12 {
   position: fixed;
   margin-left: 55vw;
-  margin-top: 40vh;
-  transform: rotate(-130deg);
+  margin-top: 37vh;
+  transform: rotate(-125deg);
 }
 
 .wish13 {
   position: fixed;
-  margin-left: 51vw;
+  margin-left: 48vw;
   margin-top: 50vh;
-  transform: rotate(-90deg);
+  transform: rotate(-75deg);
 }
 
 .wish14 {
   position: fixed;
   margin-left: 43vw;
-  margin-top: 75vh;
+  margin-top: 76vh;
   transform: rotate(0deg);
 }
 
 .wish15 {
   position: fixed;
   margin-left: 30vw;
-  margin-top: 44vh;
-  transform: rotate(105deg);
+  margin-top: 38vh;
+  transform: rotate(115deg);
 }
 
 .wish16 {
@@ -195,9 +195,9 @@
 
 .wish17 {
   position: fixed;
-  margin-left: 37vw;
-  margin-top: 55vh;
-  transform: rotate(55deg);
+  margin-left: 39vw;
+  margin-top: 58vh;
+  transform: rotate(37deg);
 }
 
 
