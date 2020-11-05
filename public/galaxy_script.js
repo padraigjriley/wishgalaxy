@@ -50,10 +50,10 @@ socket.on('make wish', function(response){
 });
 
 
-function twinkle_wait(wishes){
-  wishes.classList.remove('twinkle_in')
-  wishes.classList.add('twinkle_out')
-}
+// function twinkle_wait(wishes){
+//   wishes.classList.remove('twinkle_in')
+//   wishes.classList.add('twinkle_out')
+// }
 
 for (w=0; w<all_wishes.length; w++){
       all_wishes[w].classList.remove("twinkle")
@@ -62,4 +62,13 @@ for (w=0; w<all_wishes.length; w++){
 setInterval(function(){
       twink_wish = all_wishes[Math.floor(Math.random() * all_wishes.length)];
       twink_wish.classList.add('twinkle')
+      var g = twink_wish;
+      g.addEventListener("webkitAnimationEnd", WishEndFunction);
+      g.addEventListener("animationend", WishEndFunction);
     }, 1500);
+
+
+function WishEndFunction() {
+  twink_wish.classList.remove("twinkle")
+}
+

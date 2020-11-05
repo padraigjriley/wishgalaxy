@@ -125,7 +125,7 @@
   position: fixed;
   margin-left: 25vw;
   margin-top: 20vh;
-  transform: rotate(125deg);
+  transform: rotate(130deg);
 }
 
 .wish8 {
@@ -202,16 +202,19 @@
 
 
 @keyframes twinkle {
-  from{
+  0%{
     opacity: .2;
   }
-  to{
+  50%{
     opacity: 1;
+  }
+  100%{
+    opacity: .2;
   }
 }
 
 .twinkle{
-  animation: twinkle 4s alternate infinite;
+  animation: twinkle 6s alternate;
 }
 
 .twinkle_in{
