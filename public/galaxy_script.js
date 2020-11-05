@@ -65,7 +65,7 @@ setInterval(function(){
       var g = twink_wish;
       g.addEventListener("webkitAnimationEnd", WishEndFunction);
       g.addEventListener("animationend", WishEndFunction);
-    }, 1500);
+    }, 7000);
 
 
 function WishEndFunction() {
